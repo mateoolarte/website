@@ -1,0 +1,40 @@
+html { height: 100% }
+
+body { height: 100%; margin: 0px; padding: 0px; background-color: #efefef; }
+
+header { background-image: url("images/header.gif"); padding: 10px; border-top: 3px solid #4c841a; }
+
+#logo { width: 159px; height: 156px; margin: 0 auto;}
+
+.container { background: #fff; padding: 10px; -webkit-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.25); -moz-box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.25); box-shadow: 0px 0px 8px rgba(50, 50, 50, 0.25); }
+
+#map_canvas { height: 450px; margin: 0 auto; }
+#map_canvas2 { height: 520px; }
+
+.text { text-align: center; color: #005E10; }
+
+section { background: #f9f9f9; border: 1px solid #f1f1f1; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; padding: 20px; margin-top: 10px; }
+
+.logo2 { float: left; width: 110px; height: 90px; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Ubuntu", Arial, Helvetica, Sans-serif;  }
+
+hr { height:1px; border: 0; border-top: 1px solid #ccc; width: 100%; margin: 25px 0;  }
+
+ul li { list-style: none; }
+
+ul li.twitter a { margin-right: 15px; float:left; background: url("images/twitter.jpg") no-repeat; height:48px; width: 48px; text-indent: -9999px; }
+
+ul li.twitter a:hover { background: url("images/twitter2.jpg") no-repeat;  }
+
+ul li.facebook a { margin-right: 15px; float:left; background: url("images/facebook.jpg") no-repeat; height:48px; width: 48px; text-indent: -9999px; }
+
+ul li.facebook a:hover { background: url("images/facebook2.jpg") no-repeat;  }
+
+ul li.google a { float:left; background: url("images/google.jpg") no-repeat; height:48px; width: 48px; text-indent: -9999px; }
+
+ul li.google a:hover { background: url("images/google2.jpg") no-repeat;  }
+
+span.desc { font-size: 10px; font-family: Arial, Helvetica, Sans-Serif; font-style: italic; }
+
+@media screen and (max-width: 650px) { .mapita { width: 80%; margin:0 auto; } }  
