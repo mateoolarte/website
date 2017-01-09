@@ -1,0 +1,31 @@
+.footer {
+  margin-bottom: 80px;
+  text-align: center;
+
+  @media (min-width: $md-device) {
+    // scss-lint:disable ImportantRule
+    position: absolute !important;
+    // scss-lint:enable ImportantRule
+    bottom: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 0.6rem;
+
+    @media (min-width: $sm-device) {
+      font-size: 1.3rem;
+    }
+
+    @media (min-width: $md-device) {
+      text-shadow: 2px 3px 5px rgba($black, 0.7);
+    }
+  }
+
+  .madeby {
+    span {
+      color: $orange;
+    }
+  }
+}

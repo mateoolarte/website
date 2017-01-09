@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  transition: box-shadow 0.45s $cubic-bezier-2, background-color 0.45s $cubic-bezier-2;
+  border-radius: 5px;
+  color: $white;
+  text-decoration: none;
+  box-shadow: $z-depth-1;
+
+  &:hover {
+    box-shadow: $z-depth-1-half;
+  }
+
+  &-default {
+    background-color: $orange;
+
+    &:hover {
+      outline: none;
+      background-color: tint($orange, 10%);
+    }
+  }
+
+  &-primary {
+    background-color: $blue;
+
+    &:hover {
+      outline: none;
+      background-color: tint($blue, 10%);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.main-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  @media (min-width: $md-device) {
+    position: static;
+    width: 60%;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 60px;
+  background-color: $blue;
+  color: $white;
+  font-family: $titles;
+  font-size: 0.7rem;
+  list-style: none;
+
+  @media (min-width: $sm-device) {
+    height: 80px;
+    font-size: 1rem;
+  }
+
+  @media (min-width: $md-device) {
+    height: auto;
+    background: transparent;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    color: $black;
+
+    @media (min-width: $md-device) {
+      color: $gold;
+    }
+  }
+
+  &.active {
+    outline: none;
+    color: $black;
+
+    @media (min-width: $md-device) {
+      color: $gold;
+    }
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 5px;
+  }
+}

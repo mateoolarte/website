@@ -1,0 +1,12 @@
+body {
+  background-color: $white;
+  color: $black;
+  font-family: $texts;
+}
+
+.container {
+  @media (min-width: $xl-device) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

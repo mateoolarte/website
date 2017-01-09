@@ -14,27 +14,80 @@
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto+Mono:300,400,700" />
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
   </head>
-  <body>
+  <body id="body">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header class="header">
+    <div class="wrapper">
+      <header class="header container">
+        <picture class="logo">
+          <source media="(max-width: 1023px)" srcset="images/logo-dark-text.png" />
+          <source media="(min-width: 1024px)" srcset="images/logo-light.png"  />
+          <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
+        </picture>
+        <nav class="main-nav">
+          <ul>
+            <li class="main-nav__item active">
+              <svg class="icon-home">
+                <use xlink:href="/images/icons.svg#icon-home">
+                </use>
+              </svg>
+              Inicio
+            </li>
+            <li class="main-nav__item">
+              <svg class="icon-about">
+                <use xlink:href="/images/icons.svg#icon-about">
+                </use>
+              </svg>
+              Sobre mi
+            </li>
+            <li class="main-nav__item">
+              <svg class="icon-work">
+                <use xlink:href="/images/icons.svg#icon-work">
+                </use>
+              </svg>
+              Trabajo
+            </li>
+            <li class="main-nav__item">
+              <svg class="icon-mail">
+                <use xlink:href="/images/icons.svg#icon-mail">
+                </use>
+              </svg>
+              Contacto
+            </li>
+            <li class="main-nav__item">
+              <svg class="icon-blog">
+                <use xlink:href="/images/icons.svg#icon-blog">
+                </use>
+              </svg>
+              Blog
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    </header>
+      <section class="home">
+        <h1 class="home-title">
+          Hola! <br /> mi nombre es Mateo
+        </h1>
+        <h2 class="home-subtitle">
+          Soy desarrollador web, apasionado por desarrollar con tecnologías modernas y diseñar experiencias de usuario usables.
+        </h2>
+        <a class="btn btn-default" href="#">Conoce más</a>
+      </section>
 
-    <section class="home">
-
-    </section>
-
-    <footer class="footer">
-
-    </footer>
+      <footer class="footer">
+        <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
+        <p class="copyright">© Todos los derechos reservados 2017</p>
+      </footer>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
