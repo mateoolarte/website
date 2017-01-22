@@ -2,6 +2,10 @@
   margin-bottom: 80px;
   text-align: center;
 
+  @media (min-width: $sm-device) {
+    margin-bottom: 100px;
+  }
+
   @media (min-width: $md-device) {
     // scss-lint:disable ImportantRule
     position: absolute !important;
@@ -26,6 +30,20 @@
   .madeby {
     span {
       color: $orange;
+    }
+  }
+
+  &-alt {
+    @media (min-width: $md-device) {
+      // scss-lint:disable ImportantRule
+      position: static !important;
+      // scss-lint:enable ImportantRule
+    }
+
+    p {
+      @media (min-width: $md-device) {
+        text-shadow: none;
+      }
     }
   }
 }

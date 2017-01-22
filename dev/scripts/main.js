@@ -2,7 +2,7 @@ window.addEventListener('orientationchange', toggleLandscape);
 
 function toggleLandscape() {
   const orientation = window.screen.orientation.type;
-  let $body = document.getElementById('body');
+  let $body = document.body;
 
   if(orientation == 'landscape-primary' || orientation == 'landscape-secondary') {
     $body.classList.add('landscape');

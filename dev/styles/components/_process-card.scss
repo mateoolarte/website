@@ -1,0 +1,68 @@
+.about-process__card {
+  position: relative;
+  margin-bottom: 4.5rem;
+  padding: 3rem 1.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: $z-depth-1;
+
+  @media (min-width: $sm-device) {
+    width: calc((100% / 2) - 5rem);
+  }
+
+  @media (min-width: $lg-device) {
+    width: calc((100% / 3) - 6rem);
+    margin-right: 2rem;
+  }
+
+  &:first-child {
+    @media (min-width: $sm-device) {
+      margin-right: 2rem;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 2rem;
+
+    @media (min-width: $lg-device) {
+      margin-right: 0;
+      margin-bottom: 4.5rem;
+    }
+
+    @media (min-width: $sm-device) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.about-process__card-icon {
+  display: inline-block;
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  padding: 1rem;
+  transform: translateX(-50%) scale(1);
+  transition: transform 0.35s $cubic-bezier-2, box-shadow 0.35s $cubic-bezier-2;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: $z-depth-1;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $orange;
+  }
+
+  &:hover {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: $z-depth-1-half;
+  }
+}
+
+.about-process__card-title {
+  margin: 0;
+}
+
+.about-process__card-description {
+  font-size: 1.2rem;
+  text-align: left;
+}

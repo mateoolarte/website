@@ -29,20 +29,6 @@
     width: 60%;
     padding-top: 25vh;
   }
-
-  .btn-default {
-    @media (min-width: $sm-device) {
-      font-size: 2rem;
-    }
-
-    @media (min-width: $md-device) {
-      font-size: 1.6rem;
-    }
-
-    @media (min-width: $xl-device) {
-      font-size: 2rem;
-    }
-  }
 }
 
 .home-title,
@@ -78,8 +64,10 @@
 }
 
 .landscape {
-  .home {
-    height: auto;
-    margin-bottom: 2.5rem;
+  @media (max-width: $sm-device) {
+    .home {
+      height: auto;
+      margin-bottom: 2.5rem;
+    }
   }
 }

@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mateo Olarte - Sobre mi</title>
+
+  <link rel="apple-touch-icon" href="touch-icon.png" />
+
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto+Mono:300,400,700" />
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+    <p class="browserupgrade">Estas usando un navegador<strong>DEMASIADO VIEJO</strong>. Te recomiendo que <a href="http://browsehappy.com/">realices una actualización</a> para mejorar tu experiencia.</p>
+  <![endif]-->
+
+  <div class="container">
+    <header class="header">
+      <picture class="logo">
+        <source media="(min-width: 1024px)" srcset="images/logo-dark.png" />
+        <source srcset="images/logo-dark-text.png" />
+        <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
+      </picture>
+      <nav class="main-nav main-nav-alt">
+        <ul>
+          <li>
+            <a class="main-nav__item" href="/">
+              <svg class="icon-home">
+                <use xlink:href="/images/icons.svg#icon-home">
+                </use>
+              </svg> Inicio
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__item active" href="sobre-mi.html">
+              <svg class="icon-about">
+                <use xlink:href="/images/icons.svg#icon-about">
+                </use>
+              </svg> Sobre mi
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="trabajo.html">
+              <svg class="icon-work">
+                <use xlink:href="/images/icons.svg#icon-work">
+                </use>
+              </svg> Trabajo
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="contacto.html">
+              <svg class="icon-mail">
+                <use xlink:href="/images/icons.svg#icon-mail">
+                </use>
+              </svg> Contacto
+            </a>
+          </li>
+          <li>
+            <a class="main-nav__item" href="#">
+              <svg class="icon-blog">
+                <use xlink:href="/images/icons.svg#icon-blog">
+                </use>
+              </svg> Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about">
+      <div class="about-info">
+        <div class="about-avatar">
+          <img src="images/avatar-desktop.png" alt="Avatar Mateo Olarte" />
+        </div>
+        <p class="about-description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="about-process">
+        <h2 class="about-process__title">Mi proceso & servicios</h2>
+        <p class="about-process__subtitle">
+          Conoce más acerca del proceso que realizo para crear nuevos productos
+        </p>
+        <div class="about-process__card-container">
+          <article class="about-process__card">
+            <span class="about-process__card-icon">
+              <svg class="icon-research">
+                <use xlink:href="/images/icons.svg#icon-research">
+                </use>
+              </svg>
+            </span>
+            <h2 class="about-process__card-title">Estrategia</h2>
+            <hr />
+            <p class="about-process__card-description">
+              Entender las ideas de los clientes, generar una investigación de mercado para definir los requerimientos, mercado y crear un producto innovador.
+            </p>
+          </article>
+          <article class="about-process__card">
+            <span class="about-process__card-icon">
+              <svg class="icon-experience">
+                <use xlink:href="/images/icons.svg#icon-experience">
+                </use>
+              </svg>
+            </span>
+            <h2 class="about-process__card-title">Experiencia de usuario</h2>
+            <hr />
+            <p class="about-process__card-description">
+              En base a los requisitos y funcionalidades se crean y forman contenidos, estructura y comportamientos del producto para poder crear experiencias enfocadas en los usuarios.
+            </p>
+          </article>
+          <article class="about-process__card">
+            <span class="about-process__card-icon">
+              <svg class="icon-develop">
+                <use xlink:href="/images/icons.svg#icon-develop">
+                </use>
+              </svg>
+            </span>
+            <h2 class="about-process__card-title">Desarrollo e implementación</h2>
+            <hr />
+            <p class="about-process__card-description">
+              Desarrollar una plataforma que sea accesible desde los diferentes dispositivos que se encuentran en el mercado para que el usuario tengar una mejor interacción con las funcionalidades del producto.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <a class="btn btn-primary" href="#">Hoja de vida</a>
+    </section>
+
+    <footer class="footer footer-alt">
+      <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
+      <p class="copyright">© Mateo Olarte - 2017</p>
+    </footer>
+  </div>
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function() {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
