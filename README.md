@@ -2,6 +2,7 @@
 Sitio web personal
 
 # Guidelines for work
+`yarn && bower install` for download dependencies
 `gulp serve` for work development
 `gulp` for create dist files
 

@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mateo Olarte - Frontend Developer</title>
+  <title>Mateo Olarte - Contacto</title>
 
   <link rel="apple-touch-icon" href="touch-icon.png" />
 
@@ -26,17 +26,17 @@
     <p class="browserupgrade">Estas usando un navegador<strong>DEMASIADO VIEJO</strong>. Te recomiendo que <a href="http://browsehappy.com/">realices una actualización</a> para mejorar tu experiencia.</p>
   <![endif]-->
 
-  <div class="wrapper">
-    <header class="header container">
+  <div class="container">
+    <header class="header">
       <picture class="logo">
-        <source media="(min-width: 1024px)" srcset="images/logo-light.png 1x, images/logo-light-x2.png 2x" />
+        <source media="(min-width: 1024px)" srcset="images/logo-dark.png 1x, images/logo-dark-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav-alt">
         <ul>
           <li>
-            <a class="main-nav__item active" href="/">
+            <a class="main-nav__item" href="/">
               <svg class="icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
@@ -60,7 +60,7 @@
             </a>
           </li>
           <li>
-            <a class="main-nav__item" href="contacto.html">
+            <a class="main-nav__item active" href="contacto.html">
               <svg class="icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
@@ -79,17 +79,39 @@
       </nav>
     </header>
 
-    <section class="home">
-      <h1 class="home-title">
-        Hola! <br /> mi nombre es Mateo
-      </h1>
-      <h2 class="home-subtitle">
-        Soy desarrollador web, apasionado por desarrollar con tecnologías modernas y diseñar experiencias de usuario usables.
+    <section class="contact">
+      <h1 class="contact-title">Sigue en contacto conmigo</h1>
+      <h2 class="contact-subtitle">
+        A través de los siguientes medios puedes conocer acerca de mis gustos y poder contactar conmigo.
       </h2>
-      <a class="btn btn-default" href="/sobre-mi.html">Conoce más</a>
+      <aside class="contact-social">
+        <h2 class="contact-social__title">Sígueme en redes sociales</h2>
+        <a href="https://github.com/mateoolarte" target="_blank" class="contact-social__icon">
+          <svg class="icon-github">
+            <use xlink:href="/images/icons.svg#icon-github"></use>
+          </svg>
+          <strong>Github</strong>
+        </a>
+        <a href="https://twitter.com/mateo_olarte" target="_blank" class="contact-social__icon contact-social__icon-twitter">
+          <svg class="icon-twitter">
+            <use xlink:href="/images/icons.svg#icon-twitter"></use>
+          </svg>
+          <strong>Twitter</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/mateoolarte/" target="_blank" class="contact-social__icon contact-social__icon-linkedin">
+          <svg class="icon-linkedin">
+            <use xlink:href="/images/icons.svg#icon-linkedin"></use>
+          </svg>
+          <strong>Linkedin</strong>
+        </a>
+      </aside>
+      <section class="contact-email">
+        <h2 class="contact-email__title">O puedes escribirme a mi correo</h2>
+        <a href="mailto:mateo.olarte8@gmail.com">mateo.olarte8@gmail.com</a>
+      </section>
     </section>
 
-    <footer class="footer">
+    <footer class="footer footer-alt">
       <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
       <p class="copyright">© Mateo Olarte - 2017</p>
     </footer>

@@ -1,0 +1,142 @@
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $sm-device) {
+    width: 70%;
+    height: 63vh;
+    margin-bottom: 2rem;
+    padding-top: 2vh;
+  }
+
+  @media (min-width: $md-device) {
+    width: 80%;
+    height: 65vh;
+    padding-top: 5vh;
+  }
+
+  @media (min-width: $lg-device) {
+    height: auto;
+  }
+
+  @media (min-width: $xl-device) {
+    height: 55vh;
+    padding-top: 15vh;
+  }
+}
+
+.contact-title {
+  margin: 2rem 0 0;
+  font-family: $titles;
+  font-size: 1.8rem;
+
+  @media (min-width: $sm-device) {
+    font-size: 3rem;
+  }
+}
+
+.contact-subtitle {
+  margin: 0.5rem 0 3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: justify;
+
+  @media (min-width: $sm-device) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: $lg-device) {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: $md-device) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $lg-device) {
+    width: 50%;
+  }
+}
+
+.contact-social__title {
+  width: 100%;
+  font-family: $titles;
+
+  @media (min-width: $sm-device) {
+    font-size: 2rem;
+  }
+}
+
+.contact-social__icon {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.35s $cubic-bezier;
+  color: $black;
+  text-decoration: none;
+
+  strong {
+    display: block;
+
+    @media (min-width: $sm-device) {
+      font-size: 1.2rem;
+    }
+  }
+
+  svg {
+    @media (min-width: $sm-device) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &-twitter {
+    color: $blue;
+  }
+
+  &-linkedin {
+    color: $dark-blue;
+  }
+}
+
+.contact-email__title {
+  font-family: $titles;
+}
+
+.contact-email {
+  margin-bottom: 3rem;
+
+  a {
+    color: $blue;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+    @media (min-width: $sm-device) {
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.landscape {
+  @media (max-width: $sm-device) {
+    .contact-subtitle {
+      margin-bottom: 2rem;
+    }
+  }
+}

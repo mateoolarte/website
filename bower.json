@@ -2,7 +2,6 @@
   "name": "mateoolarte",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.8.1",
     "normalize-css": "normalize.css#^5.0.0"
   }
 }
