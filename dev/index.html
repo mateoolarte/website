@@ -28,48 +28,48 @@
 
   <div class="wrapper">
     <header class="header container">
-      <picture class="logo">
+      <picture class="header__logo">
         <source media="(min-width: 1024px)" srcset="images/logo-light.png 1x, images/logo-light-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
       <nav class="main-nav">
-        <ul>
-          <li>
-            <a class="main-nav__item active" href="/">
-              <svg class="icon-home">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active" href="/">
+              <svg class="main-nav__icon icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
               </svg> Inicio
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="sobre-mi.html">
-              <svg class="icon-about">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="sobre-mi.html">
+              <svg class="main-nav__icon icon-about">
                 <use xlink:href="/images/icons.svg#icon-about">
                 </use>
               </svg> Sobre mi
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="trabajo.html">
-              <svg class="icon-work">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="trabajo.html">
+              <svg class="main-nav__icon icon-work">
                 <use xlink:href="/images/icons.svg#icon-work">
                 </use>
               </svg> Trabajo
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="contacto.html">
-              <svg class="icon-mail">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="contacto.html">
+              <svg class="main-nav__icon icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
               </svg> Contacto
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="#">
-              <svg class="icon-blog">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              <svg class="main-nav__icon icon-blog">
                 <use xlink:href="/images/icons.svg#icon-blog">
                 </use>
               </svg> Blog
@@ -80,18 +80,20 @@
     </header>
 
     <section class="home">
-      <h1 class="home-title">
+      <h1 class="heading-1">
         Hola! <br /> mi nombre es Mateo
       </h1>
-      <h2 class="home-subtitle">
+      <p class="paragraph paragraph--home">
         Soy desarrollador web, apasionado por desarrollar con tecnologías modernas y diseñar experiencias de usuario usables.
-      </h2>
+      </p>
       <a class="btn btn-default" href="/sobre-mi.html">Conoce más</a>
     </section>
 
-    <footer class="footer">
-      <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
-      <p class="copyright">© Mateo Olarte - 2017</p>
+    <footer class="footer footer--home">
+      <small class="footer__text footer__text--home">
+        Hecho con <span class="footer__heart">♥</span> desde <strong>Medellín, Colombia</strong>
+      </small>
+      <small class="footer__text">© Mateo Olarte - 2017</small>
     </footer>
   </div>
 

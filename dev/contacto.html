@@ -28,48 +28,48 @@
 
   <div class="container">
     <header class="header">
-      <picture class="logo">
+      <picture class="header__logo">
         <source media="(min-width: 1024px)" srcset="images/logo-dark.png 1x, images/logo-dark-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
-      <nav class="main-nav main-nav-alt">
-        <ul>
-          <li>
-            <a class="main-nav__item" href="/">
-              <svg class="icon-home">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="/">
+              <svg class="main-nav__icon icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
               </svg> Inicio
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="sobre-mi.html">
-              <svg class="icon-about">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="sobre-mi.html">
+              <svg class="main-nav__icon icon-about">
                 <use xlink:href="/images/icons.svg#icon-about">
                 </use>
               </svg> Sobre mi
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="trabajo.html">
-              <svg class="icon-work">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="trabajo.html">
+              <svg class="main-nav__icon icon-work">
                 <use xlink:href="/images/icons.svg#icon-work">
                 </use>
               </svg> Trabajo
             </a>
           </li>
-          <li>
-            <a class="main-nav__item active" href="contacto.html">
-              <svg class="icon-mail">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt main-nav__link--active" href="contacto.html">
+              <svg class="main-nav__icon icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
               </svg> Contacto
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="#">
-              <svg class="icon-blog">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="#">
+              <svg class="main-nav__icon icon-blog">
                 <use xlink:href="/images/icons.svg#icon-blog">
                 </use>
               </svg> Blog
@@ -80,40 +80,40 @@
     </header>
 
     <section class="contact">
-      <h1 class="contact-title">Sigue en contacto conmigo</h1>
-      <h2 class="contact-subtitle">
+      <h1 class="heading-1">Sigue en contacto conmigo</h1>
+      <p class="paragraph paragraph--contact">
         A través de los siguientes medios puedes conocer acerca de mis gustos y poder contactar conmigo.
-      </h2>
-      <aside class="contact-social">
-        <h2 class="contact-social__title">Sígueme en redes sociales</h2>
-        <a href="https://github.com/mateoolarte" target="_blank" class="contact-social__icon">
+      </p>
+      <aside class="social">
+        <h2 class="heading-3 width100">Sígueme en redes sociales</h2>
+        <a href="https://github.com/mateoolarte" class="social__icon" target="_blank">
           <svg class="icon-github">
             <use xlink:href="/images/icons.svg#icon-github"></use>
           </svg>
           <strong>Github</strong>
         </a>
-        <a href="https://twitter.com/mateo_olarte" target="_blank" class="contact-social__icon contact-social__icon-twitter">
+        <a href="https://twitter.com/mateo_olarte" class="social__icon social__icon--twitter" target="_blank">
           <svg class="icon-twitter">
             <use xlink:href="/images/icons.svg#icon-twitter"></use>
           </svg>
           <strong>Twitter</strong>
         </a>
-        <a href="https://www.linkedin.com/in/mateoolarte/" target="_blank" class="contact-social__icon contact-social__icon-linkedin">
+        <a href="https://www.linkedin.com/in/mateoolarte/" class="social__icon social__icon--linkedin" target="_blank">
           <svg class="icon-linkedin">
             <use xlink:href="/images/icons.svg#icon-linkedin"></use>
           </svg>
           <strong>Linkedin</strong>
         </a>
       </aside>
-      <section class="contact-email">
-        <h2 class="contact-email__title">O puedes escribirme a mi correo</h2>
-        <a href="mailto:mateo.olarte8@gmail.com">mateo.olarte8@gmail.com</a>
-      </section>
+      <h3 class="heading-4">O puedes escribirme a mi correo</h3>
+      <a href="mailto:mateo.olarte8@gmail.com" class="email">mateo.olarte8@gmail.com</a>
     </section>
 
-    <footer class="footer footer-alt">
-      <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
-      <p class="copyright">© Mateo Olarte - 2017</p>
+    <footer class="footer">
+      <small class="footer__text">
+        Hecho con <span class="footer__heart">♥</span> desde <strong>Medellín, Colombia</strong>
+      </small>
+      <small class="footer__text">© Mateo Olarte - 2017</small>
     </footer>
   </div>
 

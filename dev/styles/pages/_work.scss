@@ -1,4 +1,4 @@
-.work-header {
+.work__header {
   position: relative;
   height: 60vh;
 
@@ -19,12 +19,13 @@
   }
 }
 
-.work-header__container {
+.work__header-container {
   position: absolute;
   top: 40%;
   left: 50%;
   width: 90%;
   transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 
   @media (min-width: $md-device) {
     top: 50%;
@@ -39,18 +40,7 @@
   }
 }
 
-.work-header__title {
-  margin: 0 0 2.5rem;
-  font-family: $titles;
-  font-size: 1.8rem;
-  text-align: center;
-
-  @media (min-width: $sm-device) {
-    font-size: 2.5rem;
-  }
-}
-
-.work-header__scroll {
+.work__scroll {
   position: absolute;
   left: calc(50% - 1rem);
   width: 2rem;
@@ -80,18 +70,13 @@
 
 .landscape {
   @media (max-width: $sm-device) {
-    .work-header {
+    .work__header {
       height: 50vh;
       margin-bottom: 2rem;
     }
 
-    .work-header__container {
+    .work__header-container {
       width: 85%;
-    }
-
-    .work-header__title {
-      margin-bottom: 1rem;
-      font-size: 1.6rem;
     }
 
     .work-item__image {

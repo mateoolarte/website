@@ -1,8 +1,9 @@
-.about-process__card {
+.services__card {
   position: relative;
   margin-bottom: 4.5rem;
   padding: 3rem 1.5rem 1rem;
   border-radius: 5px;
+  text-align: left;
   box-shadow: $z-depth-1;
 
   @media (min-width: $sm-device) {
@@ -34,7 +35,7 @@
   }
 }
 
-.about-process__card-icon {
+.services__icon {
   display: inline-block;
   position: absolute;
   top: -2.5rem;
@@ -46,23 +47,14 @@
   background-color: $white;
   box-shadow: $z-depth-1;
 
+  &:hover {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: $z-depth-1-half;
+  }
+
   svg {
     width: 2.5rem;
     height: 2.5rem;
     fill: $orange;
   }
-
-  &:hover {
-    transform: translateX(-50%) scale(1.2);
-    box-shadow: $z-depth-1-half;
-  }
-}
-
-.about-process__card-title {
-  margin: 0;
-}
-
-.about-process__card-description {
-  font-size: 1.2rem;
-  text-align: left;
 }

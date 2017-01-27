@@ -4,13 +4,13 @@
   text-align: center;
 }
 
-.about-info {
+.about__info {
+  margin: 4rem 0;
   text-align: center;
 
   @media (min-width: $sm-device) {
     display: flex;
     align-items: center;
-    margin: 4rem 0;
   }
 
   @media (min-width: $xl-device) {
@@ -18,7 +18,9 @@
   }
 }
 
-.about-avatar {
+.about__avatar {
+  margin: 0;
+
   @media (min-width: $sm-device) {
     width: 40%;
   }
@@ -27,13 +29,9 @@
     width: 45%;
     text-align: center;
   }
-
-  img {
-    max-width: 100%;
-  }
 }
 
-.about-description {
+.about__description {
   font-size: 1.2rem;
   text-align: justify;
 
@@ -48,23 +46,8 @@
   }
 }
 
-.about-process__title {
-  margin: 2rem 0 0.6rem;
-  color: $blue;
-  font-size: 1.8rem;
-
-  @media (min-width: $sm-device) {
-    margin: 0 0 0.3rem;
-    font-size: 2.5rem;
-  }
-}
-
-.about-process__subtitle {
-  margin: 0 0 4rem;
-  font-size: 1.2rem;
-}
-
-.about-process__card-container {
+.services__container {
+  margin-top: 4rem;
 
   @media (min-width: $sm-device) {
     display: flex;

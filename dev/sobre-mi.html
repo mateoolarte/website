@@ -28,48 +28,48 @@
 
   <div class="container">
     <header class="header">
-      <picture class="logo">
+      <picture class="header__logo">
         <source media="(min-width: 1024px)" srcset="images/logo-dark.png 1x, images/logo-dark-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
-      <nav class="main-nav main-nav-alt">
-        <ul>
-          <li>
-            <a class="main-nav__item" href="/">
-              <svg class="icon-home">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="/">
+              <svg class="main-nav__icon icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
               </svg> Inicio
             </a>
           </li>
-          <li>
-            <a class="main-nav__item active" href="sobre-mi.html">
-              <svg class="icon-about">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt main-nav__link--active" href="sobre-mi.html">
+              <svg class="main-nav__icon icon-about">
                 <use xlink:href="/images/icons.svg#icon-about">
                 </use>
               </svg> Sobre mi
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="trabajo.html">
-              <svg class="icon-work">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="trabajo.html">
+              <svg class="main-nav__icon icon-work">
                 <use xlink:href="/images/icons.svg#icon-work">
                 </use>
               </svg> Trabajo
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="contacto.html">
-              <svg class="icon-mail">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="contacto.html">
+              <svg class="main-nav__icon icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
               </svg> Contacto
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="#">
-              <svg class="icon-blog">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="#">
+              <svg class="main-nav__icon icon-blog">
                 <use xlink:href="/images/icons.svg#icon-blog">
                 </use>
               </svg> Blog
@@ -80,58 +80,59 @@
     </header>
 
     <section class="about">
-      <div class="about-info">
-        <div class="about-avatar">
+      <h1 class="heading-1">¿Quien soy?</h1>
+      <div class="about__info">
+        <figure class="about__avatar">
           <img src="images/avatar-desktop.png" alt="Avatar Mateo Olarte" />
-        </div>
-        <p class="about-description">
+        </figure>
+        <p class="about__description">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
 
-      <div class="about-process">
-        <h2 class="about-process__title">Mi proceso & servicios</h2>
-        <p class="about-process__subtitle">
+      <div class="services">
+        <h2 class="heading-2 heading-2--services">Mi proceso & servicios</h2>
+        <p class="paragraph">
           Conoce más acerca del proceso que realizo para crear nuevos productos
         </p>
-        <div class="about-process__card-container">
-          <article class="about-process__card">
-            <span class="about-process__card-icon">
+        <div class="services__container">
+          <article class="services__card">
+            <span class="services__icon">
               <svg class="icon-research">
                 <use xlink:href="/images/icons.svg#icon-research">
                 </use>
               </svg>
             </span>
-            <h2 class="about-process__card-title">Estrategia</h2>
+            <h1 class="heading-3 text-center">Estrategia</h1>
             <hr />
-            <p class="about-process__card-description">
+            <p class="paragraph">
               Entender las ideas de los clientes, generar una investigación de mercado para definir los requerimientos, mercado y crear un producto innovador.
             </p>
           </article>
-          <article class="about-process__card">
-            <span class="about-process__card-icon">
+          <article class="services__card">
+            <span class="services__icon">
               <svg class="icon-experience">
                 <use xlink:href="/images/icons.svg#icon-experience">
                 </use>
               </svg>
             </span>
-            <h2 class="about-process__card-title">Experiencia de usuario</h2>
+            <h1 class="heading-3 text-center">Experiencia de usuario</h1>
             <hr />
-            <p class="about-process__card-description">
+            <p class="paragraph">
               En base a los requisitos y funcionalidades se crean y forman contenidos, estructura y comportamientos del producto para poder crear experiencias enfocadas en los usuarios.
             </p>
           </article>
-          <article class="about-process__card">
-            <span class="about-process__card-icon">
+          <article class="services__card">
+            <span class="services__icon">
               <svg class="icon-develop">
                 <use xlink:href="/images/icons.svg#icon-develop">
                 </use>
               </svg>
             </span>
-            <h2 class="about-process__card-title">Desarrollo e implementación</h2>
+            <h1 class="heading-3 text-center">Desarrollo e implementación</h1>
             <hr />
-            <p class="about-process__card-description">
+            <p class="paragraph">
               Desarrollar una plataforma que sea accesible desde los diferentes dispositivos que se encuentran en el mercado para que el usuario tengar una mejor interacción con las funcionalidades del producto.
             </p>
           </article>
@@ -141,13 +142,13 @@
       <a class="btn btn-primary" href="#">Hoja de vida</a>
     </section>
 
-    <footer class="footer footer-alt">
-      <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
-      <p class="copyright">© Mateo Olarte - 2017</p>
+    <footer class="footer">
+      <small class="footer__text">
+        Hecho con <span class="footer__heart">♥</span> desde <strong>Medellín, Colombia</strong>
+      </small>
+      <small class="footer__text">© Mateo Olarte - 2017</small>
     </footer>
   </div>
-
-
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

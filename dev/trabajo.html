@@ -28,48 +28,48 @@
 
   <div class="container">
     <header class="header">
-      <picture class="logo">
+      <picture class="header__logo">
         <source media="(min-width: 1024px)" srcset="images/logo-dark.png 1x, images/logo-dark-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
-      <nav class="main-nav main-nav-alt">
-        <ul>
-          <li>
-            <a class="main-nav__item" href="/">
-              <svg class="icon-home">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="/">
+              <svg class="main-nav__icon icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
               </svg> Inicio
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="sobre-mi.html">
-              <svg class="icon-about">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="sobre-mi.html">
+              <svg class="main-nav__icon icon-about">
                 <use xlink:href="/images/icons.svg#icon-about">
                 </use>
               </svg> Sobre mi
             </a>
           </li>
-          <li>
-            <a class="main-nav__item active" href="trabajo.html">
-              <svg class="icon-work">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt main-nav__link--active" href="trabajo.html">
+              <svg class="main-nav__icon icon-work">
                 <use xlink:href="/images/icons.svg#icon-work">
                 </use>
               </svg> Trabajo
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="contacto.html">
-              <svg class="icon-mail">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="contacto.html">
+              <svg class="main-nav__icon icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
               </svg> Contacto
             </a>
           </li>
-          <li>
-            <a class="main-nav__item" href="#">
-              <svg class="icon-blog">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--alt" href="#">
+              <svg class="main-nav__icon icon-blog">
                 <use xlink:href="/images/icons.svg#icon-blog">
                 </use>
               </svg> Blog
@@ -80,72 +80,72 @@
     </header>
 
     <section class="work">
-      <header class="work-header">
-        <div class="work-header__container">
-          <h1 class="work-header__title">
+      <header class="work__header">
+        <div class="work__header-container">
+          <h1 class="heading-1">
             Explora acerca de mis trabajos y proyectos personales
           </h1>
-          <a class="work-header__scroll" href="#works"></a>
+          <a class="work__scroll" href="#works"></a>
         </div>
       </header>
-      <section class="work-container" id="works">
-        <article class="work-item">
-          <div class="work-item__image">
+      <section class="work__container" id="works">
+        <article class="work__item">
+          <div class="work__image">
             <img src="images/work-ecoactuar-desktop.png" alt="Proyecto Ecoactuar" srcset="images/work-ecoactuar-mobile.png 768w, images/work-ecoactuar-desktop.png 1024w">
           </div>
-          <div class="work-item__content">
-            <h2 class="work-item__title">Ecoactuar</h2>
-            <p class="work-item__description">
+          <div class="work__content">
+            <h2 class="heading-2">Ecoactuar</h2>
+            <p class="paragraph text-justify">
               Ecoactuar es una aplicacion web en la que puedes reportar problemas ambientales en tu ciudad ya sean desechos toxicos, maltrato animal, contaminacion del aire y el agua, entre otros. Este proyecto fue el trabajo final de un programa piloto que enseña
               a jovenes sobre programacion web el cual se llama Coderise.
             </p>
             <hr />
-            <h3 class="work-item__subtitle">Tecnologías</h3>
-            <p class="work-item__technologies">
-              <span class="work-item__tech-icon"><b>NodeJS</b></span>
-              <span class="work-item__tech-icon"><b>Javascript</b></span>
-              <span class="work-item__tech-icon"><b>HTML5</b></span>
-              <span class="work-item__tech-icon"><b>CSS3</b></span>
-              <span class="work-item__tech-icon"><b>Bootstrap</b></span>
-              <span class="work-item__tech-icon"><b>Jquery</b></span>
-            </p>
+            <h3 class="heading-3">Tecnologías</h3>
+            <aside class="work__technologies">
+              <span class="work__icon"><b>NodeJS</b></span>
+              <span class="work__icon"><b>Javascript</b></span>
+              <span class="work__icon"><b>HTML5</b></span>
+              <span class="work__icon"><b>CSS3</b></span>
+              <span class="work__icon"><b>Bootstrap</b></span>
+              <span class="work__icon"><b>Jquery</b></span>
+            </aside>
             <a class="btn btn-primary" href="/ecoactuar">Conoce más</a>
           </div>
         </article>
-        <article class="work-item">
-          <div class="work-item__image">
+        <article class="work__item">
+          <div class="work__image">
             <img src="images/work-rebbel-ropa-desktop.png" alt="Proyecto REBBEL (Tienda de Ropa)" srcset="images/work-rebbel-ropa-mobile.png 768w, images/work-rebbel-ropa-desktop.png 1024w">
           </div>
-          <div class="work-item__content">
-            <h2 class="work-item__title">REBBEL (Tienda de Ropa)</h2>
-            <p class="work-item__description">
+          <div class="work__content">
+            <h2 class="heading-2">REBBEL (Tienda de Ropa)</h2>
+            <p class="paragraph text-justify">
               Rebbel es una tienda online que vende y distribuye ropa para un publico juvenil. Y este es el desarrollo de su landing de pre-estreno.
             </p>
             <hr />
-            <h3 class="work-item__subtitle">Tecnologías</h3>
-            <p class="work-item__technologies">
-              <span class="work-item__tech-icon"><b>HTML5</b></span>
-              <span class="work-item__tech-icon"><b>CSS3</b></span>
-              <span class="work-item__tech-icon"><b>Javascript</b></span>
-            </p>
+            <h3 class="heading-3">Tecnologías</h3>
+            <aside class="work__technologies">
+              <span class="work__icon"><b>HTML5</b></span>
+              <span class="work__icon"><b>CSS3</b></span>
+              <span class="work__icon"><b>Javascript</b></span>
+            </aside>
             <a class="btn btn-primary" href="/rebbel">Conoce más</a>
           </div>
         </article>
-        <article class="work-item">
-          <div class="work-item__image">
+        <article class="work__item">
+          <div class="work__image">
             <img src="images/work-rebbel-estudio-desktop.png" alt="Proyecto REBBEL (Estudio Gráfico)" srcset="images/work-rebbel-estudio-mobile.png 768w, images/work-rebbel-estudio-desktop.png 1024w">
           </div>
-          <div class="work-item__content">
-            <h2 class="work-item__title">REBBEL (Estudio Gráfico)</h2>
-            <p class="work-item__description">
+          <div class="work__content">
+            <h2 class="heading-2">REBBEL (Estudio Gráfico)</h2>
+            <p class="paragraph text-justify">
               Desarrollo de dos landing page para el estudio grafico REBBEL, el cual contiene informacion acerca de los diferentes planes que ofrece el estudio para que emprendedores y pequeñas empresas eligen el que mejor se acomode a sus necesidades.
             </p>
             <hr />
-            <h3 class="work-item__subtitle">Tecnologías</h3>
-            <p class="work-item__technologies">
-              <span class="work-item__tech-icon"><b>HTML5</b></span>
-              <span class="work-item__tech-icon"><b>CSS3</b></span>
-              <span class="work-item__tech-icon"><b>PHP</b></span>
+            <h3 class="heading-3">Tecnologías</h3>
+            <p class="work__technologies">
+              <span class="work__icon"><b>HTML5</b></span>
+              <span class="work__icon"><b>CSS3</b></span>
+              <span class="work__icon"><b>PHP</b></span>
             </p>
             <a class="btn btn-primary" href="http://rebbel.co/programa-pymes/">Conoce más</a>
             <a class="btn btn-primary" href="http://rebbel.co/programa-emprendedor/">Conoce más</a>
@@ -154,9 +154,11 @@
       </section>
     </section>
 
-    <footer class="footer footer-alt">
-      <p class="madeby">Hecho con <span>♥</span> desde <strong>Medellín, Colombia</strong></p>
-      <p class="copyright">© Mateo Olarte - 2017</p>
+    <footer class="footer">
+      <small class="footer__text">
+        Hecho con <span class="footer__heart">♥</span> desde <strong>Medellín, Colombia</strong>
+      </small>
+      <small class="footer__text">© Mateo Olarte - 2017</small>
     </footer>
   </div>
 

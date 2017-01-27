@@ -1,6 +1,6 @@
 .contact {
   width: 90%;
-  margin: 0 auto;
+  margin: 3rem auto;
   text-align: center;
 
   @media (min-width: $sm-device) {
@@ -13,6 +13,7 @@
   @media (min-width: $md-device) {
     width: 80%;
     height: 65vh;
+    margin-top: 0;
     padding-top: 5vh;
   }
 
@@ -26,32 +27,7 @@
   }
 }
 
-.contact-title {
-  margin: 2rem 0 0;
-  font-family: $titles;
-  font-size: 1.8rem;
-
-  @media (min-width: $sm-device) {
-    font-size: 3rem;
-  }
-}
-
-.contact-subtitle {
-  margin: 0.5rem 0 3rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: justify;
-
-  @media (min-width: $sm-device) {
-    font-size: 1.8rem;
-  }
-
-  @media (min-width: $lg-device) {
-    margin-bottom: 1rem;
-  }
-}
-
-.contact-social {
+.social {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -67,21 +43,16 @@
   }
 }
 
-.contact-social__title {
-  width: 100%;
-  font-family: $titles;
-
-  @media (min-width: $sm-device) {
-    font-size: 2rem;
-  }
-}
-
-.contact-social__icon {
+.social__icon {
   display: inline-block;
   transform: scale(1);
   transition: transform 0.35s $cubic-bezier;
   color: $black;
   text-decoration: none;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   strong {
     display: block;
@@ -98,45 +69,25 @@
     }
   }
 
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  &-twitter {
+  &--twitter {
     color: $blue;
   }
 
-  &-linkedin {
+  &--linkedin {
     color: $dark-blue;
   }
 }
 
-.contact-email__title {
-  font-family: $titles;
-}
+.email {
+  color: $blue;
+  font-size: 1.4rem;
+  text-decoration: none;
 
-.contact-email {
-  margin-bottom: 3rem;
-
-  a {
-    color: $blue;
-    font-size: 1.4rem;
-    text-decoration: none;
-
-    @media (min-width: $sm-device) {
-      font-size: 1.6rem;
-    }
-
-    &:hover {
-      color: $orange;
-    }
+  @media (min-width: $sm-device) {
+    font-size: 1.6rem;
   }
-}
 
-.landscape {
-  @media (max-width: $sm-device) {
-    .contact-subtitle {
-      margin-bottom: 2rem;
-    }
+  &:hover {
+    color: $orange;
   }
 }

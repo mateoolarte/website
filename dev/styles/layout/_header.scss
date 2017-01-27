@@ -1,5 +1,4 @@
 .header {
-
   @media (min-width: $md-device) {
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@
   }
 }
 
-.logo {
+.header__logo {
   display: block;
   margin: 1.4rem 0;
   text-align: center;

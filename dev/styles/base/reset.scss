@@ -4,9 +4,25 @@ body {
   font-family: $texts;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   @media (min-width: $xl-device) {
     width: 70%;
     margin: 0 auto;
   }
+}
+
+.width100 {
+  width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
 }
