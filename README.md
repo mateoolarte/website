@@ -2,9 +2,9 @@
 Sitio web personal
 
 # Guidelines for work
-`yarn && bower install` for download dependencies
-`gulp serve` for work development
-`gulp` for create dist files
+* `yarn && bower install` for download dependencies
+* `gulp serve` for work development
+* `gulp` for create dist files
 
 #Technologies used
 * [Yeoman](https://github.com/yeoman/generator-webapp "Yeoman webapp") *webapp generator*
