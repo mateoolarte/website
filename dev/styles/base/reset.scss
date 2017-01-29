@@ -26,3 +26,10 @@ img {
 .text-center {
   text-align: center;
 }
+
+.text-shadow {
+  @media (min-width: $md-device) {
+    text-shadow: 2px 3px 5px rgba($black, 0.7);
+  }
+
+}
