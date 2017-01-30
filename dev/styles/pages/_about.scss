@@ -29,6 +29,20 @@
     width: 45%;
     text-align: center;
   }
+
+  img {
+    max-width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: $z-depth-1;
+
+    @media (min-width: $md-device) {
+      max-width: 60%;
+    }
+
+    @media (min-width: $lg-device) {
+      max-width: 50%;
+    }
+  }
 }
 
 .about__description {
@@ -43,6 +57,17 @@
   @media (min-width: $md-device) {
     width: 50%;
     margin: 0;
+  }
+}
+
+.about__cite {
+  margin: 1rem;
+  font-family: $titles;
+  line-height: 1.8rem;
+  text-align: left;
+
+  q {
+    font-weight: bold;
   }
 }
 
@@ -62,8 +87,10 @@
 
 .landscape {
   @media (max-width: $sm-device) {
-    .about-avatar {
-      width: 40%;
+    .about__avatar {
+      img {
+        max-width: 40%;
+      }
     }
   }
 }

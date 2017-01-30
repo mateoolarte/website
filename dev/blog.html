@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mateo Olarte - Frontend Developer</title>
+  <title>Mateo Olarte - Blog</title>
 
   <link rel="apple-touch-icon" href="touch-icon.png" />
 
@@ -26,17 +26,17 @@
     <p class="browserupgrade">Estas usando un navegador<strong>DEMASIADO VIEJO</strong>. Te recomiendo que <a href="http://browsehappy.com/">realices una actualización</a> para mejorar tu experiencia.</p>
   <![endif]-->
 
-  <div class="wrapper">
-    <header class="header container">
+  <div class="container">
+    <header class="header">
       <picture class="header__logo">
-        <source media="(min-width: 1024px)" srcset="images/logo-light.png 1x, images/logo-light-x2.png 2x" />
+        <source media="(min-width: 1024px)" srcset="images/logo-dark.png 1x, images/logo-dark-x2.png 2x" />
         <source srcset="images/logo-dark-text.png 1x, images/logo-dark-text-x2.png 2x" />
         <img src="images/logo-dark.png" alt="Logo Mateo Olarte" />
       </picture>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active" href="/">
+            <a class="main-nav__link main-nav__link--alt" href="/">
               <svg class="main-nav__icon icon-home">
                 <use xlink:href="/images/icons.svg#icon-home">
                 </use>
@@ -44,7 +44,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="sobre-mi.html">
+            <a class="main-nav__link main-nav__link--alt" href="sobre-mi.html">
               <svg class="main-nav__icon icon-about">
                 <use xlink:href="/images/icons.svg#icon-about">
                 </use>
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="trabajo.html">
+            <a class="main-nav__link main-nav__link--alt" href="trabajo.html">
               <svg class="main-nav__icon icon-work">
                 <use xlink:href="/images/icons.svg#icon-work">
                 </use>
@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="contacto.html">
+            <a class="main-nav__link main-nav__link--alt" href="contacto.html">
               <svg class="main-nav__icon icon-mail">
                 <use xlink:href="/images/icons.svg#icon-mail">
                 </use>
@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="blog.html">
+            <a class="main-nav__link main-nav__link--alt main-nav__link--active" href="blog.html">
               <svg class="main-nav__icon icon-blog">
                 <use xlink:href="/images/icons.svg#icon-blog">
                 </use>
@@ -79,18 +79,15 @@
       </nav>
     </header>
 
-    <section class="home">
-      <h1 class="heading-1 text-shadow">
-        Hola! <br /> mi nombre es Mateo
-      </h1>
-      <p class="paragraph paragraph--home text-shadow">
-        Soy desarrollador web, apasionado por desarrollar con tecnologías modernas y diseñar experiencias de usuario usables.
-      </p>
-      <a class="btn btn-default" href="/sobre-mi.html">Conoce más</a>
+    <section class="blog">
+      <div class="blog__container">
+        <h1 class="blog__title"><strong>Proximamente</strong> <i>.</i><i>.</i><i>.</i></h1>
+        <a href="/" class="btn btn-default">Volver al inicio</a>
+      </div>
     </section>
 
-    <footer class="footer footer--home">
-      <small class="footer__text footer__text--home">
+    <footer class="footer">
+      <small class="footer__text">
         Hecho con <span class="footer__heart">♥</span> desde <strong>Medellín, Colombia</strong>
       </small>
       <small class="footer__text">© Mateo Olarte - 2017</small>
