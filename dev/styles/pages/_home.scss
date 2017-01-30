@@ -1,0 +1,37 @@
+.wrapper {
+  @media (min-width: $md-device) {
+    height: 100vh;
+    background-image: -webkit-image-set(url("../images/bg-home.jpg") 1x, url("../images/bg-home-x2.jpg") 2x);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: $white;
+
+    @include overlay();
+  }
+}
+
+.home {
+  width: 90%;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 10vh 0 0;
+
+  @media (min-width: $sm-device) {
+    padding: 15vh 0 0;
+  }
+
+  @media (min-width: $xl-device) {
+    width: 60%;
+    padding-top: 25vh;
+  }
+}
+
+.landscape {
+  @media (max-width: $sm-device) {
+    .home {
+      height: auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

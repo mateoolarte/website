@@ -1,0 +1,35 @@
+body {
+  background-color: $white;
+  color: $black;
+  font-family: $texts;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  @media (min-width: $xl-device) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.width100 {
+  width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-shadow {
+  @media (min-width: $md-device) {
+    text-shadow: 2px 3px 5px rgba($black, 0.7);
+  }
+
+}

@@ -1,0 +1,1 @@
+"use strict";function toggleLandscape(){var a=window.screen.orientation.type,e=document.body;"landscape-primary"==a||"landscape-secondary"==a?e.classList.add("landscape"):"portrait-primary"!=a&&"portrait-secondary"!=a||e.classList.remove("landscape")}window.addEventListener("orientationchange",toggleLandscape);

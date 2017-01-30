@@ -1,0 +1,96 @@
+.about {
+  width: 90%;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.about__info {
+  margin: 4rem 0;
+  text-align: center;
+
+  @media (min-width: $sm-device) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $xl-device) {
+    margin: 6rem 0;
+  }
+}
+
+.about__avatar {
+  margin: 0;
+
+  @media (min-width: $sm-device) {
+    width: 40%;
+  }
+
+  @media (min-width: $md-device) {
+    width: 45%;
+    text-align: center;
+  }
+
+  img {
+    max-width: 80%;
+    border-radius: 0.5rem;
+    box-shadow: $z-depth-1;
+
+    @media (min-width: $md-device) {
+      max-width: 60%;
+    }
+
+    @media (min-width: $lg-device) {
+      max-width: 50%;
+    }
+  }
+}
+
+.about__description {
+  font-size: 1.2rem;
+  text-align: justify;
+
+  @media (min-width: $sm-device) {
+    width: 60%;
+    margin-left: 2rem;
+  }
+
+  @media (min-width: $md-device) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.about__cite {
+  margin: 1rem;
+  font-family: $titles;
+  line-height: 1.8rem;
+  text-align: left;
+
+  q {
+    font-weight: bold;
+  }
+}
+
+.services__container {
+  margin-top: 4rem;
+
+  @media (min-width: $sm-device) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  @media (min-width: $lg-device) {
+    flex-wrap: nowrap;
+  }
+}
+
+.landscape {
+  @media (max-width: $sm-device) {
+    .about__avatar {
+      img {
+        max-width: 40%;
+      }
+    }
+  }
+}
