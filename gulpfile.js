@@ -38,7 +38,7 @@ gulp.task('styles', argv.production ? null : ['scss-lint'], () => {
     includePaths: ['.']
   }).on('error', $.sass.logError))
   .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-  .pipe($.sourcemaps.write())
+  .pipe($.sourcemaps.write('.'))
   .pipe(gulp.dest('.tmp/styles'))
   .pipe(reload({stream: true}));
 });

@@ -1,6 +1,4 @@
-window.addEventListener('orientationchange', toggleLandscape);
-
-function toggleLandscape() {
+const toggleLandscape = () => {
   const orientation = window.screen.orientation.type;
   let $body = document.body;
 
@@ -10,3 +8,5 @@ function toggleLandscape() {
     $body.classList.remove('landscape');
   }
 }
+
+window.addEventListener('orientationchange', toggleLandscape);
