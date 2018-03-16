@@ -1,0 +1,88 @@
+.work__header {
+  position: relative;
+  height: 60vh;
+
+  @media (min-width: $sm-device) {
+    height: 35vh;
+  }
+
+  @media (min-width: $md-device) {
+    height: 40vh;
+  }
+
+  @media (min-width: $lg-device) {
+    height: 50vh;
+  }
+
+  @media (min-width: $xl-device) {
+    height: 40vh;
+  }
+}
+
+.work__header-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+
+  @media (min-width: $md-device) {
+    top: 50%;
+  }
+
+  @media (min-width: $lg-device) {
+    top: 40%;
+  }
+
+  @media (min-width: $xl-device) {
+    top: 50%;
+  }
+}
+
+.work__scroll {
+  position: absolute;
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 3rem;
+  border: 0.2rem solid $black;
+  border-radius: 5em;
+
+  &::before {
+    position: absolute;
+    top: 0.4rem;
+    left: calc(50% - 0.2rem);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: $black;
+    content: "";
+    animation: fadeTo 1.4s $cubic-bezier-2 infinite;
+  }
+
+  @keyframes fadeTo {
+    to {
+      transform: translateY(1.2rem);
+      opacity: 0;
+    }
+  }
+}
+
+.landscape {
+  @media (max-width: $sm-device) {
+    .work__header {
+      height: 50vh;
+      margin-bottom: 2rem;
+    }
+
+    .work__header-container {
+      width: 85%;
+    }
+
+    .work-item__image {
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}

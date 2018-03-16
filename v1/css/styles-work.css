@@ -1,0 +1,63 @@
+.item-work a {
+	color: #00a9d4;
+}
+
+.content .section-title {
+	text-align: center;
+	font-size: 1.8rem;
+	margin-top: 4rem;
+	margin-bottom: 0;
+}
+
+.work 
+{	margin: 3rem auto 0;
+	width: 90%;
+}
+
+.work img.image {
+	max-width: 100%;
+	height: auto;
+}
+
+.work .work-title {
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.work .description-work, .tecnologies{
+	text-align: justify;
+}
+
+.work .project {
+	font-size: 1.2rem;
+	border: 2px solid rgb(255, 255, 255);
+	padding: 0.5rem;
+	display: inline-block;
+	border-radius: 5%;
+}
+
+.work .project:hover {	
+	color: #00a9d4;
+	border: 2px solid #00a9d4;
+}
+
+.content .comin-soon {
+	text-align: center;
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 64em) {
+	.work {
+		width: 100%;
+	}
+
+	.work img.image {
+		max-width: 50%;
+		height: auto;
+	}
+
+	.content-work {
+		width: 50%;
+		float: right;
+	}
+}

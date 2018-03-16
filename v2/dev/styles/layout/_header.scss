@@ -1,0 +1,27 @@
+.header {
+  @media (min-width: $md-device) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0 0;
+  }
+
+  @media (min-width: $xl-device) {
+    padding-top: 3rem;
+  }
+}
+
+.header__logo {
+  display: block;
+  margin: 1.4rem 0;
+  text-align: center;
+
+  @media (min-width: $sm-device) {
+    margin: 2rem 0;
+  }
+
+  @media (min-width: $md-device) {
+    display: inline-block;
+    margin: 0;
+  }
+}
