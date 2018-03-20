@@ -1,15 +1,25 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "short_name": "Mateo Olarte",
+  "name": "Mateo Olarte - Fullstack & UX Developer",
+  "icons": [{
+    "src": "icon-128x128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "apple-touch-icon.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  }, {
+    "src": "ms-touch-icon-144x144-precomposed.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }, {
+    "src": "chrome-touch-icon-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#2196F3",
+  "background_color": "#1755B2"
 }
