@@ -5,6 +5,13 @@
   position: fixed;
   width: 100%;
   padding: 2rem 4rem;
+  transition: padding 0.37s ease-in;
+  z-index: 2;
+}
+
+.header--fixed {
+  padding: 1rem 4rem;
+  background-color: var(--black);
 }
 
 .logo {

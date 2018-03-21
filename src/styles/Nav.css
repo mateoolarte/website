@@ -1,9 +1,35 @@
 .mainNav {
   position: absolute;
   left: 50%;
-  bottom: 2rem;
+  top: 92vh;
   width: 60%;
   transform: translateX(-50%);
+  z-index: 2;
+}
+
+.mainNav--fixed {
+  position: fixed;
+  top: 0;
+  padding: 2rem 0 0;
+  animation: changeMenu 0.65s ease-in;
+}
+
+@keyframes changeMenu {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .mainNav__list {
@@ -29,12 +55,14 @@
   transition: width 0.37s ease-in, background-color 0.37s ease-in;
 }
 
-.mainNav__listItem a:hover::after {
+.mainNav__listItem a:hover::after,
+.mainNav__listItem.active a::after {
   width: 100%;
   background-color: var(--blue-light);
 }
 
-.mainNav__listItem a:hover {
+.mainNav__listItem a:hover,
+.mainNav__listItem.active a {
   color: var(--blue-light);
 }
 
@@ -54,7 +82,8 @@
 @media (max-width: 768px) {
   .mainNav {
     position: fixed;
-    bottom: 0;
+    top: unset;
+    bottom: -1px;
     width: 100%;
   }
 
@@ -80,8 +109,11 @@
     color: var(--white);
   }
 
-  .mainNav__listItem a:hover,
-  .mainNav__listItem--blog a:hover {
+  .mainNav__listItem a:hover {
+    color: var(--white);
+  }
+
+  .mainNav__listItem.active a {
     color: var(--black);
   }
 
