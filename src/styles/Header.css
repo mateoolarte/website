@@ -51,9 +51,13 @@
   opacity: 0.7;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 737px) {
   .header {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    width: 80px;
   }
 
   .contactMe__listItem img {

@@ -51,6 +51,12 @@ class App extends Component {
   }
 
   changeMenu(e) {
+    let allItemsMenu = document.querySelectorAll(".mainNav__listItem");
+    
+    [].forEach.call(allItemsMenu, function(el) {
+      el.classList.remove("active")
+    })
+
     this.handleFixedMenu(e.view)
   }
 
