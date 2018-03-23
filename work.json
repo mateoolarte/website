@@ -1,0 +1,42 @@
+{
+  "works": [
+    {
+      "id": "1",
+      "title": "Ecoactua",
+      "url": "ecoactua.herokuapp.com",
+      "image": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg",
+      "year": "2018",
+      "description": "Ecoactua busca mantener y conservar nuestros recursos naturales, con nuestra ayuda intentamos solucionar las problemáticas ambientales que se presenten en la ciudad.",
+      "process": {
+        "text1": "Hola planetarios",
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+        "text2": "Lorem ipsum dolor",
+        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+      },
+      "challenges": {
+        "description": "Lorem ipsum dolor aset",
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Expensify",
+      "url": "expensify-rails.herokuapp.com",
+      "image": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+      "year": "2018",
+      "description": "Aplicación web para llevar el control y registro de los gastos personales, además de mostrar graficos para diferentes tipos de gasto y cual ha sido el acomulado de los meses",
+      "process": {
+        "text1": "Hola planetarios",
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+        "text2": "Lorem ipsum dolor",
+        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+      },
+      "challenges": {
+        "description": "Lorem ipsum dolor aset",
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+      }
+    }
+  ]
+}

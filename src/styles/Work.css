@@ -71,14 +71,6 @@
   background-color: var(--blue);
 }
 
-.workEcoctua {
-  background-image: url("../images/img_work/ecoactua.jpg");
-}
-
-.workExpensify {
-  background-image: url("../images/img_work/expensify.jpg");
-}
-
 @media (min-width: 1600px) {
   .work {
     width: 80%;

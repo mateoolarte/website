@@ -1,8 +1,8 @@
 import React from "react"
 import "../styles/About.css"
 
-export const About = () => {
-  return <section className="about" id="about">
+const About = () => {
+  return <section className="about">
       <h2 className="heading">About me</h2>
       <p className="about__paragraph">
         I’m passionate about technology, especially web development. I like to
@@ -43,3 +43,5 @@ export const About = () => {
       </ul>
     </section>
 }
+
+export { About }

@@ -42,7 +42,7 @@
 @media (max-width: 736px) {
   .about {
     height: auto;
-    padding: 18vh 1.5rem 0;
+    padding: 18vh 1.5rem 5rem;
   }
 }
 

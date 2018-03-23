@@ -1,7 +1,8 @@
 .cover {
   position: relative;
   height: 100vh;
-  background-image: url("../images/pattern.png");
+  background-color: var(--black);
+  background-image: url("https://res.cloudinary.com/mateoolarte/image/upload/v1521778667/personal_website/pattern.png");
 }
 
 .cover__box {

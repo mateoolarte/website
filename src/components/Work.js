@@ -1,22 +1,32 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "../styles/Work.css"
 
-export const Work = () => {
+const Work = props => {
   return (
-    <section className="work" id="work">
+    <section className="work">
       <h2 className="heading">Work</h2>
+
       <section className="work__container">
-        <article className="work__itemWork">
-          <h1 className="work__title">Ecoactua</h1>
-          <span className="work__image workEcoctua"></span>
-          <a href="" className="work__link">Ver más</a>
-        </article>
-        <article className="work__itemWork">
-          <h1 className="work__title">Expensify</h1>
-          <span className="work__image workExpensify"></span>
-          <a href="" className="work__link">Ver más</a>
-        </article>
+
+        { props.works.map(work => {
+          let backgroundImage = { backgroundImage: `url(${work.image})` }
+
+          return (
+            <article className="work__itemWork" key={work.id}>
+              <h1 className="work__title">{work.title}</h1>
+              <span className="work__image" style={backgroundImage} />
+              <Link className="work__link" to={`/project/${work.title.toLowerCase()}`}>
+                Ver más
+              </Link>
+            </article>
+          )
+
+        }) }
+
       </section>
     </section>
   )
 }
+
+export { Work }

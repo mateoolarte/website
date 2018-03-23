@@ -1,114 +1,70 @@
 import React, { Component } from "react"
+import { HashRouter as Router, Route } from "react-router-dom"
+import axios from "axios"
 import { Header } from "./Header"
 import { Nav } from "./Nav"
-import { Cover } from "./Cover"
-import { About } from "./About"
-import { Work } from "./Work"
+import { Cover } from "./Cover" 
+import { About } from "./About" 
+import { Work } from "./Work" 
+import { SingleWork } from "./SingleWork"
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
-    this.changeMenu = this.changeMenu.bind(this)
-
-    this.handleFixedMenu = function(event) {
-        const widthScreen = event.innerHeight - 180
-        let menu = document.querySelector(".mainNav")
-        let header = document.querySelector(".header")
-
-        if (event.scrollY >= widthScreen) {
-          header.classList.add("header--fixed")
-          
-          if (window.matchMedia("(min-width: 769px)").matches) {
-            menu.classList.add("mainNav--fixed")
-          } 
-        } else {
-          let allItemsMenu = document.querySelectorAll(".mainNav__listItem");
-
-          [].forEach.call(allItemsMenu, function (el) {
-            el.classList.remove("active")
-          })
-
-          if (window.matchMedia("(min-width: 769px)").matches) {
-            menu.classList.remove("mainNav--fixed")
-          }
-
-          header.classList.remove("header--fixed")
-        }
+    this.state = {
+      works: []
     }
   }
 
   componentDidMount() {
-    let handleFixedMenu = this.handleFixedMenu
-
-    window.addEventListener("load", function (e) {
-      handleFixedMenu(e.currentTarget)
-    })
-
-    window.addEventListener("scroll", function (e) {
-      handleFixedMenu(e.currentTarget)
-    })
-  }
-
-  changeMenu(e) {
-    let allItemsMenu = document.querySelectorAll(".mainNav__listItem");
-    
-    [].forEach.call(allItemsMenu, function(el) {
-      el.classList.remove("active")
-    })
-
-    this.handleFixedMenu(e.view)
-  }
-
-  scrollLinks(e) {
-    let item = e.target.parentNode
-
-    if (item.classList.contains("active")) {
-
-    } else {
-      let allItemsMenu = document.querySelectorAll(".mainNav__listItem");
-
-      [].forEach.call(allItemsMenu, function (el) {
-        el.classList.remove("active")
+    axios
+      .get(
+        "https://res.cloudinary.com/mateoolarte/raw/upload/v1521779472/work.json"
+      )
+      .then(response => {
+        this.setState({
+          works: response.data.works
+        })
       })
-
-      let targetOffset, currentPosition, yScroll
-      item.classList.add("active")
-
-      if (window.pageYOffset) {
-        yScroll = window.pageYOffset
-      } else if (document.documentElement && document.documentElement.scrollTop) {
-        yScroll = document.documentElement.scrollTop
-      } else if (document.body) {
-        yScroll = document.body.scrollTop
-      }
-
-      targetOffset = document.getElementById(e.target.hash.substr(1)).offsetTop
-      currentPosition = yScroll
-
-      document.body.classList.add("in-transition")
-      document.body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)"
-
-      window.setTimeout(function() {
-        document.body.classList.remove("in-transition")
-        document.body.style.cssText = ""
-        window.scrollTo(0, targetOffset)
-      }, 800)
-    }
-
-    e.preventDefault()
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   render() {
-    return (
-      <section className="wrapper" onWheel={this.changeMenu}>
-        <Header />
-        <Nav smoothScroll={this.scrollLinks} />
-        <Cover />
-        <About />
-        <Work />
-      </section>
-    )
+    return <Router>
+        <section className="wrapper">
+          <Route exact path="/" render={props => {
+              return <div>
+                  <Header isHome={true} />
+                  <Nav isHome={true} />
+                  <Cover />
+                </div>
+            }} />
+          <Route path="/about" render={props => {
+              return <div>
+                  <Header isHome={false} />
+                  <Nav isHome={false} />
+                  <About />
+                </div>
+            }} />
+          <Route path="/work" render={props => {
+              return <div>
+                  <Header isHome={false} />
+                  <Nav isHome={false} />
+                  <Work {...props} works={this.state.works} />
+                </div>
+            }} />
+          <Route path="/project/:title" render={props => {
+              return <div>
+                  <Header isHome={false} />
+                  <Nav isHome={false} />
+                  <SingleWork {...props} />
+                </div>
+            }} />
+        </section>
+      </Router>
   }
 }
 
