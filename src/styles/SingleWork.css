@@ -1,0 +1,225 @@
+.singleWork {
+  padding: 67px 0;
+}
+
+.singleWork img {
+  max-width: 100%;
+}
+
+.singleWork__hero {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.singleWork__hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.singleWork__yearLabel {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-shadow: 2px 3px 6px var(--black);
+  z-index: 2;
+}
+
+.singleWork__container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.singleWork__header {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.singleWork__title {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  font-size: 1.8rem;
+}
+
+.singleWork__link {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.37s ease-in;
+  color: var(--blue);
+}
+
+.singleWork__link:hover {
+  opacity: 0.7;
+}
+
+.singleWork__link img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+.SingleWork__process,
+.SingleWork__challenges {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.singleWork__subtitle {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.SingleWork__processItem {
+  text-align: center;
+}
+
+.SingleWork__paragraph {
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.SingleWork__processItem img {
+  max-height: 400px;
+}
+
+.SingleWork__challengesImages {
+  text-align: center;
+}
+
+.SingleWork__challengesImages img {
+  max-height: 350px;
+}
+
+.singleWork__cta {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--blue-light);
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--blue-light);
+  transition: color 0.37s ease-in, background-color 0.37s ease-in;
+  font-size: 1.2rem;
+}
+
+.singleWork__cta:hover {
+  color: var(--white);
+  background-color: var(--blue-light);
+}
+
+.singleWork__backWork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.singleWork__backWork img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .singleWork {
+    padding-top: 87px 0;
+  }
+
+  .singleWork__hero {
+    height: 450px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+
+  .singleWork__yearLabel {
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .singleWork__container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .singleWork__title {
+    font-size: 2.8rem;
+  }
+
+  .singleWork__subtitle {
+    font-size: 2rem;
+  }
+
+  .singleWork__description {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+
+  .SingleWork__process,
+  .SingleWork__challenges {
+    margin: 3rem 0;
+  }
+
+  .SingleWork__paragraph {
+    font-size: 1.2rem;
+  }
+
+  .SingleWork__challengesImages img {
+    max-height: 220px;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .SingleWork__processItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  }
+
+  .SingleWork__processItem:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .SingleWork__processItem:nth-child(odd) p {
+    margin-right: 0;
+    margin-left: 2rem;
+  }
+
+  .SingleWork__processItem p {
+    width: 48%;
+    margin-right: 2rem;
+  }
+
+  .SingleWork__processItem img {
+    max-width: 48%;
+  }
+}
+
+@media (min-width: 1180px) {
+  .singleWork__container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .singleWork__hero {
+    height: 600px;
+  }
+
+  .SingleWork__challengesImages img {
+    max-height: 350px;
+  }
+}
