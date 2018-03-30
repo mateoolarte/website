@@ -47,15 +47,6 @@
   background-size: cover;
 }
 
-.work__image::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .work__link {
   display: block;
   position: absolute;

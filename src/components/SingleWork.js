@@ -58,7 +58,7 @@ class SingleWork extends Component {
 
   componentDidMount() {
     axios
-      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522213461/personal_website/work.json")
+      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522390393/personal_website/work.json")
       .then(response => {
         this.setState({
           project: response.data.works.find(

@@ -10,7 +10,7 @@ const Work = props => {
       <section className="work__container">
 
         { props.works.map(work => {
-          let backgroundImage = { backgroundImage: `url(${work.image})` }
+          let backgroundImage = { backgroundImage: `url(${work.thumbnail})` }
 
           return (
             <article className="work__itemWork" key={work.id}>

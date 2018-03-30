@@ -4,47 +4,48 @@
       "id": "1",
       "title": "Ecoactua",
       "url": "https://ecoactua-rails.herokuapp.com",
-      "image": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg",
+      "thumbnail": "https://res.cloudinary.com/mateoolarte/image/upload/v1522387717/personal_website/thumbnail-ecoactua.jpg",
+      "image": "https://res.cloudinary.com/mateoolarte/image/upload/v1522388978/personal_website/projects/ecoactua/hero-ecoactua.jpg",
       "year": "2018",
       "description": "Ecoactua busca mantener y conservar nuestros recursos naturales, con nuestra ayuda intentamos solucionar las problemáticas ambientales que se presenten en la ciudad.",
       "process": [
         {
           "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg"
+          "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390286/personal_website/projects/ecoactua/process1-ecoactua.jpg"
         },
         {
           "text2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+          "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390286/personal_website/projects/ecoactua/process2-ecoactua.jpg"
         }
       ],
       "challenges": {
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
-        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg",
-        "image3": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/expensify.jpg"
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390285/personal_website/projects/ecoactua/challenge1-ecoactua.jpg",
+        "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390285/personal_website/projects/ecoactua/challenge2-ecoactua.jpg"
       }
     },
     {
       "id": "2",
       "title": "Expensify",
       "url": "https://expensify-rails.herokuapp.com",
-      "image": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
+      "thumbnail": "https://res.cloudinary.com/mateoolarte/image/upload/v1522388007/personal_website/thumbnail-expensify.jpg",
+      "image": "https://res.cloudinary.com/mateoolarte/image/upload/v1522388999/personal_website/projects/expensify/hero-expensify.jpg",
       "year": "2018",
       "description": "Aplicación web para llevar el control y registro de los gastos personales, además de mostrar graficos para diferentes tipos de gasto y cual ha sido el acomulado de los meses",
       "process": [
         {
           "text1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg"
+          "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390259/personal_website/projects/expensify/process1-expensify.jpg"
         },
         {
           "text2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-          "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+          "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390259/personal_website/projects/expensify/process2-expensify.jpg"
         }
       ],
       "challenges": {
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1521778017/personal_website/expensify.jpg",
-        "image2": "http://res.cloudinary.com/mateoolarte/image/upload/v1521778018/personal_website/ecoactua.jpg"
+        "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390259/personal_website/projects/expensify/challenge1-expensify.jpg",
+        "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390259/personal_website/projects/expensify/challenge2-expensify.jpg"
       }
     }
   ]

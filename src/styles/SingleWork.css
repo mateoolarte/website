@@ -134,7 +134,7 @@
 
 @media (min-width: 768px) {
   .singleWork {
-    padding-top: 87px 0;
+    padding: 87px 0;
   }
 
   .singleWork__hero {
