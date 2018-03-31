@@ -11,12 +11,12 @@ const Nav = (props) => {
           </NavLink>
         </li>
         <li className="mainNav__listItem">
-          <NavLink exact className="mainNav__listItemLink" to="/about" activeClassName="active">
+          <NavLink className="mainNav__listItemLink" to="/about" activeClassName="active">
             About
           </NavLink>
         </li>
         <li className="mainNav__listItem">
-          <NavLink exact className="mainNav__listItemLink" to="/work" activeClassName="active">
+          <NavLink className="mainNav__listItemLink" to="/work" activeClassName="active">
             Work
           </NavLink>
         </li>

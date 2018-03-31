@@ -2,7 +2,6 @@ import React from "react"
 import "../styles/Cover.css"
 
 export const Cover = ({ props }) => {
-  console.log(props)
   return (
     <section className="cover">
       <div className="cover__box">

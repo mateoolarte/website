@@ -2,7 +2,7 @@
   "name": "mateoolarte.github.io",
   "version": "3.0.0",
   "private": true,
-  "homepage": "https://mateoolarte.com",
+  "homepage": "https://mateoolarte.github.io",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.2.0",

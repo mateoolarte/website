@@ -9,7 +9,7 @@
 .singleWork__hero {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -38,7 +38,6 @@
 .singleWork__container {
   width: 90%;
   margin: 0 auto;
-  text-align: center;
 }
 
 .singleWork__header {
@@ -61,6 +60,10 @@
   color: var(--blue);
 }
 
+.singleWork__description  {
+  text-align: justify;
+}
+
 .singleWork__link:hover {
   opacity: 0.7;
 }
@@ -71,9 +74,9 @@
   margin-right: 0.3rem;
 }
 
-.SingleWork__process,
-.SingleWork__challenges {
-  margin: 2rem 0;
+.singleWork__process,
+.singleWork__challenges {
+  padding: 2rem 0;
   text-align: left;
 }
 
@@ -82,24 +85,34 @@
   font-size: 1.5rem;
 }
 
-.SingleWork__processItem {
-  text-align: center;
+.singleWork__process {
+  background-color: #eee;
 }
 
-.SingleWork__paragraph {
+.singleWork__paragraph {
   margin-bottom: 2rem;
   text-align: justify;
 }
 
-.SingleWork__processItem img {
-  max-height: 400px;
+.singleWork__processItem {
+  margin-bottom: 4rem;
 }
 
-.SingleWork__challengesImages {
+.singleWork__processItem:last-child {
+  margin-bottom: 2rem;
+}
+
+.singleWork__processItem img {
+  max-height: 400px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 20px 50px #808990;
+}
+
+.singleWork__challengesImages {
   text-align: center;
 }
 
-.SingleWork__challengesImages img {
+.singleWork__challengesImages img {
   max-height: 350px;
 }
 
@@ -163,63 +176,60 @@
 
   .singleWork__description {
     font-size: 1.4rem;
-    text-align: justify;
   }
 
-  .SingleWork__process,
-  .SingleWork__challenges {
-    margin: 3rem 0;
+  .singleWork__process,
+  .singleWork__challenges {
+    padding: 3rem 0;
   }
 
-  .SingleWork__paragraph {
+  .singleWork__paragraph {
     font-size: 1.2rem;
   }
 
-  .SingleWork__challengesImages img {
+  .singleWork__challengesImages img {
     max-height: 220px;
     margin: 0.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .SingleWork__processItem {
+  .singleWork__processItem {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 2rem;
   }
 
-  .SingleWork__processItem:nth-child(odd) {
+  .singleWork__processItem:nth-child(odd) {
     flex-direction: row-reverse;
   }
 
-  .SingleWork__processItem:nth-child(odd) p {
+  .singleWork__processItem:nth-child(odd) p {
     margin-right: 0;
     margin-left: 2rem;
   }
 
-  .SingleWork__processItem p {
+  .singleWork__processItem p {
     width: 48%;
     margin-right: 2rem;
   }
 
-  .SingleWork__processItem img {
+  .singleWork__processItem img {
     max-width: 48%;
   }
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1600px) {
   .singleWork__container {
     width: 60%;
   }
-}
 
-@media (min-width: 1600px) {
   .singleWork__hero {
     height: 600px;
   }
 
-  .SingleWork__challengesImages img {
+  .singleWork__challengesImages img {
     max-height: 350px;
   }
 }

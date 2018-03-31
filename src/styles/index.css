@@ -35,9 +35,14 @@ a {
 .heading {
   display: inline-block;
   margin: 0 auto 1rem;
-  border-bottom: 3px solid var(--blue-light);
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid var(--blue-light);
   color: var(--blue-light);
   font-size: 3rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 568px) {

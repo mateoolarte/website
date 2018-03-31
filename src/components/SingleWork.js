@@ -10,16 +10,18 @@ const ProcessSection = props => {
 
   (props.data === undefined) ? content = [] : content = props.data
 
-  return <section className="SingleWork__process">
-      {content.length > 0 && <h2 className="heading singleWork__subtitle">Process</h2>}
+  return <section className="singleWork__process">
+          <div className="singleWork__container">
+            {content.length > 0 && <h2 className="heading singleWork__subtitle">Process</h2>}
 
-      {content.map((item, i) => {
-        let index = i + 1
-        return <article key={i} className="SingleWork__processItem">
-                <p className="SingleWork__paragraph">{item[`text${index}`]}</p>
-                <img src={item[`image${index}`]} alt="" />
-              </article>
-      })}
+            {content.map((item, i) => {
+              let index = i + 1
+              return <article key={i} className="singleWork__processItem">
+                      <p className="singleWork__paragraph">{item[`text${index}`]}</p>
+                      <img src={item[`image${index}`]} alt="" />
+                    </article>
+            })}
+          </div>
     </section>
 }
 
@@ -34,19 +36,21 @@ const ChallengesSection = props => {
     arrIMG = Object.values(content).splice(1)
   }
 
-  return <section className="SingleWork__challenges">
-      {Object.keys(content).length > 0 && <h2 className="heading singleWork__subtitle">
-          Challenges
-        </h2>}
+  return <section className="singleWork__challenges">
+          <div className="singleWork__container">
+            {Object.keys(content).length > 0 && <h2 className="heading singleWork__subtitle">
+                Challenges
+              </h2>}
 
-      {Object.keys(content).length > 0 && <p className="SingleWork__paragraph">
-          {content.description}
-        </p>}
+            {Object.keys(content).length > 0 && <p className="singleWork__paragraph">
+                {content.description}
+              </p>}
 
-      <div className="SingleWork__challengesImages">
-        {arrIMG.map((image, i) => <img src={image} alt="" key={i} />)}
-      </div>
-    </section>
+            <div className="singleWork__challengesImages">
+              {arrIMG.map((image, i) => <img src={image} alt="" key={i} />)}
+            </div>
+          </div>
+        </section>
 }
 
 class SingleWork extends Component {
@@ -58,7 +62,7 @@ class SingleWork extends Component {
 
   componentDidMount() {
     axios
-      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522390393/personal_website/work.json")
+      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522461812/personal_website/work.json")
       .then(response => {
         this.setState({
           project: response.data.works.find(
@@ -88,18 +92,20 @@ class SingleWork extends Component {
             </a>
             <p className="singleWork__description">{project.description}</p>
           </header>
+        </div>
 
-          <ProcessSection data={project.process} />
-          <ChallengesSection data={project.challenges} />
+        <ProcessSection data={project.process} />
+        <ChallengesSection data={project.challenges} />
 
+        <div className="text-center">
           <a href={project.url} className="singleWork__cta" target="_blank" rel="noopener noreferrer">
             Visit project
           </a>
-
-          <NavLink exact className="singleWork__backWork" to="/work" activeClassName="active">
-            <img src={backWorkIcon} alt="" /> Back work
-          </NavLink>
         </div>
+
+        <NavLink exact className="singleWork__backWork" to="/work" activeClassName="active">
+          <img src={backWorkIcon} alt="" /> Back work
+        </NavLink>
       </section>
   }
 }

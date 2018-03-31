@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { HashRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import axios from "axios"
 import { Header } from "./Header"
 import { Nav } from "./Nav"
@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522390393/personal_website/work.json")
+      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522461812/personal_website/work.json")
       .then(response => {
         this.setState({ works: response.data.works })
       })
