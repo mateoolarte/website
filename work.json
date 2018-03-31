@@ -7,19 +7,19 @@
       "thumbnail": "https://res.cloudinary.com/mateoolarte/image/upload/v1522387717/personal_website/thumbnail-ecoactua.jpg",
       "image": "https://res.cloudinary.com/mateoolarte/image/upload/v1522388978/personal_website/projects/ecoactua/hero-ecoactua.jpg",
       "year": "2018",
-      "description": "Ecoactua find to maintain and preserve all our naturals environments. With our help trying solve the main problems with natural resources that present in the city.",
+      "description": "Ecoactua looks for the maintenance and preservation of all of our natural-environments. We are trying to solve the main problems related with natural resources that are present in the city.",
       "process": [
         {
-          "text1": "In the process of build this application I based principally in the original idea of ecoactuar that was old idea but I want to improve and add some useful features to that. Given that information I procedure to build with someone users cases which are divided in two categories: Administrators and Users.",
+          "text1": "In the building process of this application I based myself principally in the original concept of ecoactuar that was an old idea, but I wanted to improve and add some useful features to that. Given that information I proceeded to build some user cases which were divided in two categories: Administrators and Users.",
           "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390286/personal_website/projects/ecoactua/process1-ecoactua.jpg"
         },
         {
-          "text2": "Each of this can make different features in the application as shown: the create a report, and then evaluate by administrators and execute the correct process for mark a report as solved, also the administrators can use a dashboard where they can manage all of reports that the users created.",
+          "text2": "Each one of this cases can make different actions in the application, like: report creation, administrators evaluation and the execution of the correct process to mark a report as solved,  administrators also can use a dashboard where they are able to manage all reports that users created.",
           "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390286/personal_website/projects/ecoactua/process2-ecoactua.jpg"
         }
       ],
       "challenges": {
-        "description": "The challenges that founded in the build was the create a profile per user and its can manage the reports if your state no changed yet. As well I was make a effort for create the administrators dashboard and them can controlled with each one of the reports, besides the create a search which filter the searches and get information based of your attributes.",
+        "description": "The challenges found in the building process were the creation of a profile for each user and its capability to manage the reports if their state hasn’t changed yet, I  made an effort to create the administrators dashboard and to implement a report manager role for them as well , besides, it was a challenging experience to create a search field for users to filter the reports and get information based on their labels and states.",
         "image1": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390285/personal_website/projects/ecoactua/challenge1-ecoactua.jpg",
         "image2": "https://res.cloudinary.com/mateoolarte/image/upload/v1522390285/personal_website/projects/ecoactua/challenge2-ecoactua.jpg"
       }
