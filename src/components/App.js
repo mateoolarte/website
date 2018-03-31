@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522461812/personal_website/work.json")
+      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522529627/personal_website/work.json")
       .then(response => {
         this.setState({ works: response.data.works })
       })
