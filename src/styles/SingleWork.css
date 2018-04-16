@@ -2,8 +2,11 @@
   padding: 67px 0;
 }
 
-.singleWork img {
+.singleWork__image {
   max-width: 100%;
+  max-height: 400px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 60px rgb(180, 183, 185);
 }
 
 .singleWork__hero {
@@ -102,18 +105,12 @@
   margin-bottom: 2rem;
 }
 
-.singleWork__processItem img {
-  max-height: 400px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 20px 50px #808990;
-}
-
 .singleWork__challengesImages {
   text-align: center;
 }
 
 .singleWork__challengesImages img {
-  max-height: 350px;
+  margin: 1.5rem 0;
 }
 
 .singleWork__cta {
@@ -188,8 +185,8 @@
   }
 
   .singleWork__challengesImages img {
-    max-height: 220px;
-    margin: 0.5rem;
+    max-height: 300px;
+    margin: 1.5rem;
   }
 }
 
@@ -230,6 +227,6 @@
   }
 
   .singleWork__challengesImages img {
-    max-height: 350px;
+    max-height: 400px;
   }
 }

@@ -1,7 +1,7 @@
-import React from "react"
-import "../styles/Cover.css"
+import React from "react";
+import "../styles/Cover.css";
 
-export const Cover = ({ props }) => {
+function Cover() {
   return (
     <section className="cover">
       <div className="cover__box">
@@ -9,5 +9,7 @@ export const Cover = ({ props }) => {
         <h1 className="cover__subtitle">Fullstack & UX Developer</h1>
       </div>
     </section>
-  )
+  );
 }
+
+export default Cover;

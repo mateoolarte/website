@@ -30,21 +30,27 @@
   position: absolute;
   top: -1.5rem;
   right: -3rem;
+  width: 430px;
   margin: 0;
   color: var(--black);
   font-size: 3rem;
+  text-align: right;
   text-shadow: 1px 2px 11px rgba(0, 0, 0, 0.3);
 }
 
 .work__image {
   display: block;
   position: absolute;
-  top: 20%;
-  left: -8rem;
+  top: 18%;
+  left: -5rem;
   width: 18rem;
   height: 18rem;
   background-position: center center;
   background-size: cover;
+}
+
+.work__image::before {
+  content: "";
 }
 
 .work__link {
@@ -100,6 +106,7 @@
     right: unset;
     width: 100%;
     font-size: 2rem;
+    text-align: center;
   }
 
   .work__image {

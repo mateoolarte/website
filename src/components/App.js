@@ -1,67 +1,101 @@
-import React, { Component } from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import axios from "axios"
-import { Header } from "./Header"
-import { Nav } from "./Nav"
-import { Cover } from "./Cover" 
-import { About } from "./About" 
-import { Work } from "./Work" 
-import { SingleWork } from "./SingleWork"
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ReactGA from "react-ga";
 
+import Header from "./Header";
+import Nav from "./Nav";
+import Cover from "./Cover";
+import About from "./About";
+import Work from "./Work";
+import SingleWork from "./SingleWork";
+
+export function fireTracking(nextState) {
+  const { pathname } = nextState.location; // this gives you the next URL
+
+  ReactGA.pageview(pathname);
+}
+function HomePage() {
+  return (
+    <Route
+      path="/"
+      onEnter={fireTracking}
+      exact
+      render={props => (
+        <div>
+          <Header isHome={true} />
+          <Nav isHome={true} />
+          <Cover />
+        </div>
+      )}
+    />
+  );
+}
+function AboutPage() {
+  return (
+    <Route
+      path="/about"
+      onEnter={fireTracking}
+      render={props => {
+        return (
+          <div>
+            <Header isHome={false} />
+            <Nav isHome={false} />
+            <About />
+          </div>
+        );
+      }}
+    />
+  );
+}
+function WorkPage() {
+  return (
+    <Route
+      path="/work"
+      onEnter={fireTracking}
+      render={props => {
+        return (
+          <div>
+            <Header isHome={false} />
+            <Nav isHome={false} />
+            <Work />
+          </div>
+        );
+      }}
+    />
+  );
+}
+function SingleWorkPage() {
+  return (
+    <Route
+      path="/project/:title"
+      onEnter={fireTracking}
+      render={props => {
+        return (
+          <div>
+            <Header isHome={false} />
+            <Nav isHome={false} />
+            <SingleWork {...props} />
+          </div>
+        );
+      }}
+    />
+  );
+}
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      works: []
-    }
-  }
-
-  componentDidMount() {
-    axios
-      .get("https://res.cloudinary.com/mateoolarte/raw/upload/v1522529627/personal_website/work.json")
-      .then(response => {
-        this.setState({ works: response.data.works })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-
   render() {
-    return <Router>
+    return (
+      <Router>
         <section className="wrapper">
-          <Route exact path="/" render={props => {
-              return <div>
-                  <Header isHome={true} />
-                  <Nav isHome={true} />
-                  <Cover />
-                </div>
-            }} />
-          <Route path="/about" render={props => {
-              return <div>
-                  <Header isHome={false} />
-                  <Nav isHome={false} />
-                  <About />
-                </div>
-            }} />
-          <Route path="/work" render={props => {
-              return <div>
-                  <Header isHome={false} />
-                  <Nav isHome={false} />
-                  <Work {...props} works={this.state.works} />
-                </div>
-            }} />
-          <Route path="/project/:title" render={props => {
-              return <div>
-                  <Header isHome={false} />
-                  <Nav isHome={false} />
-                  <SingleWork {...props} />
-                </div>
-            }} />
+          <HomePage />
+          <AboutPage />
+          <WorkPage />
+          <SingleWorkPage />
+          {/* <Page404 /> */}
         </section>
       </Router>
+    );
   }
 }
+ReactGA.initialize("UA-60678906-1");
 
-export default App
+export default App;
