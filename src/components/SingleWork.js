@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { NavLink } from "react-router-dom";
 
+import Header from "./Header";
+import Nav from "./Nav";
 import DataProjects from "./DataProjects";
 
 import "../styles/SingleWork.css";
@@ -92,50 +94,55 @@ class SingleWork extends Component {
     const project = this.state.project;
     const backgroundImage = { backgroundImage: `url(${project.image})` };
     return (
-      <section className="singleWork">
-        <div className="singleWork__hero" style={backgroundImage}>
-          <span className="singleWork__yearLabel">{project.year}</span>
-        </div>
+      <Fragment>
+        <Header />
+        <Nav />
 
-        <div className="singleWork__container">
-          <header className="singleWork__header">
-            <h1 className="singleWork__title">{project.title}</h1>
+        <section className="singleWork">
+          <div className="singleWork__hero" style={backgroundImage}>
+            <span className="singleWork__yearLabel">{project.year}</span>
+          </div>
+
+          <div className="singleWork__container">
+            <header className="singleWork__header">
+              <h1 className="singleWork__title">{project.title}</h1>
+              <a
+                href={project.url}
+                className="singleWork__link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkIcon} alt="" /> Visit project
+              </a>
+              <p className="singleWork__description">{project.description}</p>
+            </header>
+          </div>
+
+          <Process data={project.process} />
+
+          <Challenges data={project.challenges} />
+
+          <div className="text-center">
             <a
               href={project.url}
-              className="singleWork__link"
+              className="singleWork__cta"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkIcon} alt="" /> Visit project
+              Visit project
             </a>
-            <p className="singleWork__description">{project.description}</p>
-          </header>
-        </div>
+          </div>
 
-        <Process data={project.process} />
-
-        <Challenges data={project.challenges} />
-
-        <div className="text-center">
-          <a
-            href={project.url}
-            className="singleWork__cta"
-            target="_blank"
-            rel="noopener noreferrer"
+          <NavLink
+            exact
+            className="singleWork__backWork"
+            to="/work"
+            activeClassName="active"
           >
-            Visit project
-          </a>
-        </div>
-
-        <NavLink
-          exact
-          className="singleWork__backWork"
-          to="/work"
-          activeClassName="active"
-        >
-          <img src={backWorkIcon} alt="" /> Back work
-        </NavLink>
-      </section>
+            <img src={backWorkIcon} alt="" /> Back work
+          </NavLink>
+        </section>
+      </Fragment>
     );
   }
 }

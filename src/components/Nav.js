@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Nav.css";
 
-function Nav(props) {
+export default function Nav(props) {
   return (
     <nav className={props.isHome ? "mainNav" : "mainNav mainNav--fixed"}>
       <ul className="mainNav__list">
@@ -35,7 +35,7 @@ function Nav(props) {
           </NavLink>
         </li>
         <li className="mainNav__listItem--blog">
-          <a href="/blog/" target="_blank" rel="noopener noreferrer">
+          <a href="https://blog.mateoolarte.com" target="_blank" rel="noopener noreferrer">
             Blog
           </a>
         </li>
@@ -43,5 +43,3 @@ function Nav(props) {
     </nav>
   );
 }
-
-export default Nav;
