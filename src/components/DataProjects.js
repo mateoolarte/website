@@ -2,7 +2,7 @@ const DataProjects = [
   {
     id: "1",
     title: "Ecoactua",
-    url: "https://ecoactua-rails.herokuapp.com",
+    url: "https://ecoactua.org",
     thumbnail:
       "https://res.cloudinary.com/mateoolarte/image/upload/v1522387717/personal_brand/projects/ecoactua/thumbnail-ecoactua.jpg",
     image:
