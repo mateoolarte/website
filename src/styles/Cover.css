@@ -1,0 +1,52 @@
+.cover {
+  position: relative;
+  height: 100vh;
+  background-color: var(--black);
+  background-image: url("https://res.cloudinary.com/mateoolarte/image/upload/v1521778667/personal_brand/assets/pattern.png");
+}
+
+.cover__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cover__title,
+.cover__subtitle {
+  margin: 0;
+  text-shadow: 2px 3px 6px var(--black);
+}
+
+.cover__title {
+  margin-bottom: 0.5rem;
+  color: var(--white);
+  font-size: 4.2rem;
+  font-weight: 300;
+}
+
+.cover__subtitle {
+  color: var(--blue-light);
+  font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+  .cover__title {
+    font-size: 3.2rem;
+  }
+  .cover__subtitle {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .cover__title {
+    font-size: 2rem;
+  }
+
+  .cover__subtitle {
+    font-size: 2.6rem;
+  }
+}

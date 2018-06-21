@@ -1,0 +1,94 @@
+.content { margin-top: 3rem; }
+
+.content .profile {
+	font-size: 3rem;
+	margin: 0;
+	text-align: center;
+}
+
+.footer { margin-top: 5rem; }
+
+.footer .title-contact {
+	font-weight: lighter;
+	margin: 0;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.footer .nav-contact {
+	text-align: center;
+	width: 100%;
+}
+
+.footer .nav-contact ul { padding: 0; }
+
+.footer .nav-contact ul li {
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+.fa-twitter {
+	color: #FFF;
+	transition: color .5s linear
+}
+
+.fa-twitter:hover {
+	color: #5EA9DD;
+	transition: color .5s ease-in-out;
+}
+
+.fa-behance {
+	color: #FFF;
+	transition: color .5s linear
+}
+
+.fa-behance:hover {
+	color: #0061FF;
+	transition: color .5s ease-in-out;
+}
+
+.fa-github-alt {
+	color: #FFF;
+	transition: color .5s linear
+}
+
+.fa-github-alt:hover {
+	color: darkgray;
+	transition: color .5s ease-in-out;
+}
+
+.fa-linkedin {
+	color: #FFF;
+	transition: color .5s linear
+}
+
+.fa-linkedin:hover {
+	color: #0274B3;
+	transition: color .5s ease-in-out;
+}
+
+.footer .nav-contact ul li.clear {
+	margin-right: 0;
+}
+
+@media screen and (min-width: 48em) {
+	body {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);		
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.content .profile {
+		font-size: 4rem;
+	}
+	
+	.footer .title-contact {
+		font-size: 1.2rem;
+	}
+}
