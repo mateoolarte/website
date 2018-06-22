@@ -4,6 +4,7 @@
   top: 92vh;
   width: 60%;
   transform: translateX(-50%);
+  transition: top 2s ease-in;
   z-index: 3;
 }
 
@@ -11,6 +12,7 @@
   position: fixed;
   top: 0;
   padding: 2rem 0 0;
+  transition: top 2s ease-out;
 }
 
 .mainNav__list {

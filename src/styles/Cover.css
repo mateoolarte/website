@@ -11,7 +11,13 @@
   left: 50%;
   width: 90%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.37s ease-in;
   text-align: center;
+  opacity: 1;
+}
+
+.enter.cover__box {
+  opacity: 0;
 }
 
 .cover__title,

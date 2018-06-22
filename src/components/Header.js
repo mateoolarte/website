@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 const github =
   "https://res.cloudinary.com/mateoolarte/image/upload/v1521778769/personal_brand/assets/github.svg";
 const twitter =
@@ -12,9 +13,9 @@ const logo =
 function Header(props) {
   return (
     <header className={props.isHome ? "header" : "header header--fixed"}>
-      <a href="/">
+      <Link to="/">
         <img src={logo} className="logo" alt="Logo" />
-      </a>
+      </Link>
       <div className="contactMe">
         <span>Contact me</span>
         <ul className="contactMe__list">

@@ -19,10 +19,6 @@ body {
   font-size: 16px;
 }
 
-body.in-transition {
-  transition: transform 800ms ease-in;
-}
-
 ul {
   padding-left: 0;
   list-style: none;
@@ -30,6 +26,16 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.fade-enter {
+  opacity: 0;
+  overflow-y: hidden;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.37s ease-in;
 }
 
 .heading {
