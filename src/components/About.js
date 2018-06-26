@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 import "../styles/About.css";
 
-function About(props) {
+export default function About() {
   return (
     <Fragment>
       <Header />
@@ -32,28 +32,19 @@ function About(props) {
           and requirements. The delivering process stage is also important
           because that’s where I give life to the product and it can be tested.
         </p>
-        <p className="about__paragraph">
-          My favorite and common technologies are:
-        </p>
+
+        <h4 className="about__skillsTitle">Technical skills</h4>
         <ul className="about__skills">
           <li>
-            <strong>Languages:</strong> HTML - CSS - Javascript - Ruby.
+            <strong>Proficient:</strong> HTML, CSS, Javascript, Git, ReactJS,
+            GulpJS, SASS, Responsive design, Scrum
           </li>
           <li>
-            <strong>Tools:</strong> GulpJS - SASS - Git - Twig - Heroku.
-          </li>
-          <li>
-            <strong>Frameworks:</strong> Bootstrap 4 - Jquery - AJAX - Sinatra -
-            Ruby on Rails - Wordpress - ReactJS.
-          </li>
-          <li>
-            <strong>Methodologies:</strong> BEM - Responsive design - Redux -
-            TDD - REST API’s - Scrum.
+            <strong>Experienced:</strong> Ruby, Sinatra, Ruby on Rails, Twig,
+            Jquery, Wordpress, Redux, TDD
           </li>
         </ul>
       </section>
     </Fragment>
   );
 }
-
-export default About;

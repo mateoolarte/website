@@ -1,5 +1,5 @@
 .about {
-  max-width: 50rem;
+  max-width: 740px;
   height: 100vh;
   margin: 0 auto;
   padding: 18vh 0 0;
@@ -9,17 +9,23 @@
 .about__paragraph,
 .about__skills {
   font-size: 1.1rem;
+  line-height: 1.4;
   text-align: justify;
 }
 
-.about__containerSkills {
-  display: flex;
-  justify-content: center;
+.about__skillsTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  text-align: left;
 }
 
-.about__containerSkills-box {
-  width: 25%;
-  text-align: center;
+.about__skills {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.about__skills li {
+  line-height: 1.4;
 }
 
 @media (min-width: 1600px) {
