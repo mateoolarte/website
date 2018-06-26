@@ -36,12 +36,12 @@ export default function About() {
         <h4 className="about__skillsTitle">Technical skills</h4>
         <ul className="about__skills">
           <li>
-            <strong>Proficient:</strong> HTML, CSS, Javascript, Git, ReactJS,
-            GulpJS, SASS, Responsive design, Scrum
+            <strong>Strong: </strong>
+            HTML, CSS, Javascript, Git, ReactJS, Redux, SASS.
           </li>
           <li>
-            <strong>Experienced:</strong> Ruby, Sinatra, Ruby on Rails, Twig,
-            Jquery, Wordpress, Redux, TDD
+            <strong>Knowledgeable: </strong>
+            Ruby, Ruby on Rails, NodeJS, Jquery, TDD.
           </li>
         </ul>
       </section>
