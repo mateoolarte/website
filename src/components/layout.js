@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
-import Header from "./header"
+// import Header from "./header"
 import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
@@ -51,10 +51,10 @@ export default function Layout({ children, currentPage }) {
   return (
     <>
       <GlobalStyle />
-      <Header
+      {/* <Header
         siteTitle={data.site.siteMetadata.title}
         currentPage={currentPage}
-      />
+      /> */}
       <main>{children}</main>
 
       <footer>
