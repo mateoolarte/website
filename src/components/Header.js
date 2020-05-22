@@ -1,51 +1,55 @@
-import React from "react";
-import "../styles/Header.css";
-import { Link } from "react-router-dom";
-const github =
-  "https://res.cloudinary.com/mateoolarte/image/upload/v1521778769/personal_brand/assets/github.svg";
-const twitter =
-  "https://res.cloudinary.com/mateoolarte/image/upload/v1521778769/personal_brand/assets/twitter.svg";
-const email =
-  "https://res.cloudinary.com/mateoolarte/image/upload/v1521778769/personal_brand/assets/email.svg";
-const logo =
-  "https://res.cloudinary.com/mateoolarte/image/upload/v1521778769/personal_brand/assets/logo.svg";
+import { Link } from "gatsby"
+import { string } from "prop-types"
+import React from "react"
+import styled from "styled-components"
 
-function Header(props) {
+import logoSmall from "../images/logo-small.png"
+import logoMedium from "../images/logo-medium.png"
+import logoLarge from "../images/logo-large.png"
+
+import Nav from "./nav"
+
+const Wrapper = styled.header`
+  max-width: 1180px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 2rem 0;
+  }
+`
+
+const Logo = styled(Link)`
+  display: inline-block;
+
+  picture {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+`
+
+export default function Header({ currentPage }) {
   return (
-    <header className={props.isHome ? "header" : "header header--fixed"}>
-      <Link to="/">
-        <img src={logo} className="logo" alt="Logo" />
-      </Link>
-      <div className="contactMe">
-        <span>Contact me</span>
-        <ul className="contactMe__list">
-          <li className="contactMe__listItem">
-            <a
-              href="https://twitter.com/mateo_olarte"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={twitter} alt="" />
-            </a>
-          </li>
-          <li className="contactMe__listItem">
-            <a
-              href="https://github.com/mateoolarte"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={github} alt="" />
-            </a>
-          </li>
-          <li className="contactMe__listItem">
-            <a href="mailto:mateo.olarte8@gmail.com">
-              <img src={email} alt="" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </header>
-  );
+    <Wrapper>
+      <Logo to="/">
+        <picture>
+          <source srcSet={logoSmall} media="(max-width: 767px)" />
+          <source srcSet={logoMedium} media="(max-width: 991px)" />
+          <source srcSet={logoLarge} media="(min-width: 992px)" />
+          <img src={logoMedium} alt="Mateo Olarte - Frontend Engineer" />
+        </picture>
+      </Logo>
+      <Nav currentPage={currentPage} />
+    </Wrapper>
+  )
 }
 
-export default Header;
+Header.propTypes = {
+  siteTitle: string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
