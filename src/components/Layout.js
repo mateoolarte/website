@@ -5,13 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import { createGlobalStyle } from "styled-components";
 
-// import Header from "./header"
-import "./layout.css"
+import Header from "./Header";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -19,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    background-color: #fafafa;
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   picture {
     display: block;
   }
-`
+`;
 
 export default function Layout({ children, currentPage }) {
   const data = useStaticQuery(graphql`
@@ -46,26 +46,26 @@ export default function Layout({ children, currentPage }) {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <GlobalStyle />
-      {/* <Header
+      <Header
         siteTitle={data.site.siteMetadata.title}
         currentPage={currentPage}
-      /> */}
+      />
       <main>{children}</main>
 
-      <footer>
+      {/* <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      </footer> */}
     </>
-  )
+  );
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};

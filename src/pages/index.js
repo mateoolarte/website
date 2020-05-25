@@ -1,23 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/Layout";
+import SEO from "../components/Seo";
 
 export default function Home({ location }) {
-  const pathname = (location && location.pathname) || "/"
+  const pathname = (location && location.pathname) || "/";
 
   return (
     <Layout currentPage={pathname}>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/about/">Go to about</Link>
     </Layout>
-  )
+  );
 }

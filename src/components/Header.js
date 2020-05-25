@@ -1,13 +1,15 @@
-import { Link } from "gatsby"
-import { string } from "prop-types"
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import { string } from "prop-types";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
-import logoSmall from "../images/logo-small.png"
-import logoMedium from "../images/logo-medium.png"
-import logoLarge from "../images/logo-large.png"
+import { MEDIA_QUERIES } from "../constants";
 
-import Nav from "./nav"
+import logoSmall from "../images/logo-small.png";
+import logoMedium from "../images/logo-medium.png";
+import logoLarge from "../images/logo-large.png";
+
+import Nav from "./Nav";
 
 const Wrapper = styled.header`
   max-width: 1180px;
@@ -15,10 +17,16 @@ const Wrapper = styled.header`
   margin: 0 auto;
   padding: 1.5rem 0.5rem;
 
-  @media screen and (min-width: 768px) {
+  ${MEDIA_QUERIES.tablet} {
     padding: 2rem 0;
   }
-`
+
+  ${MEDIA_QUERIES.landscape} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
 
 const Logo = styled(Link)`
   display: inline-block;
@@ -28,7 +36,7 @@ const Logo = styled(Link)`
       opacity: 0.7;
     }
   }
-`
+`;
 
 export default function Header({ currentPage }) {
   return (
@@ -36,20 +44,20 @@ export default function Header({ currentPage }) {
       <Logo to="/">
         <picture>
           <source srcSet={logoSmall} media="(max-width: 767px)" />
-          <source srcSet={logoMedium} media="(max-width: 991px)" />
-          <source srcSet={logoLarge} media="(min-width: 992px)" />
+          <source srcSet={logoMedium} media="(max-width: 1023px)" />
+          <source srcSet={logoLarge} media="(min-width: 1024px)" />
           <img src={logoMedium} alt="Mateo Olarte - Frontend Engineer" />
         </picture>
       </Logo>
       <Nav currentPage={currentPage} />
     </Wrapper>
-  )
+  );
 }
 
 Header.propTypes = {
   siteTitle: string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
