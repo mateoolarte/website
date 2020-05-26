@@ -13,6 +13,7 @@ const Wrapper = styled.nav`
     bottom: 0;
     left: 0;
     width: 100%;
+    background-color: #fafafa;
   }
 
   ${MEDIA_QUERIES.landscape} {
@@ -91,7 +92,6 @@ const Box = styled.li`
 const Item = styled(Link)`
   transition: 0.25s color ease-out;
   color: #02060c;
-  font-weight: 500;
   text-align: center;
   text-decoration: none;
 

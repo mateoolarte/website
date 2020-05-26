@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { createGlobalStyle } from "styled-components";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.33px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -57,11 +60,7 @@ export default function Layout({ children, currentPage }) {
       />
       <main>{children}</main>
 
-      {/* <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer> */}
+      <Footer />
     </>
   );
 }
