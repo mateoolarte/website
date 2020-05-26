@@ -35,6 +35,12 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  main {
+    max-width: 1180px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
   picture {
     display: block;
   }
@@ -59,7 +65,6 @@ export default function Layout({ children, currentPage }) {
         currentPage={currentPage}
       />
       <main>{children}</main>
-
       <Footer />
     </>
   );

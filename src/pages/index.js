@@ -1,7 +1,8 @@
 import React from "react";
 
-import Layout from "../components/Layout";
 import SEO from "../components/Seo";
+import Layout from "../components/Layout";
+import HomeHero from "../components/HomeHero";
 
 export default function Home({ location }) {
   const pathname = (location && location.pathname) || "/";
@@ -9,6 +10,7 @@ export default function Home({ location }) {
   return (
     <Layout currentPage={pathname}>
       <SEO title="Home" />
+      <HomeHero />
     </Layout>
   );
 }
