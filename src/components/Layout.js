@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    color: #02060c;
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;

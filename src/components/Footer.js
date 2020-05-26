@@ -85,7 +85,7 @@ export default function Footer() {
         })}
       </SocialLinks>
       <Copyright>
-        Made with ❤️ in <strong>Medellín, Colombia</strong> <br />
+        Made with <span role="img" aria-label="heart">❤️</span> in <strong>Medellín, Colombia</strong> <br />
         Mateo Olarte © {new Date().getFullYear()}
       </Copyright>
     </Wrapper>
