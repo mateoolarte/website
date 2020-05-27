@@ -1,18 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 
+import { MEDIA_QUERIES } from "../constants";
+
 const Wrapper = styled.a`
   display: flex;
-  width: calc(50% - 40px);
-  height: 330px;
-  margin-bottom: 5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
   border-radius: 0.6rem;
   color: #02060c;
   box-shadow: 0 3px 12px #dbdee3;
   text-decoration: none;
 
+  ${MEDIA_QUERIES.tablet} {
+    width: calc(50% - 20px);
+    height: 280px;
+  }
+
+  ${MEDIA_QUERIES.landscape} {
+    height: 330px;
+  }
+
+  ${MEDIA_QUERIES.desktop} {
+    width: calc(50% - 40px);
+    margin-bottom: 5rem;
+  }
+
   &:nth-child(odd) {
-    margin-right: 80px;
+    ${MEDIA_QUERIES.tablet} {
+      margin-right: 40px;
+    }
+
+    ${MEDIA_QUERIES.desktop} {
+      margin-right: 80px;
+    }
   }
 
   &:hover {
@@ -23,8 +44,14 @@ const Wrapper = styled.a`
 `;
 
 const Info = styled.div`
-  width: 50%;
+  width: 100%;
   padding: 1.5rem;
+  text-align: center;
+
+  ${MEDIA_QUERIES.landscape} {
+    width: 50%;
+    text-align: left;
+  }
 `;
 
 const Icon = styled.img`
@@ -54,9 +81,14 @@ const Description = styled.p`
 `;
 
 const BgImageContainer = styled.div`
-  width: 50%;
-  border-radius: 0 0.6rem 0.6rem 0;
-  box-shadow: -3px 0 12px #dbdee3;
+  display: none;
+
+  ${MEDIA_QUERIES.landscape} {
+    display: block;
+    width: 50%;
+    border-radius: 0 0.6rem 0.6rem 0;
+    box-shadow: -3px 0 12px #dbdee3;
+  }
 `;
 
 const BgImage = styled.div`

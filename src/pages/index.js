@@ -16,6 +16,7 @@ const Heading = styled.h2`
 const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 `;
 
 export default function Home({ location }) {
