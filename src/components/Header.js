@@ -9,6 +9,9 @@ import logoSmall from "../images/logo-small.png";
 import logoMedium from "../images/logo-medium.png";
 import logoLarge from "../images/logo-large.png";
 
+import logoBlogSmall from "../images/logo-blog-small.png";
+import logoBlogLarge from "../images/logo-blog-large.png";
+
 import Nav from "./Nav";
 
 const Wrapper = styled.header`
@@ -38,15 +41,35 @@ const Logo = styled(Link)`
   }
 `;
 
+function checkLogo(value, logoBlog, logoWebsite) {
+  if (value.includes("blog")) {
+    return logoBlog;
+  }
+
+  return logoWebsite;
+}
+
 export default function Header({ currentPage }) {
   return (
     <Wrapper>
       <Logo to="/">
         <picture>
-          <source srcSet={logoSmall} media="(max-width: 767px)" />
-          <source srcSet={logoMedium} media="(max-width: 1023px)" />
-          <source srcSet={logoLarge} media="(min-width: 1024px)" />
-          <img src={logoMedium} alt="Mateo Olarte - Frontend Engineer" />
+          <source
+            srcSet={checkLogo(currentPage, logoBlogSmall, logoSmall)}
+            media="(max-width: 767px)"
+          />
+          <source
+            srcSet={checkLogo(currentPage, logoBlogSmall, logoMedium)}
+            media="(max-width: 1023px)"
+          />
+          <source
+            srcSet={currentPage.includes("blog") ? logoBlogLarge : logoLarge}
+            media="(min-width: 1024px)"
+          />
+          <img
+            src={checkLogo(currentPage, logoBlogSmall, logoMedium)}
+            alt="Mateo Olarte - Frontend Engineer"
+          />
         </picture>
       </Logo>
       <Nav currentPage={currentPage} />

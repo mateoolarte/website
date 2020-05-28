@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import { MEDIA_QUERIES } from "../constants";
 
 import items from "../data/navbar-links";
+import itemsBlog from "../data/blog-navbar-links";
 
 const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
@@ -23,6 +24,7 @@ const Wrapper = styled.nav`
 
 const List = styled.ul`
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   margin: 0;
   padding: 0;
@@ -69,49 +71,72 @@ const Box = styled.li`
   }
 
   &:hover {
-    a {
-      color: #1755b2;
+    ${MEDIA_QUERIES.landscapeMax} {
+      a {
+        color: #1755b2;
+      }
+
+      svg {
+        fill: #1755b2;
+      }
     }
-
-    svg {
-      fill: #1755b2;
-    }
-  }
-
-  a {
-    color: ${({ children }) =>
-      children.props.isActive ? "#1755b2" : "#02060c"};
-  }
-
-  svg {
-    fill: ${({ children }) =>
-      children.props.isActive ? "#1755b2" : "#02060c"};
   }
 `;
 
 const Item = styled(Link)`
   transition: 0.25s color ease-out;
-  color: #02060c;
+  color: ${({ isActive }) => (isActive ? "#1755b2" : "#02060c")};
   text-align: center;
   text-decoration: none;
-
-  ${MEDIA_QUERIES.landscape} {
-    font-size: 1.2rem;
-  }
 
   &:hover {
     color: #1755b2;
   }
+
+  ${MEDIA_QUERIES.landscape} {
+    font-size: 1.2rem;
+
+    ${({ isBtn }) =>
+      isBtn &&
+      `
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border: 2px solid #1755b2;
+      border-radius: 0.6rem;
+      background-color: #fafafa;
+      color: #1755b2;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #1755b2;
+        color: #fafafa;
+      }
+    `}
+  }
+
+  svg {
+    fill: ${({ isActive }) => (isActive ? "#1755b2" : "#02060c")};
+  }
 `;
 
+function checkLinks(value) {
+  if (value.includes("blog")) {
+    return itemsBlog;
+  }
+
+  return items;
+}
+
 export default function Nav({ currentPage }) {
+  const links = checkLinks(currentPage);
+
   return (
     <Wrapper>
       <List>
-        {items.map(({ id, label, link, Icon }) => {
+        {links.map(({ id, label, link, Icon, highlight }) => {
           return (
             <Box key={id}>
-              <Item to={link} isActive={currentPage === link}>
+              <Item to={link} isActive={currentPage === link} isBtn={highlight}>
                 <IconContainer>
                   <Icon />
                 </IconContainer>

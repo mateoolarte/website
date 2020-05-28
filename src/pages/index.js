@@ -48,7 +48,7 @@ export default function Home({ location }) {
       <SEO title="Home" />
       <HomeHero />
 
-      <Heading>Projects</Heading>
+      <Heading id="projects">Projects</Heading>
 
       <ProjectsWrapper>
         {projects.map(project => {
