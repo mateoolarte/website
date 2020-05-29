@@ -41,7 +41,7 @@ const Logo = styled(Link)`
   }
 `;
 
-function checkLogo(value, logoBlog, logoWebsite) {
+function checkLogo(value = "", logoBlog, logoWebsite) {
   if (value.includes("blog")) {
     return logoBlog;
   }
@@ -63,7 +63,7 @@ export default function Header({ currentPage }) {
             media="(max-width: 1023px)"
           />
           <source
-            srcSet={currentPage.includes("blog") ? logoBlogLarge : logoLarge}
+            srcSet={checkLogo(currentPage, logoBlogLarge, logoLarge)}
             media="(min-width: 1024px)"
           />
           <img

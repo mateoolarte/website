@@ -132,7 +132,7 @@ function checkLinks(value) {
 }
 
 export default function Nav({ currentPage }) {
-  const links = checkLinks(currentPage);
+  const links = checkLinks(currentPage || "");
 
   return (
     <Wrapper>
