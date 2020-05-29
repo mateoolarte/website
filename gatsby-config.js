@@ -32,7 +32,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Poly:ital@0;1`, // you can also specify font weights and styles
+          `Poly:wght@400`, // you can also specify font weights and styles
+          `Poly:ital@0;1`,
           `Work+Sans:wght@500;700`,
         ],
         display: "swap",
@@ -42,4 +43,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: -0.33px;
+    letter-spacing: -0.43px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -70,6 +70,10 @@ const Box = styled.li`
     margin: 0 2rem;
   }
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   &:hover {
     ${MEDIA_QUERIES.landscapeMax} {
       a {
