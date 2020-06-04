@@ -1,9 +1,6 @@
 import iconServillantas from "../images/projects/icon-servillantas.png";
 import bgServillantas from "../images/projects/bg-servillantas.png";
 
-import iconThemesei from "../images/projects/icon-themesei.svg";
-import bgThemesei from "../images/projects/bg-themesei.png";
-
 import iconEcoactua from "../images/projects/icon-ecoactua.svg";
 import bgEcoactua from "../images/projects/bg-ecoactua.png";
 
@@ -24,17 +21,6 @@ const items = [
   },
   {
     id: 2,
-    name: "Themesei",
-    icon: iconThemesei,
-    bgImage: bgThemesei,
-    date: "2019",
-    role: "Partner / Developer",
-    description:
-      "E-commerce platform for Wordpress themes, customizable and subscription based.",
-    link: "https://www.themesei.com/",
-  },
-  {
-    id: 3,
     name: "Ecoactua",
     icon: iconEcoactua,
     bgImage: bgEcoactua,
@@ -45,7 +31,7 @@ const items = [
     link: "http://ecoactua.herokuapp.com/#/",
   },
   {
-    id: 4,
+    id: 3,
     name: "Expensify",
     icon: iconExpensify,
     bgImage: bgExpensify,
