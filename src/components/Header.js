@@ -50,9 +50,11 @@ function checkLogo(value = "", logoBlog, logoWebsite) {
 }
 
 export default function Header({ currentPage }) {
+  const pageLocation = currentPage || "";
+
   return (
     <Wrapper>
-      <Logo to={currentPage.includes("blog") ? "/blog" : "/"}>
+      <Logo to={pageLocation.includes("blog") ? "/blog" : "/"}>
         <picture>
           <source
             srcSet={checkLogo(currentPage, logoBlogSmall, logoSmall)}
