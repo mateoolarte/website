@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
@@ -133,6 +133,24 @@ function checkLinks(value) {
 
 export default function Nav({ currentPage }) {
   const links = checkLinks(currentPage || "");
+  const data = useStaticQuery(graphql`
+    query {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `);
+  const posts = data && data.allMdx;
+  const edges = posts && posts.edges;
+  const currentNode = edges && edges[0].node;
+  const frontmatter = currentNode && currentNode.frontmatter;
+  const latestPost = frontmatter && frontmatter.path;
 
   return (
     <Wrapper>
@@ -140,7 +158,11 @@ export default function Nav({ currentPage }) {
         {links.map(({ id, label, link, Icon, highlight }) => {
           return (
             <Box key={id}>
-              <Item to={link} isActive={currentPage === link} isBtn={highlight}>
+              <Item
+                to={`${label === "Último post" ? `/blog${latestPost}` : link}`}
+                isActive={currentPage === link}
+                isBtn={highlight}
+              >
                 <IconContainer>
                   <Icon />
                 </IconContainer>

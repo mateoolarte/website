@@ -52,6 +52,7 @@ const Image = styled.div`
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center center;
   }
 `;
 
@@ -205,15 +206,15 @@ const Btn = styled(Link)`
   }
 `;
 
-export default function CoverPost({
-  category,
-  slug,
-  title,
-  thumbnail,
-  date,
-  content,
-  isCover,
-}) {
+export default function CoverPost({ node, isCover }) {
+  const data = node && node.frontmatter;
+  const categories = data && data.categories;
+  const date = data && data.date;
+  const path = data && data.path;
+  const thumbnail = data && data.thumbnail;
+  const title = data && data.title;
+  const excerpt = node && node.excerpt;
+
   return (
     <Wrapper isCover={isCover}>
       <ImageContainer isCover={isCover}>
@@ -222,22 +223,22 @@ export default function CoverPost({
       <Info isCover={isCover}>
         {isCover ? (
           <Fragment>
-            <Category isCover={isCover}>{category}</Category>
+            <Category isCover={isCover}>{categories}</Category>
             <Title isCover={isCover}>{title}</Title>
             <DateText isCover={isCover}>{date}</DateText>
           </Fragment>
         ) : (
           <Fragment>
             <Details>
-              <Category>{category}</Category>
+              <Category>{categories}</Category>
               <DateText>{date}</DateText>
             </Details>
             <Title>{title}</Title>
           </Fragment>
         )}
 
-        <Description isCover={isCover}>{content}</Description>
-        <Btn to={`/blog/${slug}`} isCover={isCover}>
+        <Description isCover={isCover}>{excerpt}</Description>
+        <Btn to={`/blog/${path}`} isCover={isCover}>
           Leer más
         </Btn>
       </Info>

@@ -1,60 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { graphql } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 import Post from "../components/Post";
-
-import thumbImage from "../images/cover-educacion-moderna.jpg";
-
-const posts = [
-  {
-    id: 1,
-    slug: "educacion-moderna",
-    title: "Educación moderna",
-    category: "Tecnología",
-    thumbnail: thumbImage,
-    coverImage: thumbImage,
-    date: "Abril 29, 2018",
-    content:
-      "Hola de nuevo, hoy vengo a contarles sobre algunas iniciativas en las cuales he participado y que me parecen excelentes opciones a la hora de aprender sobre temas tecnológicos…",
-  },
-  {
-    id: 2,
-    slug: "educacion-moderna",
-    title: "Educación moderna",
-    category: "Tecnología",
-    thumbnail: thumbImage,
-    coverImage: thumbImage,
-    date: "Abril 28, 2018",
-    content:
-      "Hola de nuevo, hoy vengo a contarles sobre algunas iniciativas en las cuales he participado y que me parecen excelentes opciones a la hora de aprender sobre temas tecnológicos…",
-  },
-  {
-    id: 3,
-    slug: "educacion-moderna",
-    title: "Educación moderna",
-    category: "Tecnología",
-    thumbnail: thumbImage,
-    coverImage: thumbImage,
-    date: "Abril 27, 2018",
-    content:
-      "Hola de nuevo, hoy vengo a contarles sobre algunas iniciativas en las cuales he participado y que me parecen excelentes opciones a la hora de aprender sobre temas tecnológicos…",
-  },
-  {
-    id: 4,
-    slug: "educacion-moderna",
-    title: "Educación moderna",
-    category: "Tecnología",
-    thumbnail: thumbImage,
-    coverImage: thumbImage,
-    date: "Abril 27, 2018",
-    content:
-      "Hola de nuevo, hoy vengo a contarles sobre algunas iniciativas en las cuales he participado y que me parecen excelentes opciones a la hora de aprender sobre temas tecnológicos…",
-  },
-];
 
 const Wrapper = styled.section`
   display: flex;
@@ -67,8 +19,10 @@ const Wrapper = styled.section`
   }
 `;
 
-export default function Blog({ location }) {
+export default function Blog({ location, data }) {
   const pathname = (location && location.pathname) || "/";
+  const allMdx = data && data.allMdx;
+  const posts = allMdx && allMdx.edges;
 
   return (
     <Layout currentPage={pathname}>
@@ -76,9 +30,35 @@ export default function Blog({ location }) {
 
       <Wrapper>
         {posts.map((post, index) => {
-          return <Post {...post} isCover={index === 0} />;
+          return (
+            <Post
+              key={post.node.frontmatter.id}
+              {...post}
+              isCover={index === 0}
+            />
+          );
         })}
       </Wrapper>
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt(pruneLength: 180)
+          frontmatter {
+            id
+            path
+            date(formatString: "MMMM DD, YYYY")
+            title
+            thumbnail
+            categories
+          }
+        }
+      }
+    }
+  }
+`;

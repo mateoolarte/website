@@ -52,7 +52,7 @@ function checkLogo(value = "", logoBlog, logoWebsite) {
 export default function Header({ currentPage }) {
   return (
     <Wrapper>
-      <Logo to="/">
+      <Logo to={currentPage.includes("blog") ? "/blog" : "/"}>
         <picture>
           <source
             srcSet={checkLogo(currentPage, logoBlogSmall, logoSmall)}
