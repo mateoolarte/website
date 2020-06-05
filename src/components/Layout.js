@@ -66,7 +66,7 @@ export default function Layout({ children, currentPage }) {
         currentPage={currentPage}
       />
       <main>{children}</main>
-      <Footer />
+      <Footer currentPage={currentPage} />
     </>
   );
 }

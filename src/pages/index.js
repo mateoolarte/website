@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import SEO from "../components/Seo";
 import Layout from "../components/Layout";
@@ -40,8 +40,10 @@ const Btn = styled(Link)`
   }
 `;
 
-export default function Home({ location }) {
+export default function Home({ location, data }) {
   const pathname = (location && location.pathname) || "/";
+  const allMdx = data && data.allMdx;
+  const posts = allMdx && allMdx.edges;
 
   return (
     <Layout currentPage={pathname}>
@@ -59,14 +61,33 @@ export default function Home({ location }) {
       <Heading>Latest posts</Heading>
 
       <PostsWrapper>
-        <HomePost link="/educacion-moderna" title="Educación moderna" />
-        <HomePost
-          link="/hola-mundo"
-          title="¡Hola mundo! - Bienvenidos a mi blog"
-        />
+        {posts.map(post => {
+          const node = post && post.node;
+          const frontmatter = node && node.frontmatter;
+          const path = frontmatter && frontmatter.path;
+          const title = frontmatter && frontmatter.title;
+
+          return <HomePost link={`/blog/${path}`} title={title} />;
+        })}
 
         <Btn to="/blog">See more</Btn>
       </PostsWrapper>
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 2) {
+      edges {
+        node {
+          frontmatter {
+            id
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`;

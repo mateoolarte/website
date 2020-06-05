@@ -87,7 +87,7 @@ export default function About({ location }) {
           </p>
 
           <p>
-            Sometimes I like to go out and ride in my bike meeting new places.
+            Sometimes I like to go out and ride in my bike and meeting new places.
           </p>
         </Info>
 

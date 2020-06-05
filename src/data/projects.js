@@ -16,7 +16,7 @@ const items = [
     date: "2020",
     role: "Full stack developer",
     description:
-      "Web app where you can search, list, manage products through admin panel and contact an adviser.",
+      "Web application where you can search, list, manage products through admin panel and contact an adviser.",
     link: "https://servillantasla57.com/",
   },
   {
@@ -27,7 +27,7 @@ const items = [
     date: "2019",
     role: "Creator / Developer",
     description:
-      "Web app to report environmental issues in your city. Solved by local authorities.",
+      "Web application to report environmental issues in your city. Solved by local authorities.",
     link: "http://ecoactua.herokuapp.com/#/",
   },
   {

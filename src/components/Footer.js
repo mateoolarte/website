@@ -1,9 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 
 import { MEDIA_QUERIES } from "../constants";
 
 import links from "../data/social-links";
+
+const infoEs = {
+  heading: "¿Interesado en hablar conmigo?",
+  subtitle: "Contactame en:",
+};
+
+const infoEn = {
+  heading: "Are you interested in talking with me?",
+  subtitle: "Contact me on:",
+};
 
 const Wrapper = styled.footer`
   max-width: 1180px;
@@ -66,11 +76,22 @@ const Copyright = styled.p`
   }
 `;
 
-export default function Footer() {
+function Cta({ content }) {
+  return (
+    <Fragment>
+      <Heading>{content.heading}</Heading>
+      <Subtitle>{content.subtitle}</Subtitle>
+    </Fragment>
+  );
+}
+
+export default function Footer({ currentPage }) {
+  const pageLocation = currentPage || "";
+  const isBlogPage = pageLocation.includes("blog");
+
   return (
     <Wrapper>
-      <Heading>Are you interested in talking with me?</Heading>
-      <Subtitle>Contact me on:</Subtitle>
+      <Cta content={isBlogPage ? infoEs : infoEn} />
       <SocialLinks>
         {links.map(({ id, link, Icon }) => {
           return (
@@ -85,7 +106,12 @@ export default function Footer() {
         })}
       </SocialLinks>
       <Copyright>
-        Made with <span role="img" aria-label="heart">❤️</span> in <strong>Medellín, Colombia</strong> <br />
+        {isBlogPage ? "Hecho con" : "Made with"}{" "}
+        <span role="img" aria-label="heart">
+          ❤️
+        </span>{" "}
+        {isBlogPage ? "en " : "in "}
+        <strong>Medellín, Colombia</strong> <br />
         Mateo Olarte © {new Date().getFullYear()}
       </Copyright>
     </Wrapper>
