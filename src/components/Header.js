@@ -39,6 +39,19 @@ const Logo = styled(Link)`
       opacity: 0.7;
     }
   }
+
+  img {
+    height: 35px;
+
+    ${MEDIA_QUERIES.tablet} {
+      width: 120px;
+      height: auto;
+    }
+
+    ${MEDIA_QUERIES.landscape} {
+      width: 190px;
+    }
+  }
 `;
 
 function checkLogo(value = "", logoBlog, logoWebsite) {
