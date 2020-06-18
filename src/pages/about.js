@@ -53,6 +53,8 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   height: 550px;
+  border-radius: 4px;
+  box-shadow: 0 3px 12px #dbdee3;
 `;
 
 export default function About({ location }) {
@@ -87,7 +89,8 @@ export default function About({ location }) {
           </p>
 
           <p>
-            Sometimes I like to go out and ride in my bike and meeting new places.
+            Sometimes I like to go out and ride in my bike and meeting new
+            places.
           </p>
         </Info>
 
