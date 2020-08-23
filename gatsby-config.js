@@ -5,6 +5,7 @@ module.exports = {
     author: `Mateo Olarte`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
