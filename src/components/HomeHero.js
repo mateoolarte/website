@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   margin-top: 0;
   margin-bottom: 0.5rem;
+  line-height: 1;
 
   ${MEDIA_QUERIES.tablet} {
     font-size: 2.2rem;

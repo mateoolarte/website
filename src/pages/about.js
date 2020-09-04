@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
@@ -57,6 +58,26 @@ const Image = styled.img`
   box-shadow: 0 3px 12px #dbdee3;
 `;
 
+const LinksHeading = styled.h3`
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  color: #1755b2;
+  font-size: 1.6rem;
+  `;
+
+const Links = styled.ul`
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+`;
+
+const Item = styled.li``;
+
+const ItemLink = styled(Link)`
+  color: #02060C;
+  font-size: 1.1rem;
+`;
+
 export default function About({ location }) {
   const pathname = (location && location.pathname) || "/";
 
@@ -92,6 +113,13 @@ export default function About({ location }) {
             Sometimes I like to go out and ride in my bike and meeting new
             places.
           </p>
+
+          <LinksHeading>Links</LinksHeading>
+          <Links>
+            <Item>
+              <ItemLink to="/learning-roadmap">Learning roadmap</ItemLink>
+            </Item>
+          </Links>
         </Info>
 
         <ImageContainer>

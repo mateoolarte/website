@@ -1,3 +1,6 @@
+import iconGuruhotel from "../images/projects/icon-guruhotel.svg";
+import bgGuruhotel from "../images/projects/bg-guruhotel.png";
+
 import iconServillantas from "../images/projects/icon-servillantas.png";
 import bgServillantas from "../images/projects/bg-servillantas.png";
 
@@ -10,6 +13,17 @@ import bgExpensify from "../images/projects/bg-expensify.jpg";
 const items = [
   {
     id: 1,
+    name: "Guruhotel",
+    icon: iconGuruhotel,
+    bgImage: bgGuruhotel,
+    date: "2020",
+    role: "Freelance / Developer",
+    description:
+      "The Shopify for the hotel industry. Independent hotels use our software to rebuild their hotel website.",
+    link: "https://guruhotel.com/",
+  },
+  {
+    id: 2,
     name: "Servillantas",
     icon: iconServillantas,
     bgImage: bgServillantas,
@@ -20,7 +34,7 @@ const items = [
     link: "https://servillantasla57.com/",
   },
   {
-    id: 2,
+    id: 3,
     name: "Ecoactua",
     icon: iconEcoactua,
     bgImage: bgEcoactua,
@@ -31,7 +45,7 @@ const items = [
     link: "http://ecoactua.herokuapp.com/#/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Expensify",
     icon: iconExpensify,
     bgImage: bgExpensify,
