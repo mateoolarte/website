@@ -3,7 +3,7 @@ import LinkedinIcon from "../images/icons/linkedin";
 import TwitterIcon from "../images/icons/twitter";
 import MailIcon from "../images/icons/mail";
 
-const items = [
+const socialLinks = [
   {
     id: 1,
     link: "https://github.com/mateoolarte",
@@ -26,4 +26,19 @@ const items = [
   },
 ];
 
-export default items;
+const info = {
+  es: {
+    heading: "¿Interesado en hablar conmigo?",
+    subtitle: "Contactame en:",
+    madeBy: "Hecho con",
+    in: "en ",
+  },
+  en: {
+    heading: "Are you interested in talking with me?",
+    subtitle: "Contact me on:",
+    madeBy: "Made with",
+    in: "in ",
+  },
+};
+
+export { socialLinks, info };

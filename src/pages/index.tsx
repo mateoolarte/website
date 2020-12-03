@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
 import SEO from "../components/Seo";
-import Layout from "../components/Layout";
+import Layout from "../shared/Layout";
 import HomeHero from "../components/HomeHero";
 import ProjectCard from "../components/ProjectCard";
 import HomePost from "../components/HomePost";

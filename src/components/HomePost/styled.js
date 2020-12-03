@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
@@ -13,10 +12,4 @@ const Title = styled(Link)`
   text-decoration: none;
 `;
 
-export default function HomePost({ title, link }) {
-  return (
-    <Wrapper>
-      <Title to={link}>{title}</Title>
-    </Wrapper>
-  );
-}
+export { Wrapper, Title };

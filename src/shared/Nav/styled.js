@@ -1,11 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
-import { MEDIA_QUERIES } from "../constants";
-
-import items from "../data/navbar-links";
-import itemsBlog from "../data/blog-navbar-links";
+import { MEDIA_QUERIES } from "../../constants";
 
 const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
@@ -123,55 +119,4 @@ const Item = styled(Link)`
   }
 `;
 
-function checkLinks(value) {
-  if (value.includes("blog")) {
-    return itemsBlog;
-  }
-
-  return items;
-}
-
-export default function Nav({ currentPage }) {
-  const links = checkLinks(currentPage || "");
-  const data = useStaticQuery(graphql`
-    query {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-    }
-  `);
-  const posts = data && data.allMdx;
-  const edges = posts && posts.edges;
-  const currentNode = edges && edges[0].node;
-  const frontmatter = currentNode && currentNode.frontmatter;
-  const latestPost = frontmatter && frontmatter.path;
-
-  return (
-    <Wrapper>
-      <List>
-        {links.map(({ id, label, link, Icon, highlight }) => {
-          return (
-            <Box key={id}>
-              <Item
-                to={`${label === "Último post" ? `/blog${latestPost}` : link}`}
-                isActive={currentPage === link}
-                isBtn={highlight}
-              >
-                <IconContainer>
-                  <Icon />
-                </IconContainer>
-                {label}
-              </Item>
-            </Box>
-          );
-        })}
-      </List>
-    </Wrapper>
-  );
-}
+export { Wrapper, List, IconContainer, Box, Item };

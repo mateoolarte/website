@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
-import Layout from "../components/Layout";
+import Layout from "../shared/Layout";
 import SEO from "../components/Seo";
 
 import workspaceImg from "../images/workspace.jpg";

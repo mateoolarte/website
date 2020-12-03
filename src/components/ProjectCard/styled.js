@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../constants";
+import { MEDIA_QUERIES } from "../../constants";
 
 const Wrapper = styled.a`
   display: flex;
@@ -99,31 +98,13 @@ const BgImage = styled.div`
   opacity: 0.5;
 `;
 
-export default function ProjectCard({
-  name,
-  icon,
-  bgImage,
-  date,
-  role,
-  description,
-  link,
-}) {
-  return (
-    <Wrapper href={link} target="_blank">
-      <Info>
-        <Icon src={icon} alt={`Icon for ${name}`} />
-        <Name>{name}</Name>
-        <Details>
-          {date} - {role}
-        </Details>
-        <Description>{description}</Description>
-      </Info>
-      <BgImageContainer>
-        <BgImage
-          className="backgroundImageProject"
-          style={{ backgroundImage: `url(${bgImage})` }}
-        />
-      </BgImageContainer>
-    </Wrapper>
-  );
-}
+export {
+  Wrapper,
+  Info,
+  Icon,
+  Name,
+  Details,
+  Description,
+  BgImageContainer,
+  BgImage,
+};

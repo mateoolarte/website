@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import { MEDIA_QUERIES } from "../constants";
 
 import SEO from "../components/Seo";
-import Layout from "../components/Layout";
+import Layout from "../shared/Layout";
 import Post from "../components/Post";
 
 const Wrapper = styled.section`

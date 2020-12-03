@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        defaultLayout: require.resolve(`./src/components/Article.js`),
+        defaultLayout: require.resolve(`./src/components/Article/index.tsx`),
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-emojis",
