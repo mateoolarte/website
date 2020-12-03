@@ -117,7 +117,7 @@ export default function About({ location }) {
           <LinksHeading>Links</LinksHeading>
           <Links>
             <Item>
-              <ItemLink to="/learning-roadmap">Learning roadmap</ItemLink>
+              <ItemLink to="/learning-links">Learning knowledge base</ItemLink>
             </Item>
           </Links>
         </Info>
