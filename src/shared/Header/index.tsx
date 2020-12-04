@@ -1,12 +1,12 @@
 import React from "react";
 import { string } from "prop-types";
 
-import logoSmall from "../images/logo-small.png";
-import logoMedium from "../images/logo-medium.png";
-import logoLarge from "../images/logo-large.png";
+import logoSmall from "../../images/logo-small.png";
+import logoMedium from "../../images/logo-medium.png";
+import logoLarge from "../../images/logo-large.png";
 
-import logoBlogSmall from "../images/logo-blog-small.png";
-import logoBlogLarge from "../images/logo-blog-large.png";
+import logoBlogSmall from "../../images/logo-blog-small.png";
+import logoBlogLarge from "../../images/logo-blog-large.png";
 
 import Nav from "../Nav";
 
