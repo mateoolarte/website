@@ -42,7 +42,7 @@ export default function Nav({ currentPage }) {
           return (
             <Box key={id}>
               <Item
-                to={`${label === "Último post" ? `/blog${latestPost}` : link}`}
+                to={`${label === "Último post" ? `/blog/${latestPost}` : link}`}
                 isActive={currentPage === link}
                 isBtn={highlight}
               >
