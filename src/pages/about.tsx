@@ -63,7 +63,7 @@ const LinksHeading = styled.h3`
   margin-bottom: 1.4rem;
   color: #1755b2;
   font-size: 1.6rem;
-  `;
+`;
 
 const Links = styled.ul`
   margin: 0;
@@ -73,8 +73,8 @@ const Links = styled.ul`
 
 const Item = styled.li``;
 
-const ItemLink = styled(Link)`
-  color: #02060C;
+const ItemLink = styled.a`
+  color: #02060c;
   font-size: 1.1rem;
 `;
 
@@ -117,7 +117,7 @@ export default function About({ location }) {
           <LinksHeading>Links</LinksHeading>
           <Links>
             <Item>
-              <ItemLink to="/learning-links">Learning knowledge base</ItemLink>
+              <ItemLink href="/learning-links">Learning knowledge base</ItemLink>
             </Item>
           </Links>
         </Info>
