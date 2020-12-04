@@ -4,32 +4,28 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-
   const article = path.resolve(`./src/components/Article/index.tsx`);
-  return graphql(
-    `
-      {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 100
-        ) {
-          edges {
-            node {
-              frontmatter {
-                path
-              }
-            }
+  const query = ` {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 100
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
           }
         }
       }
-    `
-  ).then(result => {
+    }
+  }`;
+
+  return graphql(query).then(result => {
     if (result.errors) {
       throw result.errors;
     }
