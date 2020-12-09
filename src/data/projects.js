@@ -1,11 +1,11 @@
 import iconGuruhotel from "../images/projects/icon-guruhotel.svg";
-import bgGuruhotel from "../images/projects/bg-guruhotel.png";
+import bgGuruhotel from "../images/projects/bg-guruhotel.jpg";
 
 import iconServillantas from "../images/projects/icon-servillantas.png";
-import bgServillantas from "../images/projects/bg-servillantas.png";
+import bgServillantas from "../images/projects/bg-servillantas.jpg";
 
 import iconEcoactua from "../images/projects/icon-ecoactua.svg";
-import bgEcoactua from "../images/projects/bg-ecoactua.png";
+import bgEcoactua from "../images/projects/bg-ecoactua.jpg";
 
 import iconExpensify from "../images/projects/icon-expensify.svg";
 import bgExpensify from "../images/projects/bg-expensify.jpg";
@@ -42,7 +42,7 @@ const items = [
     role: "Creator / Developer",
     description:
       "Web application to report environmental issues in your city. Solved by local authorities.",
-    link: "http://ecoactua.herokuapp.com/#/",
+    link: "https://ecoactua.herokuapp.com/#/",
   },
   {
     id: 4,
