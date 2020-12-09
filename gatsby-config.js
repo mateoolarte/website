@@ -3,6 +3,7 @@ module.exports = {
     title: `Mateo Olarte - Frontend Engineer`,
     description: `I’m a software developer with professional experience working on websites and web applications. I like to be present in the thinking and design of digital products and share my ideas and knowledge. I specialize in Frontend development with technologies like CSS, React, Redux, Webpack, Apollo, NextJS.`,
     author: `Mateo Olarte`,
+    siteUrl: 'https://mateoolarte.com'
   },
   plugins: [
     `gatsby-plugin-netlify`,
@@ -10,6 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
