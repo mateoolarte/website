@@ -83,17 +83,20 @@ export default function About({ location }) {
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title="About" />
+      <SEO
+        title="About me"
+        description="I from Medellín, Colombia, passionate about the digital industry. Working with modern technologies always finding the best solution to improve the quality of products"
+      />
 
       <Wrapper>
         <Info>
           <Heading>Hi, I'm Mateo Olarte</Heading>
 
           <p>
-            I’m a Frontend engineer, born in Medellín, Colombia. I passionate
-            about technology especially on web development, I like to work with
-            modern technologies and always trying to learn new things to find
-            the best solution for the problem that I have.
+            I’m a Software developer from Medellín, Colombia. I passionate about
+            technology especially web development, I like to work with modern
+            technologies and always trying to learn new things to find the best
+            solution to improve the quality of products.
           </p>
 
           <p>
@@ -117,7 +120,9 @@ export default function About({ location }) {
           <LinksHeading>Links</LinksHeading>
           <Links>
             <Item>
-              <ItemLink href="/learning-links">Learning knowledge base</ItemLink>
+              <ItemLink href="/learning-links">
+                Learning knowledge base
+              </ItemLink>
             </Item>
           </Links>
         </Info>

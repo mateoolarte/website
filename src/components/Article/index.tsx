@@ -18,19 +18,20 @@ import {
 } from "./styled";
 
 export default function Article({ location, data }) {
-  const pathname = (location && location.pathname) || "/";
-  const mdx = data && data.mdx;
-  const content = mdx && mdx.body;
-  const frontmatter = mdx && mdx.frontmatter;
-  const title = frontmatter && frontmatter.title;
-  const date = frontmatter && frontmatter.date;
-  const categories = frontmatter && frontmatter.categories;
-  const coverImage = frontmatter && frontmatter.cover;
-  const copyright = frontmatter && frontmatter.copyright;
+  const pathname = location?.pathname || "/";
+  const mdx = data?.mdx;
+  const content = mdx?.body;
+  const excerpt = mdx?.excerpt;
+  const frontmatter = mdx?.frontmatter;
+  const title = frontmatter?.title;
+  const date = frontmatter?.date;
+  const categories = frontmatter?.categories;
+  const coverImage = frontmatter?.cover;
+  const copyright = frontmatter?.copyright;
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title="Title article" />
+      <SEO title={title} lang="es" description={excerpt} />
       <Wrapper>
         <Hero>
           <Category>{categories}</Category>
@@ -64,7 +65,7 @@ export const pageQuery = graphql`
     }
     mdx(frontmatter: { path: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 180)
+      excerpt(pruneLength: 133)
       body
       frontmatter {
         title

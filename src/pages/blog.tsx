@@ -20,13 +20,13 @@ const Wrapper = styled.section`
 `;
 
 export default function Blog({ location, data }) {
-  const pathname = (location && location.pathname) || "/";
-  const allMdx = data && data.allMdx;
-  const posts = allMdx && allMdx.edges;
+  const pathname = location?.pathname || "/";
+  const allMdx = data?.allMdx;
+  const posts = allMdx?.edges;
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title="Blog" />
+      <SEO title="Blog" lang="es" />
 
       <Wrapper>
         {posts.map((post, index) => {
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 180)
+          excerpt(pruneLength: 133)
           frontmatter {
             id
             path

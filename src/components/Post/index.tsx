@@ -14,13 +14,13 @@ import {
 } from "./styled";
 
 export default function CoverPost({ node, isCover }) {
-  const data = node && node.frontmatter;
-  const categories = data && data.categories;
-  const date = data && data.date;
-  const path = data && data.path;
-  const thumbnail = data && data.thumbnail;
-  const title = data && data.title;
-  const excerpt = node && node.excerpt;
+  const data = node?.frontmatter;
+  const categories = data?.categories;
+  const date = data?.date;
+  const path = data?.path;
+  const thumbnail = data?.thumbnail;
+  const title = data?.title;
+  const excerpt = node?.excerpt;
 
   return (
     <Wrapper isCover={isCover}>
