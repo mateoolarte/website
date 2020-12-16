@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../../constants";
+import { MEDIA_QUERIES } from "../../../constants";
 
 const Wrapper = styled.footer`
   max-width: 1180px;

@@ -1,7 +1,7 @@
-import GithubIcon from "../images/icons/github";
-import LinkedinIcon from "../images/icons/linkedin";
-import TwitterIcon from "../images/icons/twitter";
-import MailIcon from "../images/icons/mail";
+import GithubIcon from "../../../images/icons/github";
+import LinkedinIcon from "../../../images/icons/linkedin";
+import TwitterIcon from "../../../images/icons/twitter";
+import MailIcon from "../../../images/icons/mail";
 
 const socialLinks = [
   {

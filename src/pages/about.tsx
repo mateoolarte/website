@@ -1,10 +1,10 @@
 import React from "react";
+import { object } from "prop-types";
 import styled from "styled-components";
-import { Link } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
-import Layout from "../shared/Layout";
+import Layout from "../components/shared/Layout";
 import SEO from "../components/Seo";
 
 import workspaceImg from "../images/workspace.jpg";
@@ -79,7 +79,7 @@ const ItemLink = styled.a`
 `;
 
 export default function About({ location }) {
-  const pathname = (location && location.pathname) || "/";
+  const pathname = location?.pathname || "/";
 
   return (
     <Layout currentPage={pathname}>
@@ -90,7 +90,7 @@ export default function About({ location }) {
 
       <Wrapper>
         <Info>
-          <Heading>Hi, I'm Mateo Olarte</Heading>
+          <Heading>Hi, I&apos;m Mateo Olarte</Heading>
 
           <p>
             I’m a Software developer from Medellín, Colombia. I passionate about
@@ -134,3 +134,7 @@ export default function About({ location }) {
     </Layout>
   );
 }
+
+About.propTypes = {
+  location: object,
+};

@@ -1,9 +1,10 @@
 import React from "react";
+import { object } from "prop-types";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import SEO from "../Seo";
-import Layout from "../../shared/Layout";
+import Layout from "../../components/shared/Layout";
 
 import {
   Wrapper,
@@ -77,3 +78,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+Article.propTypes = {
+  location: object,
+  data: object,
+};

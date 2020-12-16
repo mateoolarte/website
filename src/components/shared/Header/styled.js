@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../../constants";
+import { MEDIA_QUERIES } from "../../../constants";
 
 const Wrapper = styled.header`
   max-width: 1180px;

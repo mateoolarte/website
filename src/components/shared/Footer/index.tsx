@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
+import { object, string } from "prop-types";
 
-import { socialLinks, info } from "../../data/footer";
+import { socialLinks, info } from "./data";
 
 import {
   Wrapper,
@@ -21,6 +22,10 @@ function Cta({ content }) {
     </Fragment>
   );
 }
+
+Cta.propTypes = {
+  content: object,
+};
 
 export default function Footer({ currentPage }) {
   const pageLocation = currentPage || "";
@@ -54,3 +59,7 @@ export default function Footer({ currentPage }) {
     </Wrapper>
   );
 }
+
+Footer.propTypes = {
+  currentPage: string,
+};

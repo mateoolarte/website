@@ -1,17 +1,17 @@
 import React from "react";
+import { string } from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
 
-import items from "../../data/navbar-links";
-import itemsBlog from "../../data/blog-navbar-links";
+import { websiteLinks, blogLinks } from "./data";
 
 import { Wrapper, List, IconContainer, Box, Item } from "./styled";
 
 function checkLinks(value) {
   if (value.includes("blog")) {
-    return itemsBlog;
+    return blogLinks;
   }
 
-  return items;
+  return websiteLinks;
 }
 
 export default function Nav({ currentPage }) {
@@ -58,3 +58,7 @@ export default function Nav({ currentPage }) {
     </Wrapper>
   );
 }
+
+Nav.propTypes = {
+  currentPage: string,
+};

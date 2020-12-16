@@ -1,11 +1,12 @@
 import React from "react";
+import { object } from "prop-types";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
 import SEO from "../components/Seo";
-import Layout from "../shared/Layout";
+import Layout from "../components/shared/Layout";
 import Post from "../components/Post";
 
 const Wrapper = styled.section`
@@ -62,3 +63,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+Blog.propTypes = {
+  location: object,
+  data: object,
+};

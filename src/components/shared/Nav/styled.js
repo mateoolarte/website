@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { MEDIA_QUERIES } from "../../constants";
+import { MEDIA_QUERIES } from "../../../constants";
 
 const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {

@@ -1,9 +1,10 @@
 import React from "react";
+import { object } from "prop-types";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
 import SEO from "../components/Seo";
-import Layout from "../shared/Layout";
+import Layout from "../components/shared/Layout";
 import HomeHero from "../components/HomeHero";
 import ProjectCard from "../components/ProjectCard";
 import HomePost from "../components/HomePost";
@@ -41,9 +42,9 @@ const Btn = styled(Link)`
 `;
 
 export default function Home({ location, data }) {
-  const pathname = (location && location.pathname) || "/";
-  const allMdx = data && data.allMdx;
-  const posts = allMdx && allMdx.edges;
+  const pathname = location?.pathname || "/";
+  const allMdx = data?.allMdx;
+  const posts = allMdx?.edges;
 
   return (
     <Layout currentPage={pathname}>
@@ -62,12 +63,13 @@ export default function Home({ location, data }) {
 
       <PostsWrapper>
         {posts.map(post => {
-          const node = post && post.node;
-          const frontmatter = node && node.frontmatter;
-          const path = frontmatter && frontmatter.path;
-          const title = frontmatter && frontmatter.title;
+          const node = post?.node;
+          const frontmatter = node?.frontmatter;
+          const id = frontmatter?.id || "";
+          const path = frontmatter?.path || "";
+          const title = frontmatter?.title || "";
 
-          return <HomePost link={`/blog/${path}`} title={title} />;
+          return <HomePost key={id} link={`/blog/${path}`} title={title} />;
         })}
 
         <Btn to="/blog">See more</Btn>
@@ -91,3 +93,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+Home.propTypes = {
+  location: object,
+  data: object,
+};
