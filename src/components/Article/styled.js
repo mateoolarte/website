@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES, COLORS, FONTS } from "../../constants";
+import { MEDIA_QUERIES, FONTS } from "../../constants";
+import {
+  fourtyColor,
+  mainColor,
+  linksColor,
+  linksColorSecondary,
+  shadows,
+  linksColorTerciary,
+} from "../../themes";
 
 const Wrapper = styled.article`
   width: 90%;
@@ -15,7 +23,7 @@ const Hero = styled.div`
 const Category = styled.span`
   display: inline-block;
   margin-bottom: 1.1rem;
-  color: ${COLORS.grayDark};
+  color: ${fourtyColor};
   font-family: ${FONTS.secondary};
   font-size: 1rem;
 `;
@@ -24,7 +32,7 @@ const DateText = styled.span`
   display: inline-block;
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
-  color: ${COLORS.grayDark};
+  color: ${fourtyColor};
   font-family: ${FONTS.secondary};
   font-size: 0.9rem;
 
@@ -58,12 +66,12 @@ const Image = styled.img`
 `;
 
 const Caption = styled.figcaption`
-  color: ${COLORS.black};
+  color: ${mainColor};
   font-size: 0.8rem;
   opacity: 0.5;
 
   a {
-    color: ${COLORS.blue};
+    color: ${linksColor};
     text-decoration: none;
   }
 `;
@@ -83,20 +91,20 @@ const Content = styled.div`
   }
 
   hr {
-    border-color: ${COLORS.lightGray};
+    border-color: ${shadows};
     border-style: solid;
   }
 
   a {
-    color: ${COLORS.blue};
+    color: ${linksColor};
 
     &:visited,
     &:hover {
-      color: ${COLORS.blueSky};
+      color: ${linksColorTerciary};
     }
 
     &:focus {
-      color: ${COLORS.orange};
+      color: ${linksColorSecondary};
     }
   }
 `;

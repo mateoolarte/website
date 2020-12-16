@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-import { FONTS, COLORS } from "../../../constants";
+import { FONTS } from "../../../constants";
+import { backgroundColor, mainColor } from "../../../themes";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -8,14 +9,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background-color: ${COLORS.white};
+    background-color: ${backgroundColor};
     font-family: sans-serif;
     text-size-adjust: 100%;
   }
 
   body {
     margin: 0;
-    color: ${COLORS.black};
+    color: ${mainColor};
     font-family: ${FONTS.main};
     font-size: 16px;
     font-weight: 500;

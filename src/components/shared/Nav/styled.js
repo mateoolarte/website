@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { MEDIA_QUERIES, COLORS } from "../../../constants";
+import { MEDIA_QUERIES } from "../../../constants";
+import {
+  backgroundColor,
+  linksColor,
+  mainColor,
+  shadows,
+} from "../../../themes";
 
 const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
@@ -10,7 +16,7 @@ const Wrapper = styled.nav`
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: ${COLORS.white};
+    background-color: ${backgroundColor};
   }
 
   ${MEDIA_QUERIES.landscape} {
@@ -28,7 +34,7 @@ const List = styled.ul`
 
   ${MEDIA_QUERIES.landscapeMax} {
     padding: 0.8rem;
-    box-shadow: 0 -3px 12px ${COLORS.lightGray};
+    box-shadow: 0 -3px 12px ${shadows};
     justify-content: space-evenly;
   }
 
@@ -47,10 +53,10 @@ const IconContainer = styled.span`
   svg {
     height: 1.2rem;
     transition: 0.25s fill ease-out;
-    fill: ${COLORS.black};
+    fill: ${mainColor};
 
     &:hover {
-      fill: ${COLORS.blue};
+      fill: ${linksColor};
     }
   }
 `;
@@ -73,11 +79,11 @@ const Box = styled.li`
   &:hover {
     ${MEDIA_QUERIES.landscapeMax} {
       a {
-        color: ${COLORS.blue};
+        color: ${linksColor};
       }
 
       svg {
-        fill: ${COLORS.blue};
+        fill: ${linksColor};
       }
     }
   }
@@ -85,36 +91,41 @@ const Box = styled.li`
 
 const Item = styled(Link)`
   transition: 0.25s color ease-out;
-  color: ${({ isActive }) => (isActive ? COLORS.blue : COLORS.black)};
+  color: ${({ isActive }) => (isActive ? linksColor : mainColor)};
   text-align: center;
   text-decoration: none;
 
   &:hover {
-    color: ${COLORS.blue};
+    color: ${linksColor};
   }
 
   ${MEDIA_QUERIES.landscape} {
     font-size: 1.2rem;
-    ${({ isBtn }) =>
-      isBtn &&
-      `
+    ${props => {
+      console.log(props);
+
+      return (
+        props.isBtn &&
+        `
       display: inline-block;
       padding: 0.5rem 1.5rem;
-      border: 2px solid ${COLORS.blue};
+      border: 2px solid ${linksColor};
       border-radius: 0.6rem;
-      background-color: ${COLORS.white};
-      color: ${COLORS.blue};
+      background-color: ${backgroundColor};
+      color: ${linksColor};
       text-decoration: none;
 
       &:hover {
-        background-color: ${COLORS.blue};
-        color: ${COLORS.white};
+        background-color: ${linksColor};
+        color: ${mainColor};
       }
-    `}
+    `
+      );
+    }}
   }
 
   svg {
-    fill: ${({ isActive }) => (isActive ? COLORS.blue : COLORS.black)};
+    fill: ${({ isActive }) => (isActive ? linksColor : mainColor)};
   }
 `;
 

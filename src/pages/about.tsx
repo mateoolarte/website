@@ -3,6 +3,7 @@ import { object } from "prop-types";
 import styled from "styled-components";
 
 import { MEDIA_QUERIES } from "../constants";
+import { linksColor, mainColor, shadows } from "../themes";
 
 import Layout from "../components/shared/Layout";
 import SEO from "../components/Seo";
@@ -24,7 +25,7 @@ const Wrapper = styled.section`
 const Heading = styled.h3`
   margin-top: 0;
   margin-bottom: 3rem;
-  color: #1755b2;
+  color: ${linksColor};
   font-size: 1.8rem;
 `;
 
@@ -55,13 +56,13 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   height: 550px;
   border-radius: 4px;
-  box-shadow: 0 3px 12px #dbdee3;
+  box-shadow: 0 3px 12px ${shadows};
 `;
 
 const LinksHeading = styled.h3`
   margin-top: 2rem;
   margin-bottom: 1.4rem;
-  color: #1755b2;
+  color: ${linksColor};
   font-size: 1.6rem;
 `;
 
@@ -74,7 +75,7 @@ const Links = styled.ul`
 const Item = styled.li``;
 
 const ItemLink = styled.a`
-  color: #02060c;
+  color: ${mainColor};
   font-size: 1.1rem;
 `;
 

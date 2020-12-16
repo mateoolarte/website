@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { MEDIA_QUERIES, COLORS, FONTS } from "../../constants";
+import { MEDIA_QUERIES, FONTS } from "../../constants";
+import { linksColor, terciaryColor, fourtyColor } from "../../themes";
 
 const Wrapper = styled.article`
   width: 100%;
@@ -95,7 +96,7 @@ const Details = styled.div`
 
 const Category = styled.span`
   display: inline-block;
-  color: ${COLORS.grayDark};
+  color: ${fourtyColor};
   font-family: ${FONTS.secondary};
   font-size: 1rem;
   ${({ isCover }) =>
@@ -107,7 +108,7 @@ const Category = styled.span`
 
 const DateText = styled.span`
   display: inline-block;
-  color: ${COLORS.grayDark};
+  color: ${fourtyColor};
   font-family: ${FONTS.secondary};
   font-size: 0.9rem;
   ${({ isCover }) =>
@@ -150,7 +151,7 @@ const Title = styled.h1`
 const Description = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
-  color: ${COLORS.grayDark};
+  color: ${fourtyColor};
   font-family: ${FONTS.secondary};
   line-height: 1.4;
   ${MEDIA_QUERIES.landscape} {
@@ -165,22 +166,22 @@ const Description = styled.p`
 
 const Btn = styled(Link)`
   display: inline-block;
-  color: ${COLORS.blue};
+  color: ${linksColor};
   font-weight: 700;
   text-decoration: none;
   ${({ isCover }) =>
     isCover &&
     `
     padding: 0.3rem 1rem;
-    border: 2px solid ${COLORS.blue};
+    border: 2px solid ${linksColor};
     border-radius: 0.6rem;
-    background-color: ${COLORS.blue};
-    color: ${COLORS.white};
+    background-color: ${linksColor};
+    color: ${terciaryColor};
     font-weight: 500;
 
     &:hover {
       background: none;
-      color: ${COLORS.blue};
+      color: ${linksColor};
     }
     `};
 

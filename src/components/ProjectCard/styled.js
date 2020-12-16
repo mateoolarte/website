@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES, COLORS } from "../../constants";
+import { MEDIA_QUERIES } from "../../constants";
+import { mainColor, shadows } from "../../themes";
 
 const Wrapper = styled.a`
   display: flex;
   width: 100%;
   margin-bottom: 2.5rem;
   border-radius: 0.6rem;
-  color: ${COLORS.black};
-  box-shadow: 0 3px 12px ${COLORS.lightGray};
+  color: ${mainColor};
+  box-shadow: 0 3px 12px ${shadows};
   text-decoration: none;
 
   ${MEDIA_QUERIES.tablet} {
@@ -86,7 +87,7 @@ const BgImageContainer = styled.div`
     display: block;
     width: 50%;
     border-radius: 0 0.6rem 0.6rem 0;
-    box-shadow: -3px 0 12px ${COLORS.lightGray};
+    box-shadow: -3px 0 12px ${shadows};
   }
 `;
 

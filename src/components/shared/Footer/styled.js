@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES, COLORS } from "../../../constants";
+import { MEDIA_QUERIES } from "../../../constants";
+import { linksColor, mainColor, secondaryColor } from "../../../themes";
 
 const Wrapper = styled.footer`
   max-width: 1180px;
@@ -18,7 +19,7 @@ const Heading = styled.h3`
 const Subtitle = styled.p`
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: ${COLORS.gray};
+  color: ${secondaryColor};
   font-size: 1.1rem;
 `;
 
@@ -45,9 +46,10 @@ const SocialIcon = styled.span`
   svg {
     width: 2.5rem;
     height: 2.5rem;
+    fill: ${mainColor};
 
     &:hover {
-      fill: ${COLORS.blue};
+      fill: ${linksColor};
     }
   }
 `;
@@ -55,7 +57,7 @@ const SocialIcon = styled.span`
 const Copyright = styled.p`
   margin-top: 0;
   margin-bottom: 6rem;
-  color: ${COLORS.gray};
+  color: ${secondaryColor};
   line-height: 1.8;
 
   ${MEDIA_QUERIES.landscape} {

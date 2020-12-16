@@ -11,6 +11,8 @@ import HomePost from "../components/HomePost";
 
 import projects from "../data/projects";
 
+import { linksColor, mainColor } from "../themes";
+
 const Heading = styled.h2`
   margin-top: 0;
   font-size: 2.2rem;
@@ -29,15 +31,15 @@ const PostsWrapper = styled.div`
 const Btn = styled(Link)`
   display: inline-block;
   padding: 0.8rem 2rem;
-  border: 2px solid #1755b2;
+  border: 2px solid ${linksColor};
   border-radius: 0.6rem;
-  background-color: #1755b2;
-  color: #fafafa;
+  background-color: ${linksColor};
+  color: ${mainColor};
   text-decoration: none;
 
   &:hover {
-    background-color: #fafafa;
-    color: #1755b2;
+    background: transparent;
+    color: ${linksColor};
   }
 `;
 

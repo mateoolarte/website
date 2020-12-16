@@ -13,6 +13,8 @@ import { ThemeProvider } from "styled-components";
 import Header from "../Header";
 import Footer from "../Footer";
 
+import useTheme from "../../../hooks/useTheme";
+
 import { GlobalStyle } from "./styled";
 
 export default function Layout({ children, currentPage }) {
@@ -25,9 +27,10 @@ export default function Layout({ children, currentPage }) {
       }
     }
   `);
+  const theme = useTheme();
 
   return (
-    <ThemeProvider theme={{ mode: "light" }}>
+    <ThemeProvider theme={{ mode: theme }}>
       <GlobalStyle />
       <Header
         siteTitle={data.site.siteMetadata.title}

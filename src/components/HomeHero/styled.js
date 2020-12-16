@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES, COLORS } from "../../constants";
+import { MEDIA_QUERIES } from "../../constants";
+import { linksColor, secondaryColor } from "../../themes";
 
 const Wrapper = styled.div`
   margin: 4rem 0 6rem;
@@ -20,13 +21,13 @@ const Title = styled.h1`
   }
 
   strong {
-    color: ${COLORS.blue};
+    color: ${linksColor};
   }
 `;
 
 const Subtitle = styled.p`
   margin-top: 0;
-  color: ${COLORS.gray};
+  color: ${secondaryColor};
 
   ${MEDIA_QUERIES.tablet} {
     font-size: 1.1rem;
