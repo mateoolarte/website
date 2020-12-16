@@ -11,7 +11,6 @@ const Wrapper = styled.article`
     display: flex;
     flex-direction: column;
     width: calc(100% / 3 - 2rem);
-
     ${({ isCover }) =>
       isCover &&
       `
@@ -27,13 +26,11 @@ const Wrapper = styled.article`
 
 const ImageContainer = styled.div`
   display: none;
-
   ${MEDIA_QUERIES.landscape} {
     display: block;
     width: 100%;
     height: 250px;
     margin-bottom: 1.5rem;
-
     ${({ isCover }) =>
       isCover &&
       `
@@ -91,7 +88,6 @@ const Details = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.4rem;
-
   ${MEDIA_QUERIES.tablet} {
     margin-bottom: 1.8rem;
   }
@@ -102,7 +98,6 @@ const Category = styled.span`
   color: #5d6064;
   font-family: "Poly", serif;
   font-size: 1rem;
-
   ${({ isCover }) =>
     isCover &&
     `
@@ -115,7 +110,6 @@ const DateText = styled.span`
   color: #5d6064;
   font-family: "Poly", serif;
   font-size: 0.9rem;
-
   ${({ isCover }) =>
     isCover &&
     `
@@ -134,7 +128,6 @@ const DateText = styled.span`
 
 const Title = styled.h1`
   font-size: 1.4rem;
-
   ${({ isCover }) =>
     isCover &&
     `
@@ -145,7 +138,6 @@ const Title = styled.h1`
   ${MEDIA_QUERIES.tablet} {
     margin-bottom: 1.6rem;
     font-size: 1.6rem;
-
     ${({ isCover }) =>
       isCover &&
       `
@@ -161,7 +153,6 @@ const Description = styled.p`
   color: #5d6064;
   font-family: "Poly", serif;
   line-height: 1.4;
-
   ${MEDIA_QUERIES.landscape} {
     ${({ isCover }) =>
       isCover &&
@@ -177,7 +168,6 @@ const Btn = styled(Link)`
   color: #1755b2;
   font-weight: 700;
   text-decoration: none;
-
   ${({ isCover }) =>
     isCover &&
     `
@@ -196,7 +186,6 @@ const Btn = styled(Link)`
 
   ${MEDIA_QUERIES.tablet} {
     font-size: 1.1rem;
-
     ${({ isCover }) =>
       isCover &&
       `

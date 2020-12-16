@@ -1,3 +1,14 @@
 {
-  "extends": "stylelint-config-standard"
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "value-keyword-case": null,
+    "no-descending-specificity": null
+  }
 }

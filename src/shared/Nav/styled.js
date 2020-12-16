@@ -95,7 +95,6 @@ const Item = styled(Link)`
 
   ${MEDIA_QUERIES.landscape} {
     font-size: 1.2rem;
-
     ${({ isBtn }) =>
       isBtn &&
       `

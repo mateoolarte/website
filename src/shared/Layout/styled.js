@@ -8,8 +8,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     background-color: #fafafa;
     font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {

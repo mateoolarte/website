@@ -6,8 +6,9 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
+import { node, string } from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -26,7 +27,7 @@ export default function Layout({ children, currentPage }) {
   `);
 
   return (
-    <>
+    <ThemeProvider theme={{ mode: "light" }}>
       <GlobalStyle />
       <Header
         siteTitle={data.site.siteMetadata.title}
@@ -34,10 +35,11 @@ export default function Layout({ children, currentPage }) {
       />
       <main>{children}</main>
       <Footer currentPage={currentPage} />
-    </>
+    </ThemeProvider>
   );
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: node.isRequired,
+  currentPage: string,
 };
