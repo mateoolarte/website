@@ -1,20 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 
+import { FONTS, COLORS } from "../../../constants";
+
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
 
   html {
-    background-color: #fafafa;
+    background-color: ${COLORS.white};
     font-family: sans-serif;
     text-size-adjust: 100%;
   }
 
   body {
     margin: 0;
-    color: #02060c;
-    font-family: 'Work Sans', sans-serif;
+    color: ${COLORS.black};
+    font-family: ${FONTS.main};
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.43px;

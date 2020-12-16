@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../../constants";
+import { MEDIA_QUERIES, COLORS } from "../../constants";
 
 const Wrapper = styled.div`
   margin: 4rem 0 6rem;
@@ -20,13 +20,13 @@ const Title = styled.h1`
   }
 
   strong {
-    color: #1755b2;
+    color: ${COLORS.blue};
   }
 `;
 
 const Subtitle = styled.p`
   margin-top: 0;
-  color: #939393;
+  color: ${COLORS.gray};
 
   ${MEDIA_QUERIES.tablet} {
     font-size: 1.1rem;

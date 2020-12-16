@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-import { MEDIA_QUERIES } from "../../../constants";
+import { MEDIA_QUERIES, COLORS } from "../../../constants";
 
 const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fafafa;
+    background-color: ${COLORS.white};
   }
 
   ${MEDIA_QUERIES.landscape} {
@@ -28,7 +28,7 @@ const List = styled.ul`
 
   ${MEDIA_QUERIES.landscapeMax} {
     padding: 0.8rem;
-    box-shadow: 0 -3px 12px #dbdee3;
+    box-shadow: 0 -3px 12px ${COLORS.lightGray};
     justify-content: space-evenly;
   }
 
@@ -47,10 +47,10 @@ const IconContainer = styled.span`
   svg {
     height: 1.2rem;
     transition: 0.25s fill ease-out;
-    fill: #02060c;
+    fill: ${COLORS.black};
 
     &:hover {
-      fill: #1755b2;
+      fill: ${COLORS.blue};
     }
   }
 `;
@@ -73,11 +73,11 @@ const Box = styled.li`
   &:hover {
     ${MEDIA_QUERIES.landscapeMax} {
       a {
-        color: #1755b2;
+        color: ${COLORS.blue};
       }
 
       svg {
-        fill: #1755b2;
+        fill: ${COLORS.blue};
       }
     }
   }
@@ -85,12 +85,12 @@ const Box = styled.li`
 
 const Item = styled(Link)`
   transition: 0.25s color ease-out;
-  color: ${({ isActive }) => (isActive ? "#1755b2" : "#02060c")};
+  color: ${({ isActive }) => (isActive ? COLORS.blue : COLORS.black)};
   text-align: center;
   text-decoration: none;
 
   &:hover {
-    color: #1755b2;
+    color: ${COLORS.blue};
   }
 
   ${MEDIA_QUERIES.landscape} {
@@ -100,21 +100,21 @@ const Item = styled(Link)`
       `
       display: inline-block;
       padding: 0.5rem 1.5rem;
-      border: 2px solid #1755b2;
+      border: 2px solid ${COLORS.blue};
       border-radius: 0.6rem;
-      background-color: #fafafa;
-      color: #1755b2;
+      background-color: ${COLORS.white};
+      color: ${COLORS.blue};
       text-decoration: none;
 
       &:hover {
-        background-color: #1755b2;
-        color: #fafafa;
+        background-color: ${COLORS.blue};
+        color: ${COLORS.white};
       }
     `}
   }
 
   svg {
-    fill: ${({ isActive }) => (isActive ? "#1755b2" : "#02060c")};
+    fill: ${({ isActive }) => (isActive ? COLORS.blue : COLORS.black)};
   }
 `;
 

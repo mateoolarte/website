@@ -9,4 +9,20 @@ const MEDIA_QUERIES = {
   desktopHDMax: "@media screen and (max-width: 1599px)",
 };
 
-export { MEDIA_QUERIES };
+const COLORS = {
+  blue: "#1755b2",
+  blueSky: "#2196f3",
+  orange: "#ff9800",
+  white: "#fafafa",
+  lightGray: "#dbdee3",
+  gray: "#939393",
+  grayDark: "#5d6064",
+  black: "#02060c",
+};
+
+const FONTS = {
+  main: "'Work Sans', sans-serif",
+  secondary: "'Poly', serif",
+};
+
+export { MEDIA_QUERIES, FONTS, COLORS };

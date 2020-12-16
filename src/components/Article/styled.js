@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../../constants";
+import { MEDIA_QUERIES, COLORS, FONTS } from "../../constants";
 
 const Wrapper = styled.article`
   width: 90%;
@@ -15,8 +15,8 @@ const Hero = styled.div`
 const Category = styled.span`
   display: inline-block;
   margin-bottom: 1.1rem;
-  color: #5d6064;
-  font-family: "Poly", serif;
+  color: ${COLORS.grayDark};
+  font-family: ${FONTS.secondary};
   font-size: 1rem;
 `;
 
@@ -24,8 +24,8 @@ const DateText = styled.span`
   display: inline-block;
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
-  color: #5d6064;
-  font-family: "Poly", serif;
+  color: ${COLORS.grayDark};
+  font-family: ${FONTS.secondary};
   font-size: 0.9rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -58,18 +58,18 @@ const Image = styled.img`
 `;
 
 const Caption = styled.figcaption`
-  color: #02060c;
+  color: ${COLORS.black};
   font-size: 0.8rem;
   opacity: 0.5;
 
   a {
-    color: #1755b2;
+    color: ${COLORS.blue};
     text-decoration: none;
   }
 `;
 
 const Content = styled.div`
-  font-family: "Poly", serif;
+  font-family: ${FONTS.secondary};
   font-size: 1.2rem;
   line-height: 1.8;
 
@@ -79,24 +79,24 @@ const Content = styled.div`
   h4,
   h5,
   h6 {
-    font-family: "Work Sans", sans-serif;
+    font-family: ${FONTS.main};
   }
 
   hr {
-    border-color: #dbdee3;
+    border-color: ${COLORS.lightGray};
     border-style: solid;
   }
 
   a {
-    color: #1755b2;
+    color: ${COLORS.blue};
 
     &:visited,
     &:hover {
-      color: #2196f3;
+      color: ${COLORS.blueSky};
     }
 
     &:focus {
-      color: #ff9800;
+      color: ${COLORS.orange};
     }
   }
 `;

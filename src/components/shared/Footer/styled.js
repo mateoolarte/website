@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA_QUERIES } from "../../../constants";
+import { MEDIA_QUERIES, COLORS } from "../../../constants";
 
 const Wrapper = styled.footer`
   max-width: 1180px;
@@ -18,7 +18,7 @@ const Heading = styled.h3`
 const Subtitle = styled.p`
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #939393;
+  color: ${COLORS.gray};
   font-size: 1.1rem;
 `;
 
@@ -47,7 +47,7 @@ const SocialIcon = styled.span`
     height: 2.5rem;
 
     &:hover {
-      fill: #1755b2;
+      fill: ${COLORS.blue};
     }
   }
 `;
@@ -55,7 +55,7 @@ const SocialIcon = styled.span`
 const Copyright = styled.p`
   margin-top: 0;
   margin-bottom: 6rem;
-  color: #939393;
+  color: ${COLORS.gray};
   line-height: 1.8;
 
   ${MEDIA_QUERIES.landscape} {
