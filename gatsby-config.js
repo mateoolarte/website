@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Mateo Olarte | Software developer`,
-    description: `I’m a software developer building digital products. I working with Frontend technologies like CSS, React, Redux, Webpack, Apollo, NextJS.`,
+    description: `I’m a software developer building digital products, working with Frontend technologies like CSS, React, Redux, Webpack, Apollo, NextJS.`,
     author: `Mateo Olarte`,
-    siteUrl: 'https://mateoolarte.com'
+    siteUrl: "https://mateoolarte.com",
   },
   plugins: [
     `gatsby-plugin-netlify`,

@@ -85,7 +85,7 @@ export default function About({ location }) {
     <Layout currentPage={pathname}>
       <SEO
         title="About me"
-        description="I from Medellín, Colombia, passionate about the digital industry. Working with modern technologies always finding the best solution to improve the quality of products"
+        description="I'm from Medellín, Colombia, passionate about the digital industry, working with modern technologies always finding the best solution to improve the quality of products"
       />
 
       <Wrapper>
