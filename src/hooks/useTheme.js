@@ -1,5 +1,13 @@
 export default function useTheme() {
-  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+  const getSystemMode = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentMode = window.localStorage.getItem("theme-mode");
 
-  return isDarkMode.matches ? "dark" : "light";
+  if (currentMode) {
+    return currentMode;
+  } else {
+    const themeMode = getSystemMode.matches ? "dark" : "light";
+    window.localStorage.setItem("theme-mode", themeMode);
+
+    return themeMode;
+  }
 }

@@ -11,7 +11,7 @@ import HomePost from "../components/HomePost";
 
 import projects from "../data/projects";
 
-import { linksColor, mainColor } from "../themes";
+import { linksColor, backgroundColor } from "../themes";
 
 const Heading = styled.h2`
   margin-top: 0;
@@ -34,7 +34,7 @@ const Btn = styled(Link)`
   border: 2px solid ${linksColor};
   border-radius: 0.6rem;
   background-color: ${linksColor};
-  color: ${mainColor};
+  color: ${backgroundColor};
   text-decoration: none;
 
   &:hover {

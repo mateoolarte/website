@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react";
+import React, { useState } from "react";
 import { node, string } from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
@@ -16,6 +16,8 @@ import Footer from "../Footer";
 import useTheme from "../../../hooks/useTheme";
 
 import { GlobalStyle } from "./styled";
+
+import { ThemeContext } from "../../../context/ThemeContext";
 
 export default function Layout({ children, currentPage }) {
   const data = useStaticQuery(graphql`
@@ -28,16 +30,21 @@ export default function Layout({ children, currentPage }) {
     }
   `);
   const theme = useTheme();
+  const [currentMode, setCurrentMode] = useState(theme);
 
   return (
-    <ThemeProvider theme={{ mode: theme }}>
-      <GlobalStyle />
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        currentPage={currentPage}
-      />
-      <main>{children}</main>
-      <Footer currentPage={currentPage} />
+    <ThemeProvider theme={{ mode: currentMode }}>
+      <ThemeContext.Provider
+        value={{ theme: currentMode, toggleTheme: setCurrentMode }}
+      >
+        <GlobalStyle />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          currentPage={currentPage}
+        />
+        <main>{children}</main>
+        <Footer currentPage={currentPage} />
+      </ThemeContext.Provider>
     </ThemeProvider>
   );
 }

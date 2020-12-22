@@ -1,10 +1,14 @@
-import React from "react";
-import { string } from "prop-types";
+import React, { useContext } from "react";
+import { func, string } from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
+import DarkIcon from "../../../images/icons/dark";
+import LightIcon from "../../../images/icons/light";
 
 import { websiteLinks, blogLinks } from "./data";
 
-import { Wrapper, List, IconContainer, Box, Item } from "./styled";
+import { Wrapper, List, IconContainer, Box, Item, ThemeBtn } from "./styled";
+
+import { ThemeContext } from "../../../context/ThemeContext";
 
 function checkLinks(value) {
   if (value.includes("blog")) {
@@ -15,6 +19,7 @@ function checkLinks(value) {
 }
 
 export default function Nav({ currentPage }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const links = checkLinks(currentPage || "");
   const data = useStaticQuery(graphql`
     query {
@@ -29,11 +34,16 @@ export default function Nav({ currentPage }) {
       }
     }
   `);
-  const posts = data && data.allMdx;
-  const edges = posts && posts.edges;
-  const currentNode = edges && edges[0].node;
-  const frontmatter = currentNode && currentNode.frontmatter;
-  const latestPost = frontmatter && frontmatter.path;
+  const posts = data?.allMdx;
+  const edges = posts?.edges;
+  const currentNode = edges[0]?.node;
+  const frontmatter = currentNode?.frontmatter;
+  const latestPost = frontmatter?.path;
+
+  function handleThemeMode(themeMode) {
+    window.localStorage.setItem("theme-mode", themeMode);
+    toggleTheme(themeMode);
+  }
 
   return (
     <Wrapper>
@@ -55,10 +65,17 @@ export default function Nav({ currentPage }) {
           );
         })}
       </List>
+      <ThemeBtn
+        type="button"
+        onClick={() => handleThemeMode(theme === "dark" ? "light" : "dark")}
+      >
+        {theme === "dark" ? <LightIcon /> : <DarkIcon />}
+      </ThemeBtn>
     </Wrapper>
   );
 }
 
 Nav.propTypes = {
   currentPage: string,
+  setCurrentMode: func,
 };

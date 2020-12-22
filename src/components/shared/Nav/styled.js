@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 
 import { MEDIA_QUERIES } from "../../../constants";
@@ -21,6 +21,9 @@ const Wrapper = styled.nav`
 
   ${MEDIA_QUERIES.landscape} {
     width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -40,6 +43,10 @@ const List = styled.ul`
 
   ${MEDIA_QUERIES.tabletMax} {
     justify-content: space-between;
+  }
+
+  ${MEDIA_QUERIES.landscape} {
+    width: 85%;
   }
 `;
 
@@ -102,24 +109,22 @@ const Item = styled(Link)`
   ${MEDIA_QUERIES.landscape} {
     font-size: 1.2rem;
     ${props => {
-      console.log(props);
-
       return (
         props.isBtn &&
-        `
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      border: 2px solid ${linksColor};
-      border-radius: 0.6rem;
-      background-color: ${backgroundColor};
-      color: ${linksColor};
-      text-decoration: none;
+        css`
+          display: inline-block;
+          padding: 0.5rem 1.5rem;
+          border: 2px solid ${linksColor};
+          border-radius: 0.6rem;
+          background-color: ${backgroundColor};
+          color: ${linksColor};
+          text-decoration: none;
 
-      &:hover {
-        background-color: ${linksColor};
-        color: ${mainColor};
-      }
-    `
+          &:hover {
+            background-color: ${linksColor};
+            color: ${mainColor};
+          }
+        `
       );
     }}
   }
@@ -129,4 +134,35 @@ const Item = styled(Link)`
   }
 `;
 
-export { Wrapper, List, IconContainer, Box, Item };
+const ThemeBtn = styled.button`
+  position: fixed;
+  top: 2rem;
+  right: 1.5rem;
+  border: 0;
+  transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
+  background: ${backgroundColor};
+  cursor: pointer;
+  opacity: 0.8;
+  outline: none;
+
+  ${MEDIA_QUERIES.tablet} {
+    right: 2rem;
+  }
+
+  ${MEDIA_QUERIES.landscape} {
+    position: static;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: ${mainColor};
+  }
+`;
+
+export { Wrapper, List, IconContainer, Box, Item, ThemeBtn };

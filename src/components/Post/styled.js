@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
 
 import { MEDIA_QUERIES, FONTS } from "../../constants";
-import { linksColor, terciaryColor, fourtyColor } from "../../themes";
+import { linksColor, terciaryColor, fourtyColor, shadows } from "../../themes";
 
 const Wrapper = styled.article`
   width: 100%;
@@ -14,10 +14,10 @@ const Wrapper = styled.article`
     width: calc(100% / 3 - 2rem);
     ${({ isCover }) =>
       isCover &&
-      `
-      flex-direction: row;
-      width: 100%;
-    `}
+      css`
+        flex-direction: row;
+        width: 100%;
+      `}
 
     &:nth-child(3n) {
       margin: 0 3rem 3rem;
@@ -34,13 +34,13 @@ const ImageContainer = styled.div`
     margin-bottom: 1.5rem;
     ${({ isCover }) =>
       isCover &&
-      `
-      display: block;
-      width: 50%;
-      height: auto;
-      min-height: 400px;
-      margin-bottom: 0;
-    `}
+      css`
+        display: block;
+        width: 50%;
+        height: auto;
+        min-height: 400px;
+        margin-bottom: 0;
+      `}
   }
 `;
 
@@ -56,32 +56,32 @@ const Image = styled.div`
 const Info = styled.div`
   ${({ isCover }) =>
     isCover &&
-    `
+    css`
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 100%;
       padding: 2rem;
-      background-color: #e7edf7;
+      background-color: ${shadows};
       text-align: center;
     `}
 
   ${MEDIA_QUERIES.landscape} {
     ${({ isCover }) =>
       isCover &&
-      `
-      width: 50%;
-      padding: 3rem;
-    `}
+      css`
+        width: 50%;
+        padding: 3rem;
+      `}
   }
 
   ${MEDIA_QUERIES.desktop} {
     ${({ isCover }) =>
       isCover &&
-      `
-      padding: 3rem 5rem;
-    `}
+      css`
+        padding: 3rem 5rem;
+      `}
   }
 `;
 
@@ -101,7 +101,7 @@ const Category = styled.span`
   font-size: 1rem;
   ${({ isCover }) =>
     isCover &&
-    `
+    css`
       margin-bottom: 1.1rem;
     `}
 `;
@@ -113,7 +113,7 @@ const DateText = styled.span`
   font-size: 0.9rem;
   ${({ isCover }) =>
     isCover &&
-    `
+    css`
       margin-top: 0.3rem;
       margin-bottom: 1.2rem;
     `}
@@ -121,9 +121,9 @@ const DateText = styled.span`
   ${MEDIA_QUERIES.tablet} {
     ${({ isCover }) =>
       isCover &&
-      `
-      margin-bottom: 1.6rem;
-    `}
+      css`
+        margin-bottom: 1.6rem;
+      `}
   }
 `;
 
@@ -131,7 +131,7 @@ const Title = styled.h1`
   font-size: 1.4rem;
   ${({ isCover }) =>
     isCover &&
-    `
+    css`
       margin: 0;
       font-size: 1.6rem;
     `};
@@ -141,10 +141,10 @@ const Title = styled.h1`
     font-size: 1.6rem;
     ${({ isCover }) =>
       isCover &&
-      `
-      margin: 0;
-      font-size: 2rem;
-    `};
+      css`
+        margin: 0;
+        font-size: 2rem;
+      `};
   }
 `;
 
@@ -157,10 +157,10 @@ const Description = styled.p`
   ${MEDIA_QUERIES.landscape} {
     ${({ isCover }) =>
       isCover &&
-      `
-      margin-bottom: 1rem;
-      padding: 0 1rem;
-    `};
+      css`
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+      `};
   }
 `;
 
@@ -171,27 +171,27 @@ const Btn = styled(Link)`
   text-decoration: none;
   ${({ isCover }) =>
     isCover &&
-    `
-    padding: 0.3rem 1rem;
-    border: 2px solid ${linksColor};
-    border-radius: 0.6rem;
-    background-color: ${linksColor};
-    color: ${terciaryColor};
-    font-weight: 500;
+    css`
+      padding: 0.3rem 1rem;
+      border: 2px solid ${linksColor};
+      border-radius: 0.6rem;
+      background-color: ${linksColor};
+      color: ${terciaryColor};
+      font-weight: 500;
 
-    &:hover {
-      background: none;
-      color: ${linksColor};
-    }
+      &:hover {
+        background: none;
+        color: ${linksColor};
+      }
     `};
 
   ${MEDIA_QUERIES.tablet} {
     font-size: 1.1rem;
     ${({ isCover }) =>
       isCover &&
-      `
-      padding: 0.5rem 1.5rem;
-    `};
+      css`
+        padding: 0.5rem 1.5rem;
+      `};
   }
 `;
 
