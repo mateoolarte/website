@@ -14,12 +14,15 @@ function checkLogo(value = "", logoBlog, logoWebsite) {
 
 export default function Logo({ pageLocation, currentPage }) {
   const theme = useTheme();
-  const logoSmall = require(`../../../images/logo-small-${theme}.png`);
-  const logoMedium = require(`../../../images/logo-medium-${theme}.png`);
-  const logoLarge = require(`../../../images/logo-large-${theme}.png`);
+  const logoSmall = require(`../../../images/logo-small-${theme}.png`).default;
+  const logoMedium =
+    require(`../../../images/logo-medium-${theme}.png`).default;
+  const logoLarge = require(`../../../images/logo-large-${theme}.png`).default;
 
-  const logoBlogSmall = require(`../../../images/logo-blog-small-${theme}.png`);
-  const logoBlogLarge = require(`../../../images/logo-blog-large-${theme}.png`);
+  const logoBlogSmall =
+    require(`../../../images/logo-blog-small-${theme}.png`).default;
+  const logoBlogLarge =
+    require(`../../../images/logo-blog-large-${theme}.png`).default;
 
   return (
     <Wrapper to={pageLocation.includes("blog") ? "/blog" : "/"}>

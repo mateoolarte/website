@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Mateo Olarte | Software developer`,
-    description: `I’m a software developer building digital products, working with Frontend technologies like CSS, React, Redux, Webpack, Apollo, NextJS.`,
+    title: `Mateo Olarte | Frontend developer`,
+    description: `I’m a frontend developer building digital products, working with web technologies like HTML, CSS, Javascript, React, Redux, Webpack, Apollo, NextJS.`,
     author: `Mateo Olarte`,
     siteUrl: "https://mateoolarte.com",
   },
