@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "description": "My personal website",
-  "version": "4.5.4",
+  "version": "4.5.5",
   "author": "Mateo Olarte <mateo.olarte8@gmail.com>",
   "keywords": [
     "gatsby",
@@ -13,7 +13,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "prod": "gatsby build",
     "dev": "gatsby develop",
     "fmt": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
