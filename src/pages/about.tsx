@@ -25,7 +25,7 @@ const Wrapper = styled.section`
 const Heading = styled.h3`
   margin-top: 0;
   margin-bottom: 3rem;
-  color: ${linksColor};
+  color: ${mainColor};
   font-size: 1.8rem;
 `;
 
@@ -62,20 +62,21 @@ const Image = styled.img`
 const LinksHeading = styled.h3`
   margin-top: 2rem;
   margin-bottom: 1.4rem;
-  color: ${linksColor};
+  color: ${mainColor};
   font-size: 1.6rem;
 `;
 
 const Links = styled.ul`
   margin: 0;
-  padding-left: 0;
-  list-style-type: none;
+  line-height: 1.5;
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  margin-bottom: 0.5rem;
+`;
 
 const ItemLink = styled.a`
-  color: ${mainColor};
+  color: ${linksColor};
   font-size: 1.1rem;
 `;
 
@@ -121,8 +122,11 @@ export default function About({ location }) {
           <LinksHeading>Links</LinksHeading>
           <Links>
             <Item>
-              <ItemLink href="/learning-links">
-                Learning knowledge base
+              <ItemLink href="/learning-links">Learning resources</ItemLink>
+            </Item>
+            <Item>
+              <ItemLink href="/mentoring">
+                Mentoring about web development
               </ItemLink>
             </Item>
           </Links>

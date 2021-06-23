@@ -24,7 +24,7 @@ const Category = styled.span`
   display: inline-block;
   margin-bottom: 1.1rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.secondary};
+  font-family: ${FONTS.main};
   font-size: 1rem;
 `;
 
@@ -33,7 +33,7 @@ const DateText = styled.span`
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.secondary};
+  font-family: ${FONTS.main};
   font-size: 0.9rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -77,17 +77,12 @@ const Caption = styled.figcaption`
 `;
 
 const Content = styled.div`
-  font-family: ${FONTS.secondary};
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-family: ${FONTS.main};
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: ${FONTS.main};
+  p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
   }
 
   hr {

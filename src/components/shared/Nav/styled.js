@@ -7,6 +7,7 @@ import {
   linksColor,
   mainColor,
   shadows,
+  terciaryColor,
 } from "../../../themes";
 
 const Wrapper = styled.nav`
@@ -122,7 +123,7 @@ const Item = styled(Link)`
 
           &:hover {
             background-color: ${linksColor};
-            color: ${mainColor};
+            color: ${terciaryColor};
           }
         `
       );

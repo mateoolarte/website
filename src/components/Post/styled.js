@@ -97,7 +97,7 @@ const Details = styled.div`
 const Category = styled.span`
   display: inline-block;
   color: ${fourtyColor};
-  font-family: ${FONTS.secondary};
+  font-family: ${FONTS.main};
   font-size: 1rem;
   ${({ isCover }) =>
     isCover &&
@@ -109,7 +109,7 @@ const Category = styled.span`
 const DateText = styled.span`
   display: inline-block;
   color: ${fourtyColor};
-  font-family: ${FONTS.secondary};
+  font-family: ${FONTS.main};
   font-size: 0.9rem;
   ${({ isCover }) =>
     isCover &&
@@ -152,8 +152,9 @@ const Description = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.secondary};
-  line-height: 1.4;
+  font-family: ${FONTS.main};
+  line-height: 1.5;
+
   ${MEDIA_QUERIES.landscape} {
     ${({ isCover }) =>
       isCover &&
@@ -169,6 +170,7 @@ const Btn = styled(Link)`
   color: ${linksColor};
   font-weight: 700;
   text-decoration: none;
+
   ${({ isCover }) =>
     isCover &&
     css`

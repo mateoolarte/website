@@ -7,7 +7,7 @@ export default function HomeHero() {
     <Wrapper>
       <Title>
         Hi there, <br />
-        I'm a <strong>Frontend Engineer</strong>
+        I&apos;m a <strong>Frontend Developer</strong>
       </Title>
       <Subtitle>
         I like to solve problems through technology and a lifelong learner.

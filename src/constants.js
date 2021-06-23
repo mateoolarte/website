@@ -11,6 +11,7 @@ const MEDIA_QUERIES = {
 
 const COLORS = {
   blue: "#1755b2",
+  blueDark: "#103976",
   blueSky: "#2196f3",
   orange: "#ff9800",
   orangeLight: "#FFB544",
@@ -23,7 +24,6 @@ const COLORS = {
 
 const FONTS = {
   main: "'Work Sans', sans-serif",
-  secondary: "'Poly', serif",
 };
 
 export { MEDIA_QUERIES, FONTS, COLORS };

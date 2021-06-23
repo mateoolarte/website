@@ -1,3 +1,6 @@
+import iconGrowly from "../images/projects/icon-growly.png";
+import bgGrowly from "../images/projects/bg-growly.jpg";
+
 import iconGuruhotel from "../images/projects/icon-guruhotel.svg";
 import bgGuruhotel from "../images/projects/bg-guruhotel.jpg";
 
@@ -7,12 +10,20 @@ import bgServillantas from "../images/projects/bg-servillantas.jpg";
 import iconEcoactua from "../images/projects/icon-ecoactua.svg";
 import bgEcoactua from "../images/projects/bg-ecoactua.jpg";
 
-import iconExpensify from "../images/projects/icon-expensify.svg";
-import bgExpensify from "../images/projects/bg-expensify.jpg";
-
 const items = [
   {
     id: 1,
+    name: "Growly",
+    icon: iconGrowly,
+    bgImage: bgGrowly,
+    date: "2021",
+    role: "Co-founder / Developer",
+    description:
+      "Create a website for your company, We are in charge of improving your digital presence",
+    link: "https://getgrowly.com/",
+  },
+  {
+    id: 2,
     name: "Guruhotel",
     icon: iconGuruhotel,
     bgImage: bgGuruhotel,
@@ -23,7 +34,7 @@ const items = [
     link: "https://guruhotel.com/",
   },
   {
-    id: 2,
+    id: 3,
     name: "Servillantas",
     icon: iconServillantas,
     bgImage: bgServillantas,
@@ -34,7 +45,7 @@ const items = [
     link: "https://servillantasla57.com/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Ecoactua",
     icon: iconEcoactua,
     bgImage: bgEcoactua,
@@ -43,17 +54,6 @@ const items = [
     description:
       "Web application to report environmental issues in your city. Solved by local authorities.",
     link: "https://ecoactua.herokuapp.com/#/",
-  },
-  {
-    id: 4,
-    name: "Expensify",
-    icon: iconExpensify,
-    bgImage: bgExpensify,
-    date: "2018",
-    role: "Creator / Developer",
-    description:
-      "Web application to track personal expenses, with graphs and categories.",
-    link: "https://expensify-rails.herokuapp.com/",
   },
 ];
 

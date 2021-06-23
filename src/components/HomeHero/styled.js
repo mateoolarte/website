@@ -17,7 +17,7 @@ const Title = styled.h1`
   line-height: 1;
 
   ${MEDIA_QUERIES.tablet} {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   strong {
@@ -30,7 +30,7 @@ const Subtitle = styled.p`
   color: ${secondaryColor};
 
   ${MEDIA_QUERIES.tablet} {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 `;
 

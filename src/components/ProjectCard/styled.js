@@ -8,6 +8,7 @@ const Wrapper = styled.a`
   width: 100%;
   margin-bottom: 2.5rem;
   border-radius: 0.6rem;
+  transition: transform 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
   color: ${mainColor};
   box-shadow: 0 3px 12px ${shadows};
   text-decoration: none;
@@ -37,6 +38,9 @@ const Wrapper = styled.a`
   }
 
   &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 3px 50px ${shadows};
+
     .backgroundImageProject {
       opacity: 1;
     }
@@ -87,7 +91,7 @@ const BgImageContainer = styled.div`
     display: block;
     width: 50%;
     border-radius: 0 0.6rem 0.6rem 0;
-    box-shadow: -3px 0 12px ${shadows};
+    border-left: 1px solid ${shadows};
   }
 `;
 
@@ -96,6 +100,7 @@ const BgImage = styled.div`
   height: 100%;
   background-size: cover;
   border-radius: 0 0.6rem 0.6rem 0;
+  transition: opacity 0.37s ease-in-out;
   opacity: 0.5;
 `;
 

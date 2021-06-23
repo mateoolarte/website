@@ -13,23 +13,23 @@ export const mainColor = theme("mode", {
 });
 
 export const secondaryColor = theme("mode", {
-  light: COLORS.gray,
+  light: COLORS.grayDark,
   dark: COLORS.lightGray,
 });
 
 export const terciaryColor = theme("mode", {
   light: COLORS.white,
-  dark: COLORS.black,
+  dark: COLORS.white,
 });
 
 export const fourtyColor = theme("mode", {
   light: COLORS.grayDark,
-  dark: COLORS.lightGray,
+  dark: COLORS.white,
 });
 
 export const linksColor = theme("mode", {
   light: COLORS.blue,
-  dark: COLORS.orange,
+  dark: COLORS.blueSky,
 });
 
 export const linksColorSecondary = theme("mode", {
@@ -44,5 +44,5 @@ export const linksColorTerciary = theme("mode", {
 
 export const shadows = theme("mode", {
   light: COLORS.lightGray,
-  dark: COLORS.grayDark,
+  dark: COLORS.blueDark,
 });
