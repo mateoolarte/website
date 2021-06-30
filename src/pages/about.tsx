@@ -95,7 +95,7 @@ export default function About({ location }) {
           <Heading>Hi, I&apos;m Mateo Olarte</Heading>
 
           <p>
-            I’m a Software developer from Medellín, Colombia. I passionate about
+            I’m a Frontend developer from Medellín, Colombia. I passionate about
             technology especially web development, I like to work with modern
             technologies and always trying to learn new things to find the best
             solution to improve the quality of products.
@@ -105,18 +105,20 @@ export default function About({ location }) {
             In high school, I found programming something interesting because I
             could create things through code and see how that can improve the
             lives of people. Then I decided to teach myself to code this allows
-            me to have a lot of opportunities and a growth in my professional
+            me to have a lot of opportunities and growth in my professional
             career.
           </p>
 
           <p>
-            Besides that, I like to play with design things and user experience
-            to deliver a better quality in my developments.
+            I have been working on different kinds of companies where I have
+            been the chance to solve bussiness challenges that give me more
+            experienced building digital projects and make an impact on the
+            world.
           </p>
 
           <p>
-            Sometimes I like to go out and ride in my bike and meeting new
-            places.
+            Also, I like to play with design things and user experience to
+            deliver better quality in my developments.
           </p>
 
           <LinksHeading>Links</LinksHeading>
