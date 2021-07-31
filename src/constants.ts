@@ -1,4 +1,4 @@
-const MEDIA_QUERIES = {
+export const MEDIA_QUERIES = {
   tablet: "@media screen and (min-width: 768px)",
   tabletMax: "@media screen and (max-width: 767px)",
   landscape: "@media screen and (min-width: 1024px)",
@@ -9,7 +9,7 @@ const MEDIA_QUERIES = {
   desktopHDMax: "@media screen and (max-width: 1599px)",
 };
 
-const COLORS = {
+export const COLORS = {
   blue: "#1755b2",
   blueDark: "#103976",
   blueSky: "#2196f3",
@@ -22,8 +22,6 @@ const COLORS = {
   black: "#02060c",
 };
 
-const FONTS = {
+export const FONTS = {
   main: "'Work Sans', sans-serif",
 };
-
-export { MEDIA_QUERIES, FONTS, COLORS };

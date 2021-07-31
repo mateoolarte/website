@@ -10,6 +10,7 @@
 - Prettier
 - MDX
 - Netlify
+- Husky with Lint staged
 
 ## Setup
 

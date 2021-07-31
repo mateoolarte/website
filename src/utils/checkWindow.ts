@@ -1,4 +1,4 @@
-export function isWindow() {
+export function isWindow(): boolean {
   if (typeof window !== "undefined") {
     return true;
   } else {
