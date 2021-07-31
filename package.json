@@ -17,7 +17,7 @@
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "fmt": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "fmt": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md, mdx}\"",
     "lint:js": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "lint:css": "stylelint 'src/**/*.js' --syntax=css-in-js",
     "lint": "yarn lint:js && yarn lint:css",
