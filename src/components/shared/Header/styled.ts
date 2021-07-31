@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { MEDIA_QUERIES } from "../../../constants";
 
-const Wrapper = styled.header`
+export const Wrapper = styled.header`
   max-width: 1180px;
   width: 90%;
   margin: 0 auto;
@@ -18,5 +18,3 @@ const Wrapper = styled.header`
     justify-content: space-between;
   }
 `;
-
-export { Wrapper };

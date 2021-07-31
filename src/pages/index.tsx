@@ -3,7 +3,7 @@ import { object } from "prop-types";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
-import SEO from "../components/Seo";
+import { Seo } from "../components/Seo";
 import Layout from "../components/shared/Layout";
 import HomeHero from "../components/HomeHero";
 import ProjectCard from "../components/ProjectCard";
@@ -50,7 +50,7 @@ export default function Home({ location, data }) {
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <HomeHero />
 
       <Heading id="projects">Projects</Heading>

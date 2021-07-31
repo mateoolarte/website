@@ -6,7 +6,7 @@ import { MEDIA_QUERIES } from "../constants";
 import { linksColor, mainColor, shadows } from "../themes";
 
 import Layout from "../components/shared/Layout";
-import SEO from "../components/Seo";
+import { Seo } from "../components/Seo";
 
 import workspaceImg from "../images/workspace.jpg";
 
@@ -85,7 +85,7 @@ export default function About({ location }) {
 
   return (
     <Layout currentPage={pathname}>
-      <SEO
+      <Seo
         title="About me"
         description="I'm from Medellín, Colombia, passionate about the digital industry, working with modern technologies always finding the best solution to improve the quality of products"
       />

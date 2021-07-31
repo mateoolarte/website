@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MEDIA_QUERIES } from "../../constants";
 import { linksColor, secondaryColor } from "../../themes";
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   margin: 4rem 0 6rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1;
@@ -25,7 +25,7 @@ const Title = styled.h1`
   }
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   margin-top: 0;
   color: ${secondaryColor};
 
@@ -33,5 +33,3 @@ const Subtitle = styled.p`
     font-size: 1.2rem;
   }
 `;
-
-export { Wrapper, Title, Subtitle };

@@ -10,7 +10,7 @@ import {
   terciaryColor,
 } from "../../../themes";
 
-const Wrapper = styled.nav`
+export const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
     position: fixed;
     z-index: 1;
@@ -28,7 +28,7 @@ const Wrapper = styled.nav`
   }
 `;
 
-const List = styled.ul`
+export const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -51,7 +51,7 @@ const List = styled.ul`
   }
 `;
 
-const IconContainer = styled.span`
+export const IconContainer = styled.span`
   display: block;
 
   ${MEDIA_QUERIES.landscape} {
@@ -69,7 +69,7 @@ const IconContainer = styled.span`
   }
 `;
 
-const Box = styled.li`
+export const Box = styled.li`
   margin: 0 0.5rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -97,7 +97,7 @@ const Box = styled.li`
   }
 `;
 
-const Item = styled(Link)`
+export const Item = styled(Link)`
   transition: 0.25s color ease-out;
   color: ${({ isActive }) => (isActive ? linksColor : mainColor)};
   text-align: center;
@@ -136,7 +136,7 @@ const Item = styled(Link)`
   }
 `;
 
-const ThemeBtn = styled.button`
+export const ThemeBtn = styled.button`
   position: fixed;
   top: 2rem;
   right: 1.5rem;
@@ -166,5 +166,3 @@ const ThemeBtn = styled.button`
     fill: ${mainColor};
   }
 `;
-
-export { Wrapper, List, IconContainer, Box, Item, ThemeBtn };

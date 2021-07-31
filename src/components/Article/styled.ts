@@ -10,17 +10,17 @@ import {
   linksColorTerciary,
 } from "../../themes";
 
-const Wrapper = styled.article`
+export const Wrapper = styled.article`
   width: 90%;
   max-width: 740px;
   margin: 3rem auto 8rem;
 `;
 
-const Hero = styled.div`
+export const Hero = styled.div`
   text-align: center;
 `;
 
-const Category = styled.span`
+export const Category = styled.span`
   display: inline-block;
   margin-bottom: 1.1rem;
   color: ${fourtyColor};
@@ -28,7 +28,7 @@ const Category = styled.span`
   font-size: 1rem;
 `;
 
-const DateText = styled.span`
+export const DateText = styled.span`
   display: inline-block;
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
@@ -41,7 +41,7 @@ const DateText = styled.span`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 1.8rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -49,7 +49,7 @@ const Title = styled.h1`
   }
 `;
 
-const ImageContainer = styled.figure`
+export const ImageContainer = styled.figure`
   display: none;
   margin-bottom: 3rem;
 
@@ -58,14 +58,14 @@ const ImageContainer = styled.figure`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   ${MEDIA_QUERIES.landscape} {
     max-width: 100%;
     margin-bottom: 0.5rem;
   }
 `;
 
-const Caption = styled.figcaption`
+export const Caption = styled.figcaption`
   color: ${mainColor};
   font-size: 0.8rem;
   opacity: 0.5;
@@ -76,7 +76,7 @@ const Caption = styled.figcaption`
   }
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   font-family: ${FONTS.main};
 
   p {
@@ -103,15 +103,3 @@ const Content = styled.div`
     }
   }
 `;
-
-export {
-  Wrapper,
-  Hero,
-  Category,
-  DateText,
-  Title,
-  ImageContainer,
-  Image,
-  Caption,
-  Content,
-};

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { MEDIA_QUERIES } from "../../../constants";
 
-const Wrapper = styled(Link)`
+export const Wrapper = styled(Link)`
   display: inline-block;
 
   picture {
@@ -25,5 +25,3 @@ const Wrapper = styled(Link)`
     }
   }
 `;
-
-export { Wrapper };

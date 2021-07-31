@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 
 import { MEDIA_QUERIES } from "../constants";
 
-import SEO from "../components/Seo";
+import { Seo } from "../components/Seo";
 import Layout from "../components/shared/Layout";
 import Post from "../components/Post";
 
@@ -27,7 +27,7 @@ export default function Blog({ location, data }) {
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title="Blog" lang="es" />
+      <Seo title="Blog" lang="es" />
 
       <Wrapper>
         {posts.map((post, index) => {

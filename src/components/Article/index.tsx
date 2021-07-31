@@ -3,7 +3,7 @@ import { object } from "prop-types";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import SEO from "../Seo";
+import { Seo } from "../Seo";
 import Layout from "../../components/shared/Layout";
 
 import {
@@ -32,7 +32,7 @@ export default function Article({ location, data }) {
 
   return (
     <Layout currentPage={pathname}>
-      <SEO title={title} lang="es" description={excerpt} />
+      <Seo title={title} lang="es" description={excerpt} />
       <Wrapper>
         <Hero>
           <Category>{categories}</Category>

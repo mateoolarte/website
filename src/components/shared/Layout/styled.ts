@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { FONTS } from "../../../constants";
 import { backgroundColor, mainColor } from "../../../themes";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
@@ -35,5 +35,3 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
 `;
-
-export { GlobalStyle };

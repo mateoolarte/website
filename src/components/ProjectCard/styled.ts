@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MEDIA_QUERIES } from "../../constants";
 import { mainColor, shadows } from "../../themes";
 
-const Wrapper = styled.a`
+export const Wrapper = styled.a`
   display: flex;
   width: 100%;
   margin-bottom: 2.5rem;
@@ -47,7 +47,7 @@ const Wrapper = styled.a`
   }
 `;
 
-const Info = styled.div`
+export const Info = styled.div`
   width: 100%;
   padding: 1.5rem;
   text-align: center;
@@ -58,33 +58,33 @@ const Info = styled.div`
   }
 `;
 
-const Icon = styled.img`
+export const Icon = styled.img`
   height: 45px;
   margin-bottom: 0.5rem;
 `;
 
-const Name = styled.h3`
+export const Name = styled.h3`
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 2rem;
   font-weight: 600;
 `;
 
-const Details = styled.p`
+export const Details = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   font-size: 0.9rem;
   font-weight: 300;
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   margin-top: 0;
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.4;
 `;
 
-const BgImageContainer = styled.div`
+export const BgImageContainer = styled.div`
   display: none;
 
   ${MEDIA_QUERIES.landscape} {
@@ -95,7 +95,7 @@ const BgImageContainer = styled.div`
   }
 `;
 
-const BgImage = styled.div`
+export const BgImage = styled.div`
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -103,14 +103,3 @@ const BgImage = styled.div`
   transition: opacity 0.37s ease-in-out;
   opacity: 0.5;
 `;
-
-export {
-  Wrapper,
-  Info,
-  Icon,
-  Name,
-  Details,
-  Description,
-  BgImageContainer,
-  BgImage,
-};

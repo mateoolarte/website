@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { MEDIA_QUERIES, FONTS } from "../../constants";
 import { linksColor, terciaryColor, fourtyColor, shadows } from "../../themes";
 
-const Wrapper = styled.article`
+export const Wrapper = styled.article`
   width: 100%;
   margin-bottom: 3rem;
 
@@ -25,7 +25,7 @@ const Wrapper = styled.article`
   }
 `;
 
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   display: none;
   ${MEDIA_QUERIES.landscape} {
     display: block;
@@ -44,7 +44,7 @@ const ImageContainer = styled.div`
   }
 `;
 
-const Image = styled.div`
+export const Image = styled.div`
   ${MEDIA_QUERIES.landscape} {
     width: 100%;
     height: 100%;
@@ -53,7 +53,7 @@ const Image = styled.div`
   }
 `;
 
-const Info = styled.div`
+export const Info = styled.div`
   ${({ isCover }) =>
     isCover &&
     css`
@@ -85,7 +85,7 @@ const Info = styled.div`
   }
 `;
 
-const Details = styled.div`
+export const Details = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.4rem;
@@ -94,7 +94,7 @@ const Details = styled.div`
   }
 `;
 
-const Category = styled.span`
+export const Category = styled.span`
   display: inline-block;
   color: ${fourtyColor};
   font-family: ${FONTS.main};
@@ -106,7 +106,7 @@ const Category = styled.span`
     `}
 `;
 
-const DateText = styled.span`
+export const DateText = styled.span`
   display: inline-block;
   color: ${fourtyColor};
   font-family: ${FONTS.main};
@@ -127,7 +127,7 @@ const DateText = styled.span`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 1.4rem;
   ${({ isCover }) =>
     isCover &&
@@ -148,7 +148,7 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   color: ${fourtyColor};
@@ -165,7 +165,7 @@ const Description = styled.p`
   }
 `;
 
-const Btn = styled(Link)`
+export const Btn = styled(Link)`
   display: inline-block;
   color: ${linksColor};
   font-weight: 700;
@@ -196,16 +196,3 @@ const Btn = styled(Link)`
       `};
   }
 `;
-
-export {
-  Wrapper,
-  ImageContainer,
-  Image,
-  Info,
-  Details,
-  Category,
-  DateText,
-  Title,
-  Description,
-  Btn,
-};

@@ -3,27 +3,27 @@ import styled from "styled-components";
 import { MEDIA_QUERIES } from "../../../constants";
 import { linksColor, mainColor, secondaryColor } from "../../../themes";
 
-const Wrapper = styled.footer`
+export const Wrapper = styled.footer`
   max-width: 1180px;
   width: 90%;
   margin: 0 auto;
   text-align: center;
 `;
 
-const Heading = styled.h3`
+export const Heading = styled.h3`
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.6rem;
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   margin-top: 0;
   margin-bottom: 1.5rem;
   color: ${secondaryColor};
   font-size: 1.1rem;
 `;
 
-const SocialLinks = styled.ul`
+export const SocialLinks = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,15 +32,15 @@ const SocialLinks = styled.ul`
   list-style-type: none;
 `;
 
-const SocialItem = styled.li`
+export const SocialItem = styled.li`
   margin: 0 1rem;
 `;
 
-const SocialLink = styled.a`
+export const SocialLink = styled.a`
   display: inline-block;
 `;
 
-const SocialIcon = styled.span`
+export const SocialIcon = styled.span`
   display: inline-block;
 
   svg {
@@ -54,7 +54,7 @@ const SocialIcon = styled.span`
   }
 `;
 
-const Copyright = styled.p`
+export const Copyright = styled.p`
   margin-top: 0;
   margin-bottom: 6rem;
   color: ${secondaryColor};
@@ -64,14 +64,3 @@ const Copyright = styled.p`
     margin-bottom: 2rem;
   }
 `;
-
-export {
-  Wrapper,
-  Heading,
-  Subtitle,
-  SocialLinks,
-  SocialItem,
-  SocialLink,
-  SocialIcon,
-  Copyright,
-};
