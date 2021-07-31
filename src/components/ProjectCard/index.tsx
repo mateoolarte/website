@@ -11,6 +11,16 @@ import {
   BgImage,
 } from "./styled";
 
+interface ProjectCardProps {
+  name: string;
+  icon: string;
+  bgImage: string;
+  date: string;
+  role: string;
+  description: string;
+  link: string;
+}
+
 export default function ProjectCard({
   name,
   icon,
@@ -19,7 +29,7 @@ export default function ProjectCard({
   role,
   description,
   link,
-}) {
+}: ProjectCardProps) {
   return (
     <Wrapper href={link} target="_blank">
       <Info>

@@ -120,11 +120,12 @@ const Item = styled(Link)`
           background-color: ${backgroundColor};
           color: ${linksColor};
           text-decoration: none;
-
+          /* stylelint-disable no-duplicate-selectors */
           &:hover {
             background-color: ${linksColor};
             color: ${terciaryColor};
           }
+          /* stylelint-enable no-duplicate-selectors */
         `
       );
     }}

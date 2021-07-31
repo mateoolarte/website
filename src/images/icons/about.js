@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export default function AboutIcon() {
   return (
@@ -28,5 +28,5 @@ export default function AboutIcon() {
         </g>
       </g>
     </svg>
-  )
+  );
 }
