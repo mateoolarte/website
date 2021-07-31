@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Wrapper, Title } from "./styled";
+import { Wrapper, Title } from './styled';
 
 interface HomePostProps {
   title: string;

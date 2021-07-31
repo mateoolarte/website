@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES } from "../constants";
-import { linksColor, mainColor, shadows } from "../themes";
+import { MEDIA_QUERIES } from '../constants';
+import { linksColor, mainColor, shadows } from '../themes';
 
-import { Layout } from "../components/shared/Layout";
-import { Seo } from "../components/Seo";
+import { Layout } from '../components/shared/Layout';
+import { Seo } from '../components/Seo';
 
-import workspaceImg from "../images/workspace.jpg";
+import workspaceImg from '../images/workspace.jpg';
 
 const Wrapper = styled.section`
   display: flex;
@@ -84,7 +84,7 @@ interface AboutProps {
 }
 
 export default function About({ location }: AboutProps) {
-  const pathname = location?.pathname || "/";
+  const pathname = location?.pathname || '/';
 
   return (
     <Layout currentPage={pathname}>

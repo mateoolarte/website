@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { Seo } from "../Seo";
-import { Layout } from "../../components/shared/Layout";
+import { Seo } from '../Seo';
+import { Layout } from '../../components/shared/Layout';
 
 import {
   Wrapper,
@@ -15,7 +15,7 @@ import {
   Image,
   Caption,
   Content,
-} from "./styled";
+} from './styled';
 
 interface ArticleProps {
   location: any;
@@ -23,7 +23,7 @@ interface ArticleProps {
 }
 
 export default function Article({ location, data }: ArticleProps) {
-  const pathname = location?.pathname || "/";
+  const pathname = location?.pathname || '/';
   const mdx = data?.mdx;
   const content = mdx?.body;
   const excerpt = mdx?.excerpt;
@@ -45,7 +45,7 @@ export default function Article({ location, data }: ArticleProps) {
           <ImageContainer>
             <Image src={coverImage} alt={`Imagen principal ${title}`} />
             <Caption>
-              Tomado de:{" "}
+              Tomado de:{' '}
               <a href={copyright} target="_blank" rel="noreferrer">
                 {copyright}
               </a>

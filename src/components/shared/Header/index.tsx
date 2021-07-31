@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Nav } from "../Nav";
-import { Logo } from "../Logo";
+import { Nav } from '../Nav';
+import { Logo } from '../Logo';
 
-import { Wrapper } from "./styled";
+import { Wrapper } from './styled';
 
 interface HeaderProps {
   currentPage: string;
 }
 
 export function Header({ currentPage }: HeaderProps) {
-  const pageLocation = currentPage || "";
+  const pageLocation = currentPage || '';
 
   return (
     <Wrapper>

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES, FONTS } from "../../constants";
+import { MEDIA_QUERIES, FONTS } from '../../constants';
 import {
   fourtyColor,
   mainColor,
@@ -8,7 +8,7 @@ import {
   linksColorSecondary,
   shadows,
   linksColorTerciary,
-} from "../../themes";
+} from '../../themes';
 
 export const Wrapper = styled.article`
   width: 90%;

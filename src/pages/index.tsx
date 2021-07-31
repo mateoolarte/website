@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { Link, graphql } from 'gatsby';
 
-import { Seo } from "../components/Seo";
-import { Layout } from "../components/shared/Layout";
-import { HomeHero } from "../components/HomeHero";
-import { ProjectCard } from "../components/ProjectCard";
-import { HomePost } from "../components/HomePost";
+import { Seo } from '../components/Seo';
+import { Layout } from '../components/shared/Layout';
+import { HomeHero } from '../components/HomeHero';
+import { ProjectCard } from '../components/ProjectCard';
+import { HomePost } from '../components/HomePost';
 
-import { projects } from "../data/projects";
+import { projects } from '../data/projects';
 
-import { linksColor, backgroundColor } from "../themes";
+import { linksColor, backgroundColor } from '../themes';
 
 const Heading = styled.h2`
   margin-top: 0;
@@ -48,7 +48,7 @@ interface HomeProps {
 }
 
 export default function Home({ location, data }: HomeProps) {
-  const pathname = location?.pathname || "/";
+  const pathname = location?.pathname || '/';
   const allMdx = data?.allMdx;
   const posts = allMdx?.edges;
 
@@ -60,7 +60,7 @@ export default function Home({ location, data }: HomeProps) {
       <Heading id="projects">Projects</Heading>
 
       <ProjectsWrapper>
-        {projects.map(project => {
+        {projects.map((project) => {
           return <ProjectCard key={project.id} {...project} />;
         })}
       </ProjectsWrapper>
@@ -68,12 +68,12 @@ export default function Home({ location, data }: HomeProps) {
       <Heading>Latest posts</Heading>
 
       <PostsWrapper>
-        {posts.map(post => {
+        {posts.map((post) => {
           const node = post?.node;
           const frontmatter = node?.frontmatter;
-          const id = frontmatter?.id || "";
-          const path = frontmatter?.path || "";
-          const title = frontmatter?.title || "";
+          const id = frontmatter?.id || '';
+          const path = frontmatter?.path || '';
+          const title = frontmatter?.title || '';
 
           return <HomePost key={id} link={`/blog/${path}`} title={title} />;
         })}

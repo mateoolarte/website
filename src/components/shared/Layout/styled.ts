@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import { FONTS } from "../../../constants";
-import { backgroundColor, mainColor } from "../../../themes";
+import { FONTS } from '../../../constants';
+import { backgroundColor, mainColor } from '../../../themes';
 
 export const GlobalStyle = createGlobalStyle`
   * {

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Wrapper } from "./styled";
-import { useTheme } from "../../../hooks/useTheme";
+import { Wrapper } from './styled';
+import { useTheme } from '../../../hooks/useTheme';
 
-function checkLogo(value = "", logoBlog, logoWebsite) {
-  if (value.includes("blog")) {
+function checkLogo(value = '', logoBlog, logoWebsite) {
+  if (value.includes('blog')) {
     return logoBlog;
   }
 
@@ -29,7 +29,7 @@ export function Logo({ pageLocation, currentPage }: LogoProps) {
     require(`../../../images/logo-blog-large-${theme}.png`).default;
 
   return (
-    <Wrapper to={pageLocation.includes("blog") ? "/blog" : "/"}>
+    <Wrapper to={pageLocation.includes('blog') ? '/blog' : '/'}>
       <picture>
         <source
           srcSet={checkLogo(currentPage, logoBlogSmall, logoSmall)}

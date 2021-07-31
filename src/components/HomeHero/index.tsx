@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Wrapper, Title, Subtitle } from "./styled";
+import { Wrapper, Title, Subtitle } from './styled';
 
 export function HomeHero() {
   return (

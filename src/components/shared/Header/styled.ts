@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES } from "../../../constants";
+import { MEDIA_QUERIES } from '../../../constants';
 
 export const Wrapper = styled.header`
   max-width: 1180px;

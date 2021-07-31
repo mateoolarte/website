@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
 import {
   Wrapper,
@@ -11,7 +11,7 @@ import {
   Title,
   Description,
   Btn,
-} from "./styled";
+} from './styled';
 
 interface PostProps {
   node: any;

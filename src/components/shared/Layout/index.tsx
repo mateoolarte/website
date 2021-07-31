@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import { Header } from "../Header";
-import { Footer } from "../Footer";
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
-import { useTheme } from "../../../hooks/useTheme";
+import { useTheme } from '../../../hooks/useTheme';
 
-import { GlobalStyle } from "./styled";
+import { GlobalStyle } from './styled';
 
-import { ThemeContext } from "../../../context/ThemeContext";
+import { ThemeContext } from '../../../context/ThemeContext';
 
 interface LayoutProps {
   children: any;

@@ -1,14 +1,14 @@
-import styled, { css } from "styled-components";
-import { Link } from "gatsby";
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
-import { MEDIA_QUERIES } from "../../../constants";
+import { MEDIA_QUERIES } from '../../../constants';
 import {
   backgroundColor,
   linksColor,
   mainColor,
   shadows,
   terciaryColor,
-} from "../../../themes";
+} from '../../../themes';
 
 export const Wrapper = styled.nav`
   ${MEDIA_QUERIES.landscapeMax} {
@@ -109,7 +109,7 @@ export const Item = styled(Link)`
 
   ${MEDIA_QUERIES.landscape} {
     font-size: 1.2rem;
-    ${props => {
+    ${(props) => {
       return (
         props.isBtn &&
         css`

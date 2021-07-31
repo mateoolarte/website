@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Layout } from "../components/shared/Layout";
-import { Seo } from "../components/Seo";
+import { Layout } from '../components/shared/Layout';
+import { Seo } from '../components/Seo';
 
 export default function NotFound() {
   return (

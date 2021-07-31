@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { graphql } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
-import { MEDIA_QUERIES } from "../constants";
+import { MEDIA_QUERIES } from '../constants';
 
-import { Seo } from "../components/Seo";
-import { Layout } from "../components/shared/Layout";
-import { Post } from "../components/Post";
+import { Seo } from '../components/Seo';
+import { Layout } from '../components/shared/Layout';
+import { Post } from '../components/Post';
 
 const Wrapper = styled.section`
   display: flex;
@@ -25,7 +25,7 @@ interface BlogProps {
 }
 
 export default function Blog({ location, data }: BlogProps) {
-  const pathname = location?.pathname || "/";
+  const pathname = location?.pathname || '/';
   const allMdx = data?.allMdx;
   const posts = allMdx?.edges;
 

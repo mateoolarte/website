@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES } from "../../constants";
-import { mainColor, shadows } from "../../themes";
+import { MEDIA_QUERIES } from '../../constants';
+import { mainColor, shadows } from '../../themes';
 
 export const Wrapper = styled.a`
   display: flex;

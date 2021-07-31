@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
-import { Link } from "gatsby";
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
-import { MEDIA_QUERIES, FONTS } from "../../constants";
-import { linksColor, terciaryColor, fourtyColor, shadows } from "../../themes";
+import { MEDIA_QUERIES, FONTS } from '../../constants';
+import { linksColor, terciaryColor, fourtyColor, shadows } from '../../themes';
 
 export const Wrapper = styled.article`
   width: 100%;

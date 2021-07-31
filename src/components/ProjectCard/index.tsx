@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   Wrapper,
@@ -9,7 +9,7 @@ import {
   Description,
   BgImageContainer,
   BgImage,
-} from "./styled";
+} from './styled';
 
 interface ProjectCardProps {
   name: string;

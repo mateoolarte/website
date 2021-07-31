@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import { socialLinks, info } from "../../../data/secondaryNav";
+import { socialLinks, info } from '../../../data/secondaryNav';
 
 import {
   Wrapper,
@@ -11,7 +11,7 @@ import {
   SocialLink,
   SocialIcon,
   Copyright,
-} from "./styled";
+} from './styled';
 
 interface CtaProps {
   content: any;
@@ -31,8 +31,8 @@ interface FooterProps {
 }
 
 export function Footer({ currentPage }: FooterProps) {
-  const pageLocation = currentPage || "";
-  const isSpanish = pageLocation.includes("blog");
+  const pageLocation = currentPage || '';
+  const isSpanish = pageLocation.includes('blog');
 
   return (
     <Wrapper>
@@ -51,10 +51,10 @@ export function Footer({ currentPage }: FooterProps) {
         })}
       </SocialLinks>
       <Copyright>
-        {isSpanish ? info.es.madeBy : info.en.madeBy}{" "}
+        {isSpanish ? info.es.madeBy : info.en.madeBy}{' '}
         <span role="img" aria-label="heart">
           ❤️
-        </span>{" "}
+        </span>{' '}
         {isSpanish ? info.es.in : info.en.in}
         <strong>Medellín, Colombia</strong> <br />
         Mateo Olarte © {new Date().getFullYear()}

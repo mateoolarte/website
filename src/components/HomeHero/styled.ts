@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES } from "../../constants";
-import { linksColor, secondaryColor } from "../../themes";
+import { MEDIA_QUERIES } from '../../constants';
+import { linksColor, secondaryColor } from '../../themes';
 
 export const Wrapper = styled.div`
   margin: 4rem 0 6rem;

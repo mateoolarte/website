@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { MEDIA_QUERIES } from "../../../constants";
-import { linksColor, mainColor, secondaryColor } from "../../../themes";
+import { MEDIA_QUERIES } from '../../../constants';
+import { linksColor, mainColor, secondaryColor } from '../../../themes';
 
 export const Wrapper = styled.footer`
   max-width: 1180px;

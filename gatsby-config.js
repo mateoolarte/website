@@ -3,7 +3,7 @@ module.exports = {
     title: `Mateo Olarte | Frontend developer`,
     description: `I’m a frontend developer building digital products, working with web technologies like HTML, CSS, Javascript, React, Redux, Webpack, Apollo, NextJS.`,
     author: `Mateo Olarte`,
-    siteUrl: "https://mateoolarte.com",
+    siteUrl: 'https://mateoolarte.com',
   },
   plugins: [
     `gatsby-plugin-netlify`,
@@ -21,7 +21,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-emojis",
+            resolve: 'gatsby-remark-emojis',
           },
         ],
       },
@@ -55,14 +55,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-60678906-1",
+        trackingId: 'UA-60678906-1',
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Work+Sans:500,700,900`],
-        display: "swap",
+        display: 'swap',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

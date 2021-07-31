@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Link } from "gatsby";
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-import { mainColor } from "../../themes";
+import { mainColor } from '../../themes';
 
 export const Wrapper = styled.article`
   margin-bottom: 1.4rem;
