@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Wrapper } from "./styled";
-import useTheme from "../../../hooks/useTheme";
+import { useTheme } from "../../../hooks/useTheme";
 
 function checkLogo(value = "", logoBlog, logoWebsite) {
   if (value.includes("blog")) {
@@ -16,7 +16,7 @@ interface LogoProps {
   currentPage: string;
 }
 
-export default function Logo({ pageLocation, currentPage }: LogoProps) {
+export function Logo({ pageLocation, currentPage }: LogoProps) {
   const theme = useTheme();
   const logoSmall = require(`../../../images/logo-small-${theme}.png`).default;
   const logoMedium =

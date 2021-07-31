@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
 import { Seo } from "../components/Seo";
-import Layout from "../components/shared/Layout";
-import HomeHero from "../components/HomeHero";
-import ProjectCard from "../components/ProjectCard";
-import HomePost from "../components/HomePost";
+import { Layout } from "../components/shared/Layout";
+import { HomeHero } from "../components/HomeHero";
+import { ProjectCard } from "../components/ProjectCard";
+import { HomePost } from "../components/HomePost";
 
-import projects from "../data/projects";
+import { projects } from "../data/projects";
 
 import { linksColor, backgroundColor } from "../themes";
 

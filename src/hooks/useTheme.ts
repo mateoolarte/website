@@ -1,6 +1,6 @@
 import { isWindow } from "../utils/checkWindow";
 
-export default function useTheme() {
+export function useTheme() {
   if (isWindow()) {
     const currentMode = window.localStorage.getItem("theme-mode");
 

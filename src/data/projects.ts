@@ -10,7 +10,7 @@ import bgServillantas from "../images/projects/bg-servillantas.jpg";
 import iconEcoactua from "../images/projects/icon-ecoactua.svg";
 import bgEcoactua from "../images/projects/bg-ecoactua.jpg";
 
-const items = [
+export const projects = [
   {
     id: 1,
     name: "Growly",
@@ -56,5 +56,3 @@ const items = [
     link: "https://ecoactua.herokuapp.com/#/",
   },
 ];
-
-export default items;

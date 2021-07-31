@@ -30,7 +30,7 @@ interface FooterProps {
   currentPage: string;
 }
 
-export default function Footer({ currentPage }: FooterProps) {
+export function Footer({ currentPage }: FooterProps) {
   const pageLocation = currentPage || "";
   const isSpanish = pageLocation.includes("blog");
 

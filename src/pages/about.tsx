@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { MEDIA_QUERIES } from "../constants";
 import { linksColor, mainColor, shadows } from "../themes";
 
-import Layout from "../components/shared/Layout";
+import { Layout } from "../components/shared/Layout";
 import { Seo } from "../components/Seo";
 
 import workspaceImg from "../images/workspace.jpg";

@@ -5,8 +5,8 @@ import { graphql } from "gatsby";
 import { MEDIA_QUERIES } from "../constants";
 
 import { Seo } from "../components/Seo";
-import Layout from "../components/shared/Layout";
-import Post from "../components/Post";
+import { Layout } from "../components/shared/Layout";
+import { Post } from "../components/Post";
 
 const Wrapper = styled.section`
   display: flex;

@@ -21,7 +21,7 @@ interface ProjectCardProps {
   link: string;
 }
 
-export default function ProjectCard({
+export function ProjectCard({
   name,
   icon,
   bgImage,

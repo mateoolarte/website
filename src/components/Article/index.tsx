@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { Seo } from "../Seo";
-import Layout from "../../components/shared/Layout";
+import { Layout } from "../../components/shared/Layout";
 
 import {
   Wrapper,

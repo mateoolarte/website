@@ -7,7 +7,7 @@ interface HomePostProps {
   link: string;
 }
 
-export default function HomePost({ title, link }: HomePostProps) {
+export function HomePost({ title, link }: HomePostProps) {
   return (
     <Wrapper>
       <Title to={link}>{title}</Title>

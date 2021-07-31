@@ -13,12 +13,12 @@ import {
   Btn,
 } from "./styled";
 
-interface CoverPostProps {
+interface PostProps {
   node: any;
   isCover: boolean;
 }
 
-export default function CoverPost({ node, isCover }: CoverPostProps) {
+export function Post({ node, isCover }: PostProps) {
   const data = node?.frontmatter;
   const categories = data?.categories;
   const date = data?.date;

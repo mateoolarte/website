@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../components/shared/Layout";
+import { Layout } from "../components/shared/Layout";
 import { Seo } from "../components/Seo";
 
 export default function NotFound() {

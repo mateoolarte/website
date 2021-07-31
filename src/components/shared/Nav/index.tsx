@@ -21,7 +21,7 @@ interface NavProps {
   currentPage: string;
 }
 
-export default function Nav({ currentPage }: NavProps) {
+export function Nav({ currentPage }: NavProps) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const links = checkLinks(currentPage || "");
   const data = useStaticQuery(graphql`

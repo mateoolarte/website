@@ -2,7 +2,7 @@ import React from "react";
 
 import { Wrapper, Title, Subtitle } from "./styled";
 
-export default function HomeHero() {
+export function HomeHero() {
   return (
     <Wrapper>
       <Title>

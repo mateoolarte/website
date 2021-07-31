@@ -8,10 +8,10 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 
-import Header from "../Header";
-import Footer from "../Footer";
+import { Header } from "../Header";
+import { Footer } from "../Footer";
 
-import useTheme from "../../../hooks/useTheme";
+import { useTheme } from "../../../hooks/useTheme";
 
 import { GlobalStyle } from "./styled";
 
@@ -19,9 +19,9 @@ import { ThemeContext } from "../../../context/ThemeContext";
 
 interface LayoutProps {
   children: any;
-  currentPage: string;
+  currentPage?: string;
 }
-export default function Layout({ children, currentPage }: LayoutProps) {
+export function Layout({ children, currentPage }: LayoutProps) {
   const theme = useTheme();
   const [currentMode, setCurrentMode] = useState(theme);
 
