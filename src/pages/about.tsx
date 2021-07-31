@@ -1,5 +1,4 @@
 import React from "react";
-import { object } from "prop-types";
 import styled from "styled-components";
 
 import { MEDIA_QUERIES } from "../constants";
@@ -80,7 +79,11 @@ const ItemLink = styled.a`
   font-size: 1.1rem;
 `;
 
-export default function About({ location }) {
+interface AboutProps {
+  location: any;
+}
+
+export default function About({ location }: AboutProps) {
   const pathname = location?.pathname || "/";
 
   return (
@@ -141,7 +144,3 @@ export default function About({ location }) {
     </Layout>
   );
 }
-
-About.propTypes = {
-  location: object,
-};

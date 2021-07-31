@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-import { object, string } from "prop-types";
 
-import { socialLinks, info } from "./data";
+import { socialLinks, info } from "../../../data/secondaryNav";
 
 import {
   Wrapper,
@@ -14,7 +13,11 @@ import {
   Copyright,
 } from "./styled";
 
-function Cta({ content }) {
+interface CtaProps {
+  content: any;
+}
+
+function Cta({ content }: CtaProps) {
   return (
     <Fragment>
       <Heading>{content.heading}</Heading>
@@ -23,11 +26,11 @@ function Cta({ content }) {
   );
 }
 
-Cta.propTypes = {
-  content: object,
-};
+interface FooterProps {
+  currentPage: string;
+}
 
-export default function Footer({ currentPage }) {
+export default function Footer({ currentPage }: FooterProps) {
   const pageLocation = currentPage || "";
   const isSpanish = pageLocation.includes("blog");
 
@@ -59,7 +62,3 @@ export default function Footer({ currentPage }) {
     </Wrapper>
   );
 }
-
-Footer.propTypes = {
-  currentPage: string,
-};

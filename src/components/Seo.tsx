@@ -9,14 +9,18 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+interface Metatags {
+  name: string;
+  content: string;
+}
 interface SeoProps {
   description?: string;
   lang?: string;
-  meta?: any;
+  meta?: Array<Metatags>;
   title: string;
 }
 
-export function Seo({ description, lang = "en", meta, title }: SeoProps) {
+export function Seo({ description, lang = "en", meta = [], title }: SeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {

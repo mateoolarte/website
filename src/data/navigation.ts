@@ -1,8 +1,8 @@
-import HomeIcon from "../../../images/icons/home.js";
-import AboutIcon from "../../../images/icons/about.js";
-import ProjectsIcon from "../../../images/icons/projects.js";
-import BlogIcon from "../../../images/icons/blog.js";
-import LatestPostIcon from "../../../images/icons/latest-post.js";
+import HomeIcon from "../images/icons/home.js";
+import AboutIcon from "../images/icons/about.js";
+import ProjectsIcon from "../images/icons/projects.js";
+import BlogIcon from "../images/icons/blog.js";
+import LatestPostIcon from "../images/icons/latest-post.js";
 
 export const websiteLinks = [
   {

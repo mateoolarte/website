@@ -1,5 +1,4 @@
 import React from "react";
-import { object } from "prop-types";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
@@ -18,7 +17,12 @@ import {
   Content,
 } from "./styled";
 
-export default function Article({ location, data }) {
+interface ArticleProps {
+  location: any;
+  data: any;
+}
+
+export default function Article({ location, data }: ArticleProps) {
   const pathname = location?.pathname || "/";
   const mdx = data?.mdx;
   const content = mdx?.body;
@@ -78,8 +82,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-Article.propTypes = {
-  location: object,
-  data: object,
-};

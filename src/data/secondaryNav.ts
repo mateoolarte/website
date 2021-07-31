@@ -1,9 +1,9 @@
-import GithubIcon from "../../../images/icons/github";
-import LinkedinIcon from "../../../images/icons/linkedin";
-import TwitterIcon from "../../../images/icons/twitter";
-import MailIcon from "../../../images/icons/mail";
+import GithubIcon from "../images/icons/github";
+import LinkedinIcon from "../images/icons/linkedin";
+import TwitterIcon from "../images/icons/twitter";
+import MailIcon from "../images/icons/mail";
 
-const socialLinks = [
+export const socialLinks = [
   {
     id: 1,
     link: "https://github.com/mateoolarte",
@@ -26,7 +26,7 @@ const socialLinks = [
   },
 ];
 
-const info = {
+export const info = {
   es: {
     heading: "¿Interesado en hablar conmigo?",
     subtitle: "Contactame en:",
@@ -40,5 +40,3 @@ const info = {
     in: "in ",
   },
 };
-
-export { socialLinks, info };

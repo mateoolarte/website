@@ -1,5 +1,4 @@
 import React from "react";
-import { object } from "prop-types";
 import styled from "styled-components";
 import { graphql } from "gatsby";
 
@@ -20,7 +19,12 @@ const Wrapper = styled.section`
   }
 `;
 
-export default function Blog({ location, data }) {
+interface BlogProps {
+  location: any;
+  data: any;
+}
+
+export default function Blog({ location, data }: BlogProps) {
   const pathname = location?.pathname || "/";
   const allMdx = data?.allMdx;
   const posts = allMdx?.edges;
@@ -63,8 +67,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-Blog.propTypes = {
-  location: object,
-  data: object,
-};

@@ -1,12 +1,15 @@
 import React from "react";
-import { string } from "prop-types";
 
 import Nav from "../Nav";
 import Logo from "../Logo";
 
 import { Wrapper } from "./styled";
 
-export default function Header({ currentPage }) {
+interface HeaderProps {
+  currentPage: string;
+}
+
+export default function Header({ currentPage }: HeaderProps) {
   const pageLocation = currentPage || "";
 
   return (
@@ -16,13 +19,3 @@ export default function Header({ currentPage }) {
     </Wrapper>
   );
 }
-
-Header.propTypes = {
-  siteTitle: string,
-  currentPage: string,
-};
-
-Header.defaultProps = {
-  siteTitle: "",
-  currentPage: "",
-};

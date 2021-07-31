@@ -6,8 +6,6 @@
  */
 
 import React, { useState } from "react";
-import { node, string } from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
 
 import Header from "../Header";
@@ -19,16 +17,11 @@ import { GlobalStyle } from "./styled";
 
 import { ThemeContext } from "../../../context/ThemeContext";
 
-export default function Layout({ children, currentPage }) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+interface LayoutProps {
+  children: any;
+  currentPage: string;
+}
+export default function Layout({ children, currentPage }: LayoutProps) {
   const theme = useTheme();
   const [currentMode, setCurrentMode] = useState(theme);
 
@@ -38,18 +31,10 @@ export default function Layout({ children, currentPage }) {
         value={{ theme: currentMode, toggleTheme: setCurrentMode }}
       >
         <GlobalStyle />
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          currentPage={currentPage}
-        />
+        <Header currentPage={currentPage} />
         <main>{children}</main>
         <Footer currentPage={currentPage} />
       </ThemeContext.Provider>
     </ThemeProvider>
   );
 }
-
-Layout.propTypes = {
-  children: node.isRequired,
-  currentPage: string,
-};

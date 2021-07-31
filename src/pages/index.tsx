@@ -1,5 +1,4 @@
 import React from "react";
-import { object } from "prop-types";
 import styled from "styled-components";
 import { Link, graphql } from "gatsby";
 
@@ -43,7 +42,12 @@ const Btn = styled(Link)`
   }
 `;
 
-export default function Home({ location, data }) {
+interface HomeProps {
+  location: any;
+  data: any;
+}
+
+export default function Home({ location, data }: HomeProps) {
   const pathname = location?.pathname || "/";
   const allMdx = data?.allMdx;
   const posts = allMdx?.edges;
@@ -95,8 +99,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-Home.propTypes = {
-  location: object,
-  data: object,
-};

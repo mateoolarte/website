@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
-import { func, string } from "prop-types";
 import { graphql, useStaticQuery } from "gatsby";
 import DarkIcon from "../../../images/icons/dark";
 import LightIcon from "../../../images/icons/light";
 
-import { websiteLinks, blogLinks } from "./data";
+import { websiteLinks, blogLinks } from "../../../data/navigation";
 
 import { Wrapper, List, IconContainer, Box, Item, ThemeBtn } from "./styled";
 
@@ -18,7 +17,11 @@ function checkLinks(value) {
   return websiteLinks;
 }
 
-export default function Nav({ currentPage }) {
+interface NavProps {
+  currentPage: string;
+}
+
+export default function Nav({ currentPage }: NavProps) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const links = checkLinks(currentPage || "");
   const data = useStaticQuery(graphql`
@@ -74,8 +77,3 @@ export default function Nav({ currentPage }) {
     </Wrapper>
   );
 }
-
-Nav.propTypes = {
-  currentPage: string,
-  setCurrentMode: func,
-};
