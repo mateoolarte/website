@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { MEDIA_QUERIES } from '../constants';
-import { linksColor, mainColor, shadows } from '../themes';
+import { linksColor, mainColor } from '../themes';
 
 import { Layout } from '../components/shared/Layout';
 import { Seo } from '../components/Seo';
-
-import workspaceImg from '../images/workspace.jpg';
 
 const Wrapper = styled.section`
   display: flex;
@@ -23,7 +21,7 @@ const Wrapper = styled.section`
 
 const Heading = styled.h3`
   margin-top: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   color: ${mainColor};
   font-size: 1.8rem;
 `;
@@ -40,22 +38,6 @@ const Info = styled.div`
     font-size: 1.2rem;
     line-height: 1.6;
   }
-`;
-
-const ImageContainer = styled.div`
-  display: none;
-
-  ${MEDIA_QUERIES.landscape} {
-    display: block;
-    width: 40%;
-    text-align: center;
-  }
-`;
-
-const Image = styled.img`
-  height: 550px;
-  border-radius: 4px;
-  box-shadow: 0 3px 12px ${shadows};
 `;
 
 const LinksHeading = styled.h3`
@@ -124,22 +106,16 @@ export default function About({ location }: AboutProps) {
             deliver better quality in my developments.
           </p>
 
-          <LinksHeading>Links</LinksHeading>
+          <LinksHeading>Resources</LinksHeading>
           <Links>
             <Item>
               <ItemLink href="/learning-links">Learning resources</ItemLink>
             </Item>
             <Item>
-              <ItemLink href="/mentoring">
-                Mentoring about web development
-              </ItemLink>
+              <ItemLink href="/mentoring">Technical Mentorship</ItemLink>
             </Item>
           </Links>
         </Info>
-
-        <ImageContainer>
-          <Image src={workspaceImg} alt="Image workplace" />
-        </ImageContainer>
       </Wrapper>
     </Layout>
   );

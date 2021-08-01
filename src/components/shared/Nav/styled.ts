@@ -140,7 +140,9 @@ export const ThemeBtn = styled.button`
   position: fixed;
   top: 2rem;
   right: 1.5rem;
+  padding: 0.3rem;
   border: 0;
+  border-radius: 0.5rem;
   transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
   background: ${backgroundColor};
   cursor: pointer;

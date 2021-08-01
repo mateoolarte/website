@@ -1,46 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+
+import { FeaturedProjects } from '../containers/FeaturedProjects';
+import { LatestPosts } from '../containers/LatestPosts';
 
 import { Seo } from '../components/Seo';
 import { Layout } from '../components/shared/Layout';
 import { HomeHero } from '../components/HomeHero';
-import { ProjectCard } from '../components/ProjectCard';
-import { HomePost } from '../components/HomePost';
 
 import { projects } from '../data/projects';
-
-import { linksColor, backgroundColor } from '../themes';
-
-const Heading = styled.h2`
-  margin-top: 0;
-  font-size: 2.2rem;
-`;
-
-const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-`;
-
-const PostsWrapper = styled.div`
-  margin-bottom: 5rem;
-`;
-
-const Btn = styled(Link)`
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  border: 2px solid ${linksColor};
-  border-radius: 0.6rem;
-  background-color: ${linksColor};
-  color: ${backgroundColor};
-  text-decoration: none;
-
-  &:hover {
-    background: transparent;
-    color: ${linksColor};
-  }
-`;
 
 interface HomeProps {
   location: any;
@@ -56,30 +24,8 @@ export default function Home({ location, data }: HomeProps) {
     <Layout currentPage={pathname}>
       <Seo title="Home" />
       <HomeHero />
-
-      <Heading id="projects">Projects</Heading>
-
-      <ProjectsWrapper>
-        {projects.map((project) => {
-          return <ProjectCard key={project.id} {...project} />;
-        })}
-      </ProjectsWrapper>
-
-      <Heading>Latest posts</Heading>
-
-      <PostsWrapper>
-        {posts.map((post) => {
-          const node = post?.node;
-          const frontmatter = node?.frontmatter;
-          const id = frontmatter?.id || '';
-          const path = frontmatter?.path || '';
-          const title = frontmatter?.title || '';
-
-          return <HomePost key={id} link={`/blog/${path}`} title={title} />;
-        })}
-
-        <Btn to="/blog">See more</Btn>
-      </PostsWrapper>
+      <FeaturedProjects projects={projects} />
+      <LatestPosts posts={posts} />
     </Layout>
   );
 }

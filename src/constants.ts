@@ -23,5 +23,5 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  main: "'Work Sans', sans-serif",
+  main: "'Georama', sans-serif",
 };

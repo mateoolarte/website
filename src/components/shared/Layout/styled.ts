@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${FONTS.main};
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: -0.43px;
+    letter-spacing: 0.43px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
