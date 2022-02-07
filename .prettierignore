@@ -1,0 +1,7 @@
+.cache
+api
+node_modules
+public
+package.json
+remix.env.d.ts
+yarn.lock
