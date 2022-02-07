@@ -1,5 +1,0 @@
-{
-  "*.{js,jsx,ts,tsx}": "eslint",
-  "*.{js,jsx,ts,tsx,json,md,mdx}": "prettier --write",
-  "./src/**/*.js": "stylelint --syntax=css-in-js"
-}

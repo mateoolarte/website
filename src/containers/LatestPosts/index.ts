@@ -1,1 +1,0 @@
-export { LatestPosts } from './LatestPosts';
