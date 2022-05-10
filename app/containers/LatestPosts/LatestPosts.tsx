@@ -4,7 +4,7 @@ import { Heading, PostsWrapper, Btn } from './styles';
 
 type Post = {
   id: string;
-  link: string;
+  slug: string;
   title: string;
 };
 
@@ -20,8 +20,8 @@ export function LatestPosts({ posts }: LatestPostsProps) {
       <Heading>Latest posts</Heading>
 
       <PostsWrapper>
-        {posts.map(({ id, link, title }) => (
-          <HomePost key={id} link={`/blog/${link}`} title={title} />
+        {posts.map(({ id, slug, title }) => (
+          <HomePost key={id} link={`/blog/${slug}`} title={title} />
         ))}
 
         <Btn to="/blog">See more</Btn>

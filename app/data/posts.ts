@@ -9,21 +9,22 @@ function parseCategories(categories) {
 
 function parsePostResponse(post) {
   const properties = post.properties;
+
   const id = post.id;
-  const title = properties.name.title[0].plain_text;
-  const link = properties.path.rich_text[0].plain_text;
-  const createdAt = properties.createdAt.date.start;
+  const title = properties.title.title[0].plain_text;
+  const slug = properties.slug.rich_text[0].plain_text;
   const categories = parseCategories(properties.categories.multi_select);
   const thumbnail = properties.thumbnail.url;
-  const excerpt = properties.excerpt.rich_text[0].plain_text;
+  const publishedAt = properties.publishedAt?.date?.start;
+  const excerpt = properties.excerpt?.rich_text[0]?.plain_text;
 
   return {
     id,
     title,
-    link,
-    createdAt,
+    slug,
     categories,
     thumbnail,
+    publishedAt,
     excerpt,
   };
 }
@@ -32,10 +33,20 @@ export async function posts() {
   const params = {
     database_id: POSTS_ID,
     filter: {
-      property: 'name',
-      title: {
-        is_not_empty: true,
-      },
+      and: [
+        {
+          property: 'title',
+          title: {
+            is_not_empty: true,
+          },
+        },
+        {
+          property: 'status',
+          select: {
+            equals: 'Published',
+          },
+        },
+      ],
     },
   };
   const getPosts = await db().databases.query(params);

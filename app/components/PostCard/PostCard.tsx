@@ -14,8 +14,8 @@ import {
 interface PostCardProps {
   id: number;
   title: string;
-  link: string;
-  createdAt: string;
+  slug: string;
+  publishedAt: string;
   categories: string;
   thumbnail: string;
   excerpt: string;
@@ -24,8 +24,8 @@ interface PostCardProps {
 
 export function PostCard({
   title,
-  link,
-  createdAt,
+  slug,
+  publishedAt,
   categories,
   thumbnail,
   excerpt,
@@ -41,20 +41,20 @@ export function PostCard({
           <>
             <Category isCover={isCover}>{categories}</Category>
             <Title isCover={isCover}>{title}</Title>
-            <DateText isCover={isCover}>{createdAt}</DateText>
+            <DateText isCover={isCover}>{publishedAt}</DateText>
           </>
         ) : (
           <>
             <Details>
               <Category>{categories}</Category>
-              <DateText>{createdAt}</DateText>
+              <DateText>{publishedAt}</DateText>
             </Details>
             <Title>{title}</Title>
           </>
         )}
 
         <Description isCover={isCover}>{excerpt}</Description>
-        <Btn to={`/blog/${link}`} isCover={isCover}>
+        <Btn to={`/blog/${slug}`} isCover={isCover}>
           Leer más
         </Btn>
       </Info>

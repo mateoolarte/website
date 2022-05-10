@@ -3,7 +3,7 @@ import { db } from '~/utils/db-connection';
 import parseFrontMatter from 'front-matter';
 import { marked } from 'marked';
 
-const POSTS_ID = process.env.NOTION_POSTS_DATABASE_ID;
+const POSTS = process.env.NOTION_POSTS_DATABASE_ID;
 
 function parseCategories(categories) {
   const normalizeCategories = categories.map((category) => category.name);
@@ -12,18 +12,19 @@ function parseCategories(categories) {
 
 function parsePostResponse(post) {
   const properties = post.properties;
-  const title = properties.name.title[0].plain_text;
-  const createdAt = properties.createdAt.date.start;
+
+  const title = properties.title.title[0].plain_text;
   const categories = parseCategories(properties.categories.multi_select);
-  const thumbnail = properties.thumbnail.url;
   const copyright = properties.copyright.url;
+  const thumbnail = properties.thumbnail.url;
+  const publishedAt = properties.publishedAt.date.start;
 
   return {
     title,
-    createdAt,
     categories,
-    thumbnail,
     copyright,
+    thumbnail,
+    publishedAt,
   };
 }
 
@@ -31,10 +32,10 @@ export async function post(slug) {
   const n2m = new NotionToMarkdown({ notionClient: db() });
 
   const params = {
-    database_id: POSTS_ID,
+    database_id: POSTS,
     page_size: 1,
     filter: {
-      property: 'path',
+      property: 'slug',
       rich_text: {
         equals: slug,
       },

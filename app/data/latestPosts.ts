@@ -5,13 +5,13 @@ const POSTS_ID = process.env.NOTION_POSTS_DATABASE_ID;
 function parsePostResponse(post) {
   const properties = post.properties;
   const id = post.id;
-  const title = properties.name.title[0].plain_text;
-  const link = properties.path.rich_text[0].plain_text;
+  const title = properties.title.title[0].plain_text;
+  const slug = properties.slug.rich_text[0].plain_text;
 
   return {
     id,
     title,
-    link,
+    slug,
   };
 }
 
@@ -20,10 +20,20 @@ export async function latestPosts() {
     database_id: POSTS_ID,
     page_size: 2,
     filter: {
-      property: 'name',
-      title: {
-        is_not_empty: true,
-      },
+      and: [
+        {
+          property: 'title',
+          title: {
+            is_not_empty: true,
+          },
+        },
+        {
+          property: 'status',
+          select: {
+            equals: 'Published',
+          },
+        },
+      ],
     },
   };
   const getLatestPosts = await db().databases.query(params);
