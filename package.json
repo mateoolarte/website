@@ -1,10 +1,58 @@
 {
-  "private": true,
   "name": "website",
+  "private": true,
   "version": "5.0.0",
   "description": "Personal website",
   "author": "Mateo Olarte <mateo.olarte8@gmail.com>",
   "license": "MIT",
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "react", "jsx-a11y"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
+    "settings": {
+      "react": {
+        "version": "latest"
+      }
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components",
+      "stylelint-config-prettier"
+    ],
+    "overrides": [
+      {
+        "files": ["**/styles.ts"],
+        "customSyntax": "@stylelint/postcss-css-in-js"
+      }
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint",
+    "*.{js,jsx,ts,tsx,json,md,mdx}": "prettier --write",
+    "./app/**/styles.ts": "stylelint"
+  },
   "scripts": {
     "build": "remix build",
     "dev": "node -r dotenv/config node_modules/.bin/remix dev",
