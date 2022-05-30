@@ -8,13 +8,13 @@ export const imgs = [
   {
     id: 2,
     breakpoint: 'max-width: 1023px',
-    websiteSize: 'medium',
+    websiteSize: 'small',
     blogSize: 'small',
   },
   {
     id: 3,
     breakpoint: 'min-width: 1024px',
-    websiteSize: 'large',
-    blogSize: 'large',
+    websiteSize: 'small',
+    blogSize: 'small',
   },
 ];

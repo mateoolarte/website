@@ -31,16 +31,29 @@ export function ProjectCard({
   return (
     <Wrapper href={link} target="_blank">
       <Info>
-        <Icon src={icon} alt={`Icon for ${name}`} height="45px" />
+        {icon && (
+          <Icon
+            src={icon}
+            alt={`Icon for ${name}`}
+            height="45px"
+            loading="lazy"
+          />
+        )}
         <Name>{name}</Name>
         <Details>
           {date} - {role}
         </Details>
         <Description>{description}</Description>
       </Info>
-      <BgImageContainer>
-        <BgImage src={bgImage} className="backgroundImageProject" />
-      </BgImageContainer>
+      {bgImage && (
+        <BgImageContainer>
+          <BgImage
+            src={bgImage}
+            className="backgroundImageProject"
+            loading="lazy"
+          />
+        </BgImageContainer>
+      )}
     </Wrapper>
   );
 }

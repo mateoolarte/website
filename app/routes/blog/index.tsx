@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
   return SEO({
     title: 'Blog',
     description:
-      "I'm a frontend developer building digital products, working with web technologies like HTML, CSS, Javascript, React, GraphQL, NextJS, Remix.",
+      "I'm a Software Engineer building digital products, working with web technologies like HTML, CSS, Javascript, React, GraphQL, NextJS, Remix.",
   });
 };
 

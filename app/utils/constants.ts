@@ -10,7 +10,7 @@ export const MEDIA_QUERIES = {
 };
 
 export const COLORS = {
-  blue: '#1755b2',
+  blue: '#0466C8',
   blueDark: '#103976',
   blueSky: '#2196f3',
   orange: '#ff9800',

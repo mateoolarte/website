@@ -8,6 +8,7 @@ import { Layout } from '~/containers/Layout';
 const Wrapper = styled.section`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 2rem;
   margin-bottom: 4rem;
 
@@ -21,12 +22,11 @@ const Heading = styled.h3`
   margin-top: 0;
   margin-bottom: 2.5rem;
   color: ${mainColor};
-  font-size: 1.8rem;
+  font-size: 2rem;
 `;
 
 const Info = styled.div`
   width: 100%;
-  padding-right: 2rem;
 
   ${MEDIA_QUERIES.landscape} {
     width: 60%;
@@ -34,7 +34,7 @@ const Info = styled.div`
 
   p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.8;
   }
 `;
 
@@ -67,7 +67,7 @@ export default function About() {
           <Heading>Hi, I&apos;m Mateo Olarte</Heading>
 
           <p>
-            I’m a Frontend developer from Medellín, Colombia. I passionate about
+            I’m a Software Engineer from Medellín, Colombia. I passionate about
             technology especially web development, I like to work with modern
             technologies and always trying to learn new things to find the best
             solution to improve the quality of products.
@@ -97,10 +97,10 @@ export default function About() {
           <Links>
             <Item>
               <ItemLink
-                href="https://github.com/mateoolarte/learning-knowledge-base"
+                href="https://github.com/mateoolarte/bookmarks"
                 target="_blank"
               >
-                Learning resources
+                Learning resources (Deprecated)
               </ItemLink>
             </Item>
             <Item>
@@ -108,7 +108,7 @@ export default function About() {
                 href="https://calendly.com/mateoolarte/mentorship"
                 target="_blank"
               >
-                Technical Mentorship
+                Need some technical help? Schedule a meeting here.
               </ItemLink>
             </Item>
           </Links>

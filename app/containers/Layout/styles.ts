@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import { FONTS } from '~/utils/constants';
-import { backgroundColor, mainColor } from '~/utils/themes';
+import { backgroundColor, linksColor, mainColor } from '~/utils/themes';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -33,5 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 
   picture {
     display: block;
+  }
+
+  a {
+    color: ${linksColor};
   }
 `;

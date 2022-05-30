@@ -5,7 +5,7 @@ import { linksColor, backgroundColor } from '~/utils/themes';
 
 export const Heading = styled.h2`
   margin-top: 0;
-  font-size: 2.2rem;
+  font-size: 2rem;
 `;
 
 export const PostsWrapper = styled.div`

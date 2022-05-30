@@ -6,15 +6,14 @@ import { mainColor, shadows } from '~/utils/themes';
 export const Wrapper = styled.a`
   display: flex;
   width: 100%;
-  margin-bottom: 2.5rem;
   border-radius: 0.6rem;
-  transition: transform 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
+  transition: box-shadow 0.45s ease-in-out;
   color: ${mainColor};
   box-shadow: 0 3px 12px ${shadows};
   text-decoration: none;
 
   ${MEDIA_QUERIES.tablet} {
-    width: calc(50% - 20px);
+    width: calc(50% - 1rem);
     height: 280px;
   }
 
@@ -22,24 +21,8 @@ export const Wrapper = styled.a`
     height: 330px;
   }
 
-  ${MEDIA_QUERIES.desktop} {
-    width: calc(50% - 40px);
-    margin-bottom: 5rem;
-  }
-
-  &:nth-child(odd) {
-    ${MEDIA_QUERIES.tablet} {
-      margin-right: 40px;
-    }
-
-    ${MEDIA_QUERIES.desktop} {
-      margin-right: 80px;
-    }
-  }
-
   &:hover {
-    transform: scale(1.01);
-    box-shadow: 0 3px 50px ${shadows};
+    box-shadow: 0 3px 28px ${shadows};
 
     .backgroundImageProject {
       opacity: 1;
@@ -65,7 +48,7 @@ export const Icon = styled.img`
 export const Name = styled.h3`
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 `;
 
@@ -100,5 +83,5 @@ export const BgImage = styled.img`
   object-fit: cover;
   border-radius: 0 0.6rem 0.6rem 0;
   transition: opacity 0.37s ease-in-out;
-  opacity: 0.5;
+  opacity: 0.6;
 `;
