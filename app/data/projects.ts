@@ -51,6 +51,6 @@ export const projects = [
     role: 'Creator / Developer',
     description:
       'Web application to report environmental issues in your city. Solved by local authorities.',
-    link: 'https://ecoactua.herokuapp.com/#/',
+    link: 'https://ecoactua.up.railway.app/#/',
   },
 ];
