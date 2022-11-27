@@ -11,16 +11,6 @@ const bgEcoactua = `${imgUrlBase}bg-ecoactua.jpg`;
 
 export const projects = [
   {
-    id: 1,
-    name: 'Miconomy',
-    icon: '',
-    bgImage: '',
-    date: '2022',
-    role: 'Creator',
-    description: 'Web app for tracking your personal finances',
-    link: 'https://miconomy.vercel.app',
-  },
-  {
     id: 2,
     name: 'Growly',
     icon: iconGrowly,
