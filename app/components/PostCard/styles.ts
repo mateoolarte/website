@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'remix';
+import { Link } from "@remix-run/react";
 
 import { MEDIA_QUERIES, FONTS } from '~/utils/constants';
 import {

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useLocation } from 'remix';
+import { useLocation } from "@remix-run/react";
 
 import { websiteLinks, blogLinks } from '~/data/navigation';
 

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useLocation } from 'remix';
+import { useLocation } from "@remix-run/react";
 
 import { ThemeContext } from '~/context/ThemeContext';
 import { checkLogo, setLogo } from './utils';

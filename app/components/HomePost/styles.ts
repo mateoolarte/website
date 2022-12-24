@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'remix';
+import { Link } from "@remix-run/react";
 
 import { mainColor } from '~/utils/themes';
 

@@ -1,4 +1,4 @@
-import { Links, Meta } from 'remix';
+import { Links, Meta } from "@remix-run/react";
 
 export function Head() {
   return (

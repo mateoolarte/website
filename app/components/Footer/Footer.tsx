@@ -1,4 +1,4 @@
-import { useLocation } from 'remix';
+import { useLocation } from "@remix-run/react";
 
 import { socialLinks, info } from '~/data/secondaryNav';
 

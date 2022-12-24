@@ -17,7 +17,11 @@
   "eslintConfig": {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint", "react", "jsx-a11y"],
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "jsx-a11y"
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
@@ -43,7 +47,9 @@
     ],
     "overrides": [
       {
-        "files": ["**/styles.ts"],
+        "files": [
+          "**/styles.ts"
+        ],
         "customSyntax": "@stylelint/postcss-css-in-js"
       }
     ]
@@ -56,7 +62,6 @@
   "scripts": {
     "build": "remix build",
     "dev": "node -r dotenv/config node_modules/.bin/remix dev",
-    "postinstall": "remix setup node",
     "fmt": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md, mdx}\"",
     "lint:scripts": "eslint app/ --ext .js,.jsx,.ts,.tsx",
     "lint:styles": "stylelint 'app/**/styles.ts'",
@@ -64,6 +69,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.3",
+    "@remix-run/node": "^1.9.0",
     "@remix-run/react": "^1.9.0",
     "@remix-run/serve": "^1.9.0",
     "@remix-run/vercel": "^1.9.0",
@@ -73,7 +79,6 @@
     "notion-to-md": "^2.5.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remix": "^1.9.0",
     "styled-components": "^5.3.6",
     "styled-theming": "^2.2.0"
   },

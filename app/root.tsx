@@ -1,10 +1,4 @@
-import {
-  LiveReload,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useLocation,
-} from 'remix';
+import { LiveReload, Outlet, Scripts, ScrollRestoration, useLocation } from "@remix-run/react";
 import { Head } from '~/components/Head';
 
 export default function App() {
