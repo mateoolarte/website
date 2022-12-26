@@ -1,4 +1,10 @@
-import { LiveReload, Outlet, Scripts, ScrollRestoration, useLocation } from "@remix-run/react";
+import {
+  LiveReload,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLocation,
+} from '@remix-run/react';
 import { Head } from '~/components/Head';
 
 export default function App() {
@@ -12,7 +18,7 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        {process.env.NODE_ENV === 'development' && <LiveReload />}
+        <LiveReload />
       </body>
     </html>
   );
