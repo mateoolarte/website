@@ -1,5 +1,7 @@
+import { type MetaFunction } from "@remix-run/node";
 import styled from 'styled-components';
 
+import { SEO } from '~/utils/seo';
 import { MEDIA_QUERIES } from '~/utils/constants';
 import { linksColor, mainColor } from '~/utils/themes';
 
@@ -59,6 +61,14 @@ const ItemLink = styled.a`
   font-size: 1.1rem;
 `;
 
+export const meta: MetaFunction = () => {
+  return SEO({
+    title: 'About',
+    description:
+      "I’m a Frontend Engineer from Medellín, Colombia. I passionate about technology especially web development, I like to work with modern technologies and always trying to learn new things to find the best solution to improve the quality of products.",
+  });
+};
+
 export default function About() {
   return (
     <Layout>
@@ -67,7 +77,7 @@ export default function About() {
           <Heading>Hi, I&apos;m Mateo Olarte</Heading>
 
           <p>
-            I’m a Software Engineer from Medellín, Colombia. I passionate about
+            I’m a Frontend Engineer from Medellín, Colombia. I passionate about
             technology especially web development, I like to work with modern
             technologies and always trying to learn new things to find the best
             solution to improve the quality of products.

@@ -1,6 +1,11 @@
-export function SEO({ title, description }) {
+interface SEOProps {
+  title: string;
+  description: string;
+}
+
+export function SEO({ title, description }: SEOProps) {
   return {
-    title: `${title} | Mateo Olarte | Software Engineer`,
+    title: `${title} | Mateo Olarte | Frontend Engineer`,
     description,
   };
 }

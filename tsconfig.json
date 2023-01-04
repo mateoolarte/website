@@ -8,13 +8,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "target": "ES2019",
-    "strict": false,
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     },
     "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true
   }
 }

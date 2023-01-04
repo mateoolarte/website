@@ -8,7 +8,7 @@ export function HomeHero() {
       <Title>
         Hi there 👋🏻
         <br />
-        I&apos;m a <strong>Software Engineer</strong>
+        I&apos;m a <strong>Frontend Engineer</strong>
       </Title>
       <Subtitle>
         I like to solve problems through technology and a lifelong learner. More
