@@ -2229,7 +2229,17 @@ __export(routes_exports, {
 var import_react20 = require("@remix-run/react");
 
 // app/data/projects.ts
-var imgUrlBase = "/assets/images/projects/", iconGrowly = `${imgUrlBase}icon-growly.png`, bgGrowly = `${imgUrlBase}bg-growly.jpg`, iconGuruhotel = `${imgUrlBase}icon-guruhotel.svg`, bgGuruhotel = `${imgUrlBase}bg-guruhotel.jpg`, iconEcoactua = `${imgUrlBase}icon-ecoactua.svg`, bgEcoactua = `${imgUrlBase}bg-ecoactua.jpg`, projects = [
+var imgUrlBase = "/assets/images/projects/", iconMiconomy = `${imgUrlBase}icon-miconomy.svg`, bgMiconomy = `${imgUrlBase}bg-miconomy.jpg`, iconGrowly = `${imgUrlBase}icon-growly.png`, bgGrowly = `${imgUrlBase}bg-growly.jpg`, iconGuruhotel = `${imgUrlBase}icon-guruhotel.svg`, bgGuruhotel = `${imgUrlBase}bg-guruhotel.jpg`, iconEcoactua = `${imgUrlBase}icon-ecoactua.svg`, bgEcoactua = `${imgUrlBase}bg-ecoactua.jpg`, projects = [
+  {
+    id: 1,
+    name: "Miconomy",
+    icon: iconMiconomy,
+    bgImage: bgMiconomy,
+    date: "2022",
+    role: "Creator / Developer",
+    description: "Personal finance tracker",
+    link: "https://miconomy.vercel.app/"
+  },
   {
     id: 2,
     name: "Growly",

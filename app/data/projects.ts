@@ -1,5 +1,8 @@
 const imgUrlBase = '/assets/images/projects/';
 
+const iconMiconomy = `${imgUrlBase}icon-miconomy.svg`;
+const bgMiconomy = `${imgUrlBase}bg-miconomy.jpg`;
+
 const iconGrowly = `${imgUrlBase}icon-growly.png`;
 const bgGrowly = `${imgUrlBase}bg-growly.jpg`;
 
@@ -10,6 +13,16 @@ const iconEcoactua = `${imgUrlBase}icon-ecoactua.svg`;
 const bgEcoactua = `${imgUrlBase}bg-ecoactua.jpg`;
 
 export const projects = [
+  {
+    id: 1,
+    name: 'Miconomy',
+    icon: iconMiconomy,
+    bgImage: bgMiconomy,
+    date: '2022',
+    role: 'Creator / Developer',
+    description: 'Personal finance tracker',
+    link: 'https://miconomy.vercel.app/',
+  },
   {
     id: 2,
     name: 'Growly',
