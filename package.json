@@ -63,7 +63,9 @@
   },
   "scripts": {
     "build": "remix build",
+    "predev": "rimraf ./public/_redirects",
     "dev": "remix dev",
+    "start": "netlify serve",
     "typecheck": "tsc -b",
     "fmt": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md, mdx}\"",
     "lint:scripts": "eslint app/ --ext .js,.jsx,.ts,.tsx",
@@ -71,10 +73,12 @@
     "lint": "yarn lint:scripts && yarn lint:styles"
   },
   "dependencies": {
+    "@netlify/functions": "^1.3.0",
     "@notionhq/client": "^2.2.3",
-    "@remix-run/node": "^1.9.0",
-    "@remix-run/react": "^1.9.0",
-    "@remix-run/vercel": "^1.9.0",
+    "@remix-run/netlify": "^1.14.3",
+    "@remix-run/node": "^1.14.3",
+    "@remix-run/react": "^1.14.3",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "front-matter": "^4.0.2",
     "marked": "^4.2.5",
@@ -85,8 +89,8 @@
     "styled-theming": "^2.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.9.0",
-    "@remix-run/serve": "^1.9.0",
+    "@remix-run/dev": "^1.14.3",
+    "@remix-run/serve": "^1.14.3",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
@@ -104,6 +108,7 @@
     "lint-staged": "^13.1.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.8.1",
+    "rimraf": "^4.1.4",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",
