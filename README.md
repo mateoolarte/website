@@ -1,19 +1,18 @@
 # Portfolio website
 
-## Features
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-- React
-- Remix
-- Styled components
-- Prettier
-- Vercel
-- Husky with Lint staged
-- Cloudinary
-- Notion API
+## Getting Started
 
-## Setup
+First, run the development server:
 
 ```bash
-  yarn
-  yarn dev
+pnpm dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Roadmap
+
+- [ ] Configure stylelint
+- [ ] Configure lint-staged with husky

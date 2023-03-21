@@ -1,5 +1,3 @@
-.cache
-api
+.next
 node_modules
 public
-remix.env.d.ts
