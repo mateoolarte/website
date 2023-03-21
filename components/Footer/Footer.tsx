@@ -2,34 +2,16 @@ import { useRouter } from "next/router";
 
 import { socialLinks, info } from "@/data/secondaryNav";
 
+import { Cta } from "./Cta";
+
 import {
   Wrapper,
-  Heading,
-  Subtitle,
   SocialLinks,
   SocialItem,
   SocialLink,
   SocialIcon,
   Copyright,
 } from "./styles";
-
-type CtaContent = {
-  heading: string;
-  subtitle: string;
-};
-
-interface CtaProps {
-  content: CtaContent;
-}
-
-function Cta({ content }: CtaProps) {
-  return (
-    <>
-      <Heading>{content.heading}</Heading>
-      <Subtitle>{content.subtitle}</Subtitle>
-    </>
-  );
-}
 
 export function Footer() {
   const router = useRouter();

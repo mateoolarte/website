@@ -1,59 +1,61 @@
-const imgUrlBase = '/assets/images/projects/';
+import { IMG_URL_BASE } from "@/utils/constants";
 
-const iconMiconomy = `${imgUrlBase}icon-miconomy.svg`;
-const bgMiconomy = `${imgUrlBase}bg-miconomy.jpg`;
+const pathProjects = `${IMG_URL_BASE}projects/`;
 
-const iconGrowly = `${imgUrlBase}icon-growly.png`;
-const bgGrowly = `${imgUrlBase}bg-growly.jpg`;
+const iconMiconomy = `${pathProjects}icon-miconomy.svg`;
+const bgMiconomy = `${pathProjects}bg-miconomy.jpg`;
 
-const iconGuruhotel = `${imgUrlBase}icon-guruhotel.svg`;
-const bgGuruhotel = `${imgUrlBase}bg-guruhotel.jpg`;
+const iconGrowly = `${pathProjects}icon-growly.png`;
+const bgGrowly = `${pathProjects}bg-growly.jpg`;
 
-const iconEcoactua = `${imgUrlBase}icon-ecoactua.svg`;
-const bgEcoactua = `${imgUrlBase}bg-ecoactua.jpg`;
+const iconGuruhotel = `${pathProjects}icon-guruhotel.svg`;
+const bgGuruhotel = `${pathProjects}bg-guruhotel.jpg`;
+
+const iconEcoactua = `${pathProjects}icon-ecoactua.svg`;
+const bgEcoactua = `${pathProjects}bg-ecoactua.jpg`;
 
 export const projects = [
   {
     id: 1,
-    name: 'Miconomy',
+    name: "Miconomy",
     icon: iconMiconomy,
     bgImage: bgMiconomy,
-    date: '2022',
-    role: 'Creator / Developer',
-    description: 'Personal finance tracker',
-    link: 'https://miconomy.vercel.app/',
+    date: "2022",
+    role: "Creator / Developer",
+    description: "Personal finance tracker",
+    link: "https://miconomy.vercel.app/",
   },
   {
     id: 2,
-    name: 'Growly',
+    name: "Growly",
     icon: iconGrowly,
     bgImage: bgGrowly,
-    date: '2021',
-    role: 'Co-founder / Developer',
+    date: "2021",
+    role: "Co-founder / Developer",
     description:
-      'Create a website for your company, We are in charge of improving your digital presence',
-    link: 'https://getgrowly.com',
+      "Create a website for your company, We are in charge of improving your digital presence",
+    link: "https://getgrowly.com",
   },
   {
     id: 3,
-    name: 'Guruhotel',
+    name: "Guruhotel",
     icon: iconGuruhotel,
     bgImage: bgGuruhotel,
-    date: '2020',
-    role: 'Freelance / Developer',
+    date: "2020",
+    role: "Freelance / Developer",
     description:
-      'The Shopify for the hotel industry. Independent hotels use our software to rebuild their hotel website.',
-    link: 'https://guruhotel.com',
+      "The Shopify for the hotel industry. Independent hotels use our software to rebuild their hotel website.",
+    link: "https://guruhotel.com",
   },
   {
     id: 4,
-    name: 'Ecoactua',
+    name: "Ecoactua",
     icon: iconEcoactua,
     bgImage: bgEcoactua,
-    date: '2019',
-    role: 'Creator / Developer',
+    date: "2019",
+    role: "Creator / Developer",
     description:
-      'Web application to report environmental issues in your city. Solved by local authorities.',
-    link: 'https://ecoactua.up.railway.app/#/',
+      "Web application to report environmental issues in your city. Solved by local authorities.",
+    link: "https://ecoactua.up.railway.app/#/",
   },
 ];

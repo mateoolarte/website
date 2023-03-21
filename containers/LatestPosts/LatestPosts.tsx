@@ -2,25 +2,21 @@ import { HomePost } from "@/components/HomePost";
 
 import { Heading, PostsWrapper, Btn } from "./styles";
 
-type Post = {
-  id: string;
-  slug: string;
-  title: string;
-};
+import type { LatestPost } from "./types";
 
 interface LatestPostsProps {
-  posts: Post[];
+  data: LatestPost[];
 }
 
-export function LatestPosts({ posts }: LatestPostsProps) {
-  if (!posts || posts.length === 0) return null;
+export function LatestPosts({ data }: LatestPostsProps) {
+  if (!data || data.length === 0) return null;
 
   return (
     <>
       <Heading>Latest posts</Heading>
 
       <PostsWrapper>
-        {posts.map(({ id, slug, title }) => (
+        {data.map(({ id, slug, title }) => (
           <HomePost key={id} link={`/blog/${slug}`} title={title} />
         ))}
 

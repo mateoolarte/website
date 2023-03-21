@@ -1,8 +1,14 @@
-import { createContext } from "react";
+import { createContext, Context } from "react";
+import type { Theme } from "@/types/themes";
 
-export const ThemeContext = createContext({
+interface ThemeTypes {
+  theme: Theme;
+  toggleTheme: (theme: Theme) => Theme;
+}
+
+export const ThemeContext: Context<ThemeTypes> = createContext({
   theme: "dark",
-  toggleTheme: (theme) => {
+  toggleTheme: (theme: Theme) => {
     return theme;
   },
 });

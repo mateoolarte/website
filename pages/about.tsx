@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { SEO } from "@/utils/seo";
+import { metatags } from "@/utils/metatags";
 import { MEDIA_QUERIES } from "@/utils/constants";
 import { linksColor, mainColor } from "@/utils/themes";
 
@@ -60,7 +60,7 @@ const ItemLink = styled.a`
   font-size: 1.1rem;
 `;
 
-const metatags = SEO({
+const meta = metatags({
   title: "About",
   description:
     "I’m a Frontend Engineer from Medellín, Colombia. I passionate about technology especially web development, I like to work with modern technologies and always trying to learn new things to find the best solution to improve the quality of products.",
@@ -68,7 +68,7 @@ const metatags = SEO({
 
 export default function About() {
   return (
-    <Layout metatags={metatags}>
+    <Layout metatags={meta}>
       <Wrapper>
         <Info>
           <Heading>Hi, I&apos;m Mateo Olarte</Heading>

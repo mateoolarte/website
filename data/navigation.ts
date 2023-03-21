@@ -1,7 +1,7 @@
-import HomeIcon from '@/components/icons/home';
-import AboutIcon from '@/components/icons/about';
-import BlogIcon from '@/components/icons/blog';
-import LatestPostIcon from '@/components/icons/latest-post';
+import HomeIcon from '@/icons/home';
+import AboutIcon from '@/icons/about';
+import BlogIcon from '@/icons/blog';
+import LatestPostIcon from '@/icons/latest-post';
 
 export const websiteLinks = [
   {

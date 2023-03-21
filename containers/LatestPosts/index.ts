@@ -1,1 +1,2 @@
-export { LatestPosts } from './LatestPosts';
+export { LatestPosts } from "./LatestPosts";
+export type { LatestPost } from "./types";

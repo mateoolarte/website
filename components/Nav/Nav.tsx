@@ -1,22 +1,12 @@
 import { useContext } from "react";
 import { useRouter } from "next/router";
 
-import { websiteLinks, blogLinks } from "@/data/navigation";
-
 import { ThemeContext } from "@/context/ThemeContext";
+import type { Theme } from "@/types/themes";
 
-import DarkIcon from "@/components/icons/dark";
-import LightIcon from "@/components/icons/light";
-
+import { checkLinks } from "./utils";
+import { ThemeIcon } from "./ThemeIcon";
 import { Wrapper, List, IconContainer, Box, Item, ThemeBtn } from "./styles";
-
-function checkLinks(value = "") {
-  if (value.includes("blog")) {
-    return blogLinks;
-  }
-
-  return websiteLinks;
-}
 
 export function Nav() {
   const router = useRouter();
@@ -25,9 +15,14 @@ export function Nav() {
   const links = checkLinks(currentUrl);
   const latestPostLink = "";
 
-  function handleThemeMode(themeMode) {
-    window.localStorage.setItem("theme-mode", themeMode);
-    toggleTheme(themeMode);
+  function handleThemeMode(value: Theme) {
+    let currentTheme = theme;
+
+    if (value === "dark") currentTheme = "light";
+    if (value === "light") currentTheme = "dark";
+
+    window.localStorage.setItem("theme-mode", currentTheme);
+    toggleTheme(currentTheme);
   }
 
   return (
@@ -54,11 +49,8 @@ export function Nav() {
         })}
       </List>
 
-      <ThemeBtn
-        type="button"
-        onClick={() => handleThemeMode(theme === "dark" ? "light" : "dark")}
-      >
-        {theme === "dark" ? <LightIcon /> : <DarkIcon />}
+      <ThemeBtn type="button" onClick={() => handleThemeMode(theme)}>
+        <ThemeIcon theme={theme} />
       </ThemeBtn>
     </Wrapper>
   );

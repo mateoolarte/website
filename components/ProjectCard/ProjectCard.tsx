@@ -1,3 +1,5 @@
+import type { Project } from "@/types/projects";
+
 import {
   Wrapper,
   Info,
@@ -7,27 +9,11 @@ import {
   Description,
   BgImageContainer,
   BgImage,
-} from './styles';
+} from "./styles";
 
-interface ProjectCardProps {
-  name: string;
-  icon: string;
-  bgImage: string;
-  date: string;
-  role: string;
-  description: string;
-  link: string;
-}
+export function ProjectCard(props: Project) {
+  const { name, icon, bgImage, date, role, description, link } = props;
 
-export function ProjectCard({
-  name,
-  icon,
-  bgImage,
-  date,
-  role,
-  description,
-  link,
-}: ProjectCardProps) {
   return (
     <Wrapper href={link} target="_blank">
       <Info>

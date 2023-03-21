@@ -1,7 +1,9 @@
 import Head from "next/head";
 
+import type { metatagsType } from "@/types/metatags";
+
 interface MetatagsProps {
-  data: any;
+  data: metatagsType;
 }
 
 export function Metatags({ data }: MetatagsProps) {
@@ -10,7 +12,7 @@ export function Metatags({ data }: MetatagsProps) {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
+      {description && <meta name="description" content={description} />}
     </Head>
   );
 }

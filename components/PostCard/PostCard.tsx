@@ -10,17 +10,7 @@ import {
   Description,
   Btn,
 } from "./styles";
-
-interface PostCardProps {
-  id: number;
-  title: string;
-  slug: string;
-  publishedAt: string;
-  categories: string;
-  thumbnail: string;
-  excerpt: string;
-  isCover: boolean;
-}
+import type { PostCardProps } from "./types";
 
 export function PostCard({
   title,
@@ -34,16 +24,18 @@ export function PostCard({
   return (
     <Wrapper isCover={isCover}>
       <ImageContainer isCover={isCover}>
-        <Image style={{ backgroundImage: `url(${thumbnail})` }}></Image>
+        <Image style={{ backgroundImage: `url("${thumbnail}")` }}></Image>
       </ImageContainer>
       <Info isCover={isCover}>
-        {isCover ? (
+        {isCover && (
           <>
             <Category isCover={isCover}>{categories}</Category>
             <Title isCover={isCover}>{title}</Title>
             <DateText isCover={isCover}>{publishedAt}</DateText>
           </>
-        ) : (
+        )}
+
+        {!isCover && (
           <>
             <Details>
               <Category>{categories}</Category>

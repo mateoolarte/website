@@ -1,12 +1,13 @@
-export function checkLogo(url = '', website, blog) {
-  if (url.includes('blog')) return blog;
+import { IMG_URL_BASE } from "@/utils/constants";
+
+export function checkLogo(url = "", website: string, blog: string): string {
+  if (url.includes("blog")) return blog;
 
   return website;
 }
 
-export function setLogo(size, theme) {
-  const imgUrlBase = '/assets/images/logo-';
-  const url = `${imgUrlBase}${size}-${theme}.png`;
+export function setLogo(size: string, theme: string): string {
+  const url = `${IMG_URL_BASE}logo-${size}-${theme}.png`;
 
   return url;
 }

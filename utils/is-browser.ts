@@ -1,7 +1,5 @@
 export function isBrowser(): boolean {
-  if (typeof window !== 'undefined') {
-    return true;
-  } else {
-    return false;
-  }
+  if (typeof window !== "undefined") return true;
+
+  return false;
 }

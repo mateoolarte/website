@@ -1,4 +1,4 @@
-import { SEO } from "@/utils/seo";
+import { metatags } from "@/utils/metatags";
 
 import { projects } from "@/data/projects";
 import { latestPosts } from "@/data/latestPosts";
@@ -9,12 +9,14 @@ import { Layout } from "@/containers/Layout";
 import { FeaturedProjects } from "@/containers/FeaturedProjects";
 import { LatestPosts } from "@/containers/LatestPosts";
 
+import type { LatestPost } from "@/containers/LatestPosts";
+import type { Project } from "@/types/projects";
 interface HomeProps {
-  projects: any;
-  latestPosts: any;
+  projects: Project[];
+  latestPosts: LatestPost[];
 }
 
-const metatags = SEO({
+const meta = metatags({
   title: "Home",
   description:
     "I'm a Frontend Engineer building digital products, working with web technologies like HTML, CSS, Javascript, React, GraphQL, NextJS, Remix.",
@@ -33,10 +35,10 @@ export async function getStaticProps() {
 
 export default function Home({ projects, latestPosts }: HomeProps) {
   return (
-    <Layout metatags={metatags}>
+    <Layout metatags={meta}>
       <HomeHero />
       <FeaturedProjects projects={projects} />
-      <LatestPosts posts={latestPosts} />
+      <LatestPosts data={latestPosts} />
     </Layout>
   );
 }

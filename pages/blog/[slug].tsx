@@ -14,7 +14,7 @@ import {
   shadows,
   linksColorTerciary,
 } from "@/utils/themes";
-import { SEO } from "@/utils/seo";
+import { metatags } from "@/utils/metatags";
 
 export const Wrapper = styled.article`
   width: 90%;
@@ -137,7 +137,7 @@ export default function Post({ data }: PostProps) {
   const { title, createdAt, categories, thumbnail, content, copyright } = data;
 
   return (
-    <Layout metatags={SEO({ title, description: "" })}>
+    <Layout metatags={metatags({ title, description: "" })}>
       <Wrapper>
         <Hero>
           <Category>{categories}</Category>
