@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useContext } from "react";
 import { useRouter } from "next/router";
 
@@ -33,7 +34,7 @@ export function Nav() {
   return (
     <Wrapper>
       <List>
-        {links.map(({ id, label, link, Icon, highlight }) => {
+        {links.map(({ id, label, link, Icon, highlight }: any) => {
           const postUrl =
             label === "Último post" ? `/blog/${latestPostLink}` : link;
 

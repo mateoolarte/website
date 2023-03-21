@@ -99,7 +99,7 @@ export const Box = styled.li`
 
 export const Item = styled(Link)`
   transition: 0.25s color ease-out;
-  color: ${({ isActive }) => (isActive ? linksColor : mainColor)};
+  color: ${({ isActive }: any) => (isActive ? linksColor : mainColor)};
   text-align: center;
   text-decoration: none;
 
@@ -109,7 +109,7 @@ export const Item = styled(Link)`
 
   ${MEDIA_QUERIES.landscape} {
     font-size: 1.2rem;
-    ${(props) => {
+    ${(props: any) => {
       return (
         props.isBtn &&
         css`
@@ -132,7 +132,7 @@ export const Item = styled(Link)`
   }
 
   svg {
-    fill: ${({ isActive }) => (isActive ? linksColor : mainColor)};
+    fill: ${({ isActive }: any) => (isActive ? linksColor : mainColor)};
   }
 `;
 

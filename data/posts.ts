@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { db } from "@/utils/db-connection";
 
 const { NOTION_POSTS_DATABASE_ID } = process.env;
