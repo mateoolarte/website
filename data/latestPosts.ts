@@ -3,8 +3,8 @@ import { db } from "@/utils/db-connection";
 const { NOTION_POSTS_DATABASE_ID } = process.env;
 
 function parsePostResponse(post) {
-  const properties = post.properties;
-  const id = post.id;
+  const { properties, id } = post;
+
   const title = properties.title.title[0].plain_text;
   const slug = properties.slug.rich_text[0].plain_text;
 

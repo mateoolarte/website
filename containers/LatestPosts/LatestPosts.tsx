@@ -1,12 +1,7 @@
 import { HomePost } from "@/components/HomePost";
 
 import { Heading, PostsWrapper, Btn } from "./styles";
-
-import type { LatestPost } from "./types";
-
-interface LatestPostsProps {
-  data: LatestPost[];
-}
+import type { LatestPostsProps } from "./types";
 
 export function LatestPosts({ data }: LatestPostsProps) {
   if (!data || data.length === 0) return null;

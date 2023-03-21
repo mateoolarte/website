@@ -1,24 +1,16 @@
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-import { Georama } from "next/font/google";
 
 import { Header } from "@/containers/Header";
 import { Footer } from "@/components/Footer";
 import { Metatags } from "@/components/Metatags";
-
 import { ThemeContext } from "@/context/ThemeContext";
 import { useTheme } from "@/hooks/useTheme";
 
-import { GlobalStyle } from "./styles";
+import { GlobalStyle, font } from "./styles";
+import type { LayoutProps } from "./types";
 
-type Props = {
-  children: ReactNode;
-  metatags: any;
-};
-
-const font = Georama({ subsets: ["latin"] });
-
-export function Layout({ children, metatags }: Props) {
+export function Layout({ children, metatags }: LayoutProps) {
   const theme = useTheme();
   const [currentMode, setCurrentMode] = useState(theme);
 

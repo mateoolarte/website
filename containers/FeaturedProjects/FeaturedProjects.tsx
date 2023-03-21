@@ -1,17 +1,7 @@
-import { ProjectCard } from '@/components/ProjectCard';
+import { ProjectCard } from "@/components/ProjectCard";
+import type { Project } from "@/types/projects";
 
-import { Heading, ProjectsWrapper } from './styles';
-
-type Project = {
-  id: number;
-  name: string;
-  icon: string;
-  bgImage: string;
-  date: string;
-  role: string;
-  description: string;
-  link: string;
-};
+import { Heading, ProjectsWrapper } from "./styles";
 
 interface FeaturedProjectsProps {
   projects: Project[];

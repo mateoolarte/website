@@ -1,7 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
+import { Georama } from "next/font/google";
 
-import { FONTS } from '@/utils/constants';
-import { backgroundColor, linksColor, mainColor } from '@/utils/themes';
+import { FONTS } from "@/utils/constants";
+import { backgroundColor, linksColor, mainColor } from "@/utils/themes";
+
+export const font = Georama({ subsets: ["latin"] });
 
 export const GlobalStyle = createGlobalStyle`
   * {
