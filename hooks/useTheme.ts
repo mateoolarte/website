@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useState, useEffect } from "react";
 import { isBrowser } from "@/utils/is-browser";
 

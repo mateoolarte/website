@@ -14,5 +14,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Roadmap
 
-- [ ] Remove // @ts-nocheck
 - [ ] Add types
