@@ -1,5 +1,6 @@
 import { useState, useEffect, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
+import { Georama } from "next/font/google";
 
 import { Header } from "@/containers/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +15,8 @@ type Props = {
   children: ReactNode;
   metatags: any;
 };
+
+const font = Georama({ subsets: ["latin"] });
 
 export function Layout({ children, metatags }: Props) {
   const theme = useTheme();
@@ -30,9 +33,11 @@ export function Layout({ children, metatags }: Props) {
       >
         <GlobalStyle />
         <Metatags data={metatags} />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className={font.className}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </ThemeContext.Provider>
     </ThemeProvider>
   );

@@ -10,16 +10,15 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     background-color: ${backgroundColor};
-    font-family: sans-serif;
+    font-family: ${FONTS.main};
+    font-size: 16px;
+    font-weight: 500;
     text-size-adjust: 100%;
   }
 
   body {
     margin: 0;
     color: ${mainColor};
-    font-family: ${FONTS.main};
-    font-size: 16px;
-    font-weight: 500;
     letter-spacing: 0.43px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

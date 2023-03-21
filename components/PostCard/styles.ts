@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Link from "next/link";
 
-import { MEDIA_QUERIES, FONTS } from "@/utils/constants";
+import { MEDIA_QUERIES } from "@/utils/constants";
 import {
   linksColor,
   terciaryColor,
@@ -102,7 +102,6 @@ export const Details = styled.div`
 export const Category = styled.span`
   display: inline-block;
   color: ${fourtyColor};
-  font-family: ${FONTS.main};
   font-size: 1rem;
   ${({ isCover }) =>
     isCover &&
@@ -114,7 +113,6 @@ export const Category = styled.span`
 export const DateText = styled.span`
   display: inline-block;
   color: ${fourtyColor};
-  font-family: ${FONTS.main};
   font-size: 0.9rem;
   ${({ isCover }) =>
     isCover &&
@@ -157,7 +155,6 @@ export const Description = styled.p`
   margin-top: 0;
   margin-bottom: 2rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.main};
   line-height: 1.5;
 
   ${MEDIA_QUERIES.landscape} {

@@ -5,7 +5,7 @@ import { urls } from "@/data/posts";
 
 import { Layout } from "@/containers/Layout";
 
-import { MEDIA_QUERIES, FONTS } from "@/utils/constants";
+import { MEDIA_QUERIES } from "@/utils/constants";
 import {
   fourtyColor,
   mainColor,
@@ -30,7 +30,6 @@ export const Category = styled.span`
   display: inline-block;
   margin-bottom: 1.1rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.main};
   font-size: 1rem;
 `;
 
@@ -39,7 +38,6 @@ export const DateText = styled.span`
   margin-top: 0.3rem;
   margin-bottom: 1.2rem;
   color: ${fourtyColor};
-  font-family: ${FONTS.main};
   font-size: 0.9rem;
 
   ${MEDIA_QUERIES.tablet} {
@@ -85,8 +83,6 @@ export const Caption = styled.figcaption`
 `;
 
 export const Content = styled.div`
-  font-family: ${FONTS.main};
-
   p {
     margin: 0;
     font-size: 1.1rem;
