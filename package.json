@@ -1,33 +1,8 @@
 {
-  "name": "website",
   "version": "6.0.0",
-  "description": "Personal website",
   "author": "Mateo Olarte <mateo.olarte8@gmail.com>",
   "license": "MIT",
   "private": true,
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ],
-  "eslintConfig": {
-    "extends": "next/core-web-vitals"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-recommended",
-      "stylelint-config-styled-components",
-      "stylelint-config-prettier"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/styles.ts"
-        ],
-        "customSyntax": "@stylelint/postcss-css-in-js"
-      }
-    ]
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -67,5 +42,8 @@
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^31.0.0",
     "stylelint-config-styled-components": "^0.1.1"
+  },
+  "engines": {
+    "node": ">= 20.x.x"
   }
 }
