@@ -20,7 +20,6 @@ export const projects = [
     name: "Miconomy",
     icon: iconMiconomy,
     bgImage: bgMiconomy,
-    date: "2022",
     role: "Creator / Developer",
     description: "Personal finance tracker",
     link: "https://miconomy.vercel.app/",
@@ -30,7 +29,6 @@ export const projects = [
     name: "Growly",
     icon: iconGrowly,
     bgImage: bgGrowly,
-    date: "2021",
     role: "Co-founder / Developer",
     description:
       "Create a website for your company, We are in charge of improving your digital presence",
@@ -41,7 +39,6 @@ export const projects = [
     name: "Guruhotel",
     icon: iconGuruhotel,
     bgImage: bgGuruhotel,
-    date: "2020",
     role: "Freelance / Developer",
     description:
       "The Shopify for the hotel industry. Independent hotels use our software to rebuild their hotel website.",
@@ -52,7 +49,6 @@ export const projects = [
     name: "Ecoactua",
     icon: iconEcoactua,
     bgImage: bgEcoactua,
-    date: "2019",
     role: "Creator / Developer",
     description:
       "Web application to report environmental issues in your city. Solved by local authorities.",

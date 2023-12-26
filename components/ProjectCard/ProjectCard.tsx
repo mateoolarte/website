@@ -12,7 +12,7 @@ import {
 } from "./styles";
 
 export function ProjectCard(props: Project) {
-  const { name, icon, bgImage, date, role, description, link } = props;
+  const { name, icon, bgImage, role, description, link } = props;
 
   return (
     <Wrapper href={link} target="_blank">
@@ -26,9 +26,7 @@ export function ProjectCard(props: Project) {
           />
         )}
         <Name>{name}</Name>
-        <Details>
-          {date} - {role}
-        </Details>
+        <Details>{role}</Details>
         <Description>{description}</Description>
       </Info>
       {bgImage && (
