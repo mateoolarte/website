@@ -22,7 +22,7 @@ export const projects = [
     bgImage: bgMiconomy,
     role: "Creator / Developer",
     description: "Personal finance tracker",
-    link: "https://miconomy.vercel.app/",
+    link: "https://miconomy.up.railway.app",
   },
   {
     id: 2,
