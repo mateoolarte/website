@@ -1,49 +1,20 @@
 {
-  "version": "6.0.0",
-  "author": "Mateo Olarte <mateo.olarte8@gmail.com>",
-  "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "fmt": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
-    "lint:js": "next lint",
-    "lint:css": "stylelint 'app/**/styles.ts'",
-    "lint": "pnpm lint:js && pnpm lint:css"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.3",
-    "dotenv": "^16.0.3",
-    "front-matter": "^4.0.2",
-    "marked": "^4.2.12",
-    "next": "13.2.4",
-    "notion-to-md": "^2.5.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^5.3.9",
-    "styled-theming": "^2.2.0",
-    "typescript": "5.0.2"
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@stylelint/postcss-css-in-js": "^0.38.0",
-    "@types/styled-components": "^5.1.26",
-    "@types/styled-theming": "^2.2.5",
-    "@types/node": "18.15.5",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
-    "postcss-syntax": "^0.36.2",
-    "prettier": "^2.8.5",
-    "stylelint": "^15.3.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^31.0.0",
-    "stylelint-config-styled-components": "^0.1.1"
-  },
-  "engines": {
-    "node": ">= 20.x.x"
+    "@types/node": "22.13.4",
+    "@types/react": "19.0.10",
+    "eslint": "9.20.1",
+    "eslint-config-next": "15.1.7",
+    "typescript": "5.7.3"
   }
 }

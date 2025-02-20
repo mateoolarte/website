@@ -1,1 +1,0 @@
-export { Metatags } from "./Metatags";
