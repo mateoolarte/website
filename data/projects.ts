@@ -32,7 +32,7 @@ export const projects = [
     role: "Co-founder / Developer",
     description:
       "Create a website for your company, We are in charge of improving your digital presence",
-    link: "https://getgrowly.com",
+    link: "https://usegrowly.com",
   },
   {
     id: 3,
