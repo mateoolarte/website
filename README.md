@@ -1,3 +1,3 @@
 # Portfolio website
 
-You can check the latest live code source on the `latest` branch
+You can check the latest live source code on the `latest` branch
