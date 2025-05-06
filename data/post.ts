@@ -47,7 +47,8 @@ export async function post(slug) {
 
   const mdblocks = await n2m.pageToMarkdown(pageId);
   const mdString = n2m.toMarkdownString(mdblocks);
-  const { body } = parseFrontMatter(mdString);
+
+  const { body } = parseFrontMatter(mdString?.parent);
   const parseToHtml = marked(body);
 
   return {
