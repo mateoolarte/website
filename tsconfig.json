@@ -23,6 +23,6 @@
   "exclude": ["node_modules"],
   "baseUrl": "/",
   "paths": {
-    "@/app/*": "app/*"
+    "@/*": "*"
   }
 }

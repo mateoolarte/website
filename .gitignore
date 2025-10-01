@@ -1,8 +1,11 @@
 # dependencies
-/node_modules
+/node_modules/
 
 # next.js
 /.next/
+
+# vscode
+/.vscode/
 
 # misc
 .DS_Store
@@ -17,6 +20,3 @@ npm-debug.log*
 
 # typescript
 next-env.d.ts
-
-# vscode
-/.vscode
