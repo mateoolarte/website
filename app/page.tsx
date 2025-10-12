@@ -1,4 +1,4 @@
-import { GithubLogoIcon, LinkedinLogoIcon, EnvelopeIcon } from "@phosphor-icons/react/ssr";
+import { GithubLogoIcon, LinkedinLogoIcon, EnvelopeIcon } from "@phosphor-icons/react/dist/ssr";
 
 import styles from "./page.module.css";
 import Link from "next/link";

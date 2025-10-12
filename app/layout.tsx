@@ -2,7 +2,9 @@ import { Reddit_Sans } from "next/font/google";
 
 import "./globals.css";
 
-const font = Reddit_Sans();
+const font = Reddit_Sans({
+  subsets: ["latin"],
+});
 
 interface RootLayoutProps {
   children: React.ReactNode;
