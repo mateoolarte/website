@@ -16,7 +16,6 @@ npm-debug.log*
 
 # local env files
 .env
-.env*.local
 
 # typescript
 next-env.d.ts
