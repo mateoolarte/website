@@ -4,10 +4,12 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
 });
 
+const ignorePatterns = {
+  ignores: ["node_modules/**", ".next/**", ".vscode/**", "next-env.d.ts"],
+};
+
 const eslintConfig = [
-  {
-    ignores: ["node_modules/**", ".next/**", "next-env.d.ts"],
-  },
+  ignorePatterns,
   ...compat.config({
     extends: ["next/core-web-vitals", "next/typescript", "prettier"],
   }),
