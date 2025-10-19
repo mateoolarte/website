@@ -68,14 +68,14 @@ jobs:
       - name: Check security vulnerabilities
         run: bun run security
 
+      - name: Build application
+        run: bun run build
+
       - name: Run unit tests
         run: bun run test
 
       - name: Run E2E tests
         run: bun run test:e2e
-
-      - name: Build application
-        run: bun run build
 
       - name: Upload Playwright report
         if: failure()
