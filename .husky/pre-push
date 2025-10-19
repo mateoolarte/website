@@ -1,1 +1,4 @@
-bun run test && bun run test:e2e
+bun run security
+bun run test
+bun run test:e2e
+bun run build

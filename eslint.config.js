@@ -5,7 +5,14 @@ const compat = new FlatCompat({
 });
 
 const ignorePatterns = {
-  ignores: ["node_modules/**", ".next/**", ".vscode/**", "next-env.d.ts"],
+  ignores: [
+    ".next/**",
+    ".vscode/**",
+    "node_modules/**",
+    "playwright-report/**",
+    "test-results/**",
+    "next-env.d.ts",
+  ],
 };
 
 const eslintConfig = [
