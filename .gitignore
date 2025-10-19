@@ -19,6 +19,7 @@ npm-debug.log*
 
 # typescript
 next-env.d.ts
+tsconfig.tsbuildinfo
 
 # Playwright
 node_modules/
