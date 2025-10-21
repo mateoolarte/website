@@ -67,3 +67,10 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+:root {
+  --primary-color: #0474c4;
+  --title-color: #262b40;
+  --primary-bg-color: #f1f5fe;
+  --secondary-color: #2c444c;
+}

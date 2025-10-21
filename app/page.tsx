@@ -16,7 +16,7 @@ function HomePage() {
         </h1>
       </header>
       <main className={styles.container}>
-        <h2 className={styles.heading}>New website coming soon... ☺️</h2>
+        <h2 className={styles.heading}>New website coming soon</h2>
         <div className={styles.contact}>
           <h3 className={styles.contactTitle}>Contact me on:</h3>
           <ul className={styles.links}>

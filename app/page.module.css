@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #edf2fb;
+  background-color: var(--primary-bg-color);
   width: 100vw;
   height: 100vh;
 }
@@ -8,11 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 120px;
 }
 
 .title {
-  color: #0d47a1;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 500;
   word-spacing: -0.5px;
@@ -20,7 +20,6 @@
 
   strong {
     display: block;
-    color: #001242;
     font-size: 2.2rem;
     font-weight: 800;
   }
@@ -32,25 +31,26 @@
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
 }
 
 .heading {
-  color: #001242;
+  color: var(--title-color);
   font-size: 2rem;
   font-weight: 800;
   text-align: center;
 
   @media (width >= 768px) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 .contactTitle {
   margin-bottom: 0.8rem;
-  color: #001242;
-  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
   font-weight: 500;
+  text-align: center;
 
   @media (width >= 768px) {
     font-size: 1.5rem;
@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   list-style-type: none;
   padding-left: 0;
 }
@@ -70,6 +70,10 @@
   svg {
     width: 3rem;
     height: 3rem;
-    fill: #0d47a1;
+    fill: var(--secondary-color);
+
+    &:hover {
+      fill: var(--primary-color);
+    }
   }
 }
