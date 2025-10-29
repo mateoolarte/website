@@ -73,7 +73,7 @@
     fill: var(--secondary-color);
 
     &:hover {
-      fill: var(--primary-color);
+      fill: var(--accent-color);
     }
   }
 }
