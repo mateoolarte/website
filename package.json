@@ -1,5 +1,7 @@
 {
+  "name": "mateoolarte.com",
   "private": true,
+  "version": "7.0.0",
   "type": "module",
   "scripts": {
     "prepare": "husky",
