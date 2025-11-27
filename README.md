@@ -81,11 +81,13 @@ The application will be available at [http://localhost:3000](http://localhost:30
 ```
 website/
 ├── app/                    # Next.js app directory
+│   ├── (homepage)/        # Homepage route group
+│   │   ├── page.tsx       # Home page
+│   │   ├── page.module.css # Page-specific styles
+│   │   └── page.test.tsx  # Page unit tests
 │   ├── globals.css        # Global styles
 │   ├── layout.tsx         # Root layout component
-│   ├── page.tsx           # Home page
-│   ├── page.module.css    # Page-specific styles
-│   └── page.test.tsx      # Page unit tests
+│   └── favicon.ico        # Site favicon
 ├── e2e/                   # Playwright E2E tests
 │   └── homepage.test.ts
 ├── playwright-report/     # Test reports
