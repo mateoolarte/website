@@ -1,8 +1,8 @@
 name: Continuous Integration
 
 on:
-  push:
-    branches: [main]
+  repository_dispatch:
+    types: [ci]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
