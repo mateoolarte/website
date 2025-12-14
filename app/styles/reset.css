@@ -22,9 +22,6 @@
 body {
   /* 4. Add accessible line-height */
   line-height: 1.5;
-
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
 }
 
 /* 6. Improve media defaults */
@@ -68,12 +65,4 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-}
-
-:root {
-  --primary-color: #0474c4;
-  --title-color: #262b40;
-  --primary-bg-color: #f1f5fe;
-  --secondary-color: #2c444c;
-  --accent-color: #ff6f61;
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Reddit_Sans } from "next/font/google";
 
-import "./globals.css";
+import "./styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Mateo Olarte - Software Engineer",
