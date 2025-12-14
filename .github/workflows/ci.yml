@@ -84,3 +84,8 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+      - name: "notify vercel"
+        uses: "vercel/repository-dispatch/actions/status@v1"
+        with:
+          name: "Vercel - mateoolarte: ci"
