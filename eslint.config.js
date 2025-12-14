@@ -1,6 +1,7 @@
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier/flat";
+import sonarjs from "eslint-plugin-sonarjs";
 
 const ignorePatterns = {
   ignores: [
@@ -13,6 +14,12 @@ const ignorePatterns = {
   ],
 };
 
-const eslintConfig = [...nextVitals, ...nextTs, prettier, ignorePatterns];
+const eslintConfig = [
+  ...nextVitals,
+  ...nextTs,
+  sonarjs.configs.recommended,
+  prettier,
+  ignorePatterns,
+];
 
 export default eslintConfig;
