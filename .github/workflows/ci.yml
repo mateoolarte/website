@@ -1,8 +1,8 @@
 name: Continuous Integration
 
 on:
-  repository_dispatch:
-    types: [ci, vercel.deployment.*]
+  push:
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -12,21 +12,13 @@ jobs:
   validate:
     name: Run CI Validation
     runs-on: ubuntu-latest
-    if: github.event.client_payload.environment == 'production'
     permissions:
       contents: read
-      statuses: write
     timeout-minutes: 15
 
     steps:
-      - name: Set commit status to pending
-        uses: vercel/repository-dispatch/actions/status@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          name: "CI Validation"
-
-      - name: Checkout deployment commit
-        uses: vercel/repository-dispatch/actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v5
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -92,10 +84,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-      - name: Report final status
-        if: always()
-        uses: vercel/repository-dispatch/actions/status@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          name: "CI Validation"
