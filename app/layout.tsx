@@ -12,11 +12,11 @@ const font = Reddit_Sans({
   subsets: ["latin"],
 });
 
-interface RootLayoutProps {
+interface RootLayoutProperties {
   children: React.ReactNode;
 }
 
-function RootLayout({ children }: RootLayoutProps) {
+function RootLayout({ children }: RootLayoutProperties) {
   return (
     <html lang="en" className={font.className}>
       <body>{children}</body>
