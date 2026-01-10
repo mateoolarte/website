@@ -71,7 +71,7 @@ The application will be available at [http://localhost:3000](http://localhost:30
 ### Testing
 
 - `bun run test` - Run unit tests (Vitest)
-- `bun run test:dev` - Run unit tests in watch mode
+- `bun run test:watch` - Run unit tests in watch mode
 - `bun run test:e2e` - Run end-to-end tests (Playwright)
 - `bun run test:e2e:dev` - Run E2E tests in UI mode
 - `bun run test:e2e:report` - View Playwright test report
@@ -113,7 +113,7 @@ Unit tests are written with [Vitest](https://vitest.dev/) and [React Testing Lib
 bun run test
 
 # Run tests in watch mode
-bun run test:dev
+bun run test:watch
 ```
 
 ### E2E Tests

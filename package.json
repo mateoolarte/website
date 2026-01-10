@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --experimental-app-only",
     "start": "next start",
     "lint:js": "eslint",
     "lint:css": "stylelint '**/*.css'",
@@ -17,7 +17,7 @@
     "security": "bun audit --audit-level=high",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "test:dev": "vitest",
+    "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:dev": "playwright test --ui",
     "test:e2e:report": "playwright show-report"
@@ -25,21 +25,22 @@
   "dependencies": {
     "@phosphor-icons/react": "2.1.10",
     "next": "16.1.1",
-    "posthog-js": "1.310.1",
-    "posthog-node": "5.18.0",
+    "next-intl": "4.7.0",
+    "posthog-js": "1.318.1",
+    "posthog-node": "5.20.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.2.0",
-    "@commitlint/config-conventional": "20.2.0",
+    "@commitlint/cli": "20.3.1",
+    "@commitlint/config-conventional": "20.3.1",
     "@eslint/eslintrc": "3.3.3",
     "@next/bundle-analyzer": "16.1.1",
     "@playwright/test": "1.57.0",
     "@testing-library/dom": "10.4.1",
     "@testing-library/react": "16.3.1",
-    "@types/node": "25.0.3",
-    "@types/react": "19.2.7",
+    "@types/node": "25.0.6",
+    "@types/react": "19.2.8",
     "@vitejs/plugin-react": "5.1.2",
     "eslint": "9.39.2",
     "eslint-config-next": "16.1.1",
@@ -47,13 +48,13 @@
     "eslint-plugin-sonarjs": "3.0.5",
     "eslint-plugin-unicorn": "62.0.0",
     "husky": "9.1.7",
-    "jsdom": "27.3.0",
+    "jsdom": "27.4.0",
     "lint-staged": "16.2.7",
     "prettier": "3.7.4",
     "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
     "typescript": "5.9.3",
-    "vite-tsconfig-paths": "6.0.3",
+    "vite-tsconfig-paths": "6.0.4",
     "vitest": "4.0.16"
   }
 }
