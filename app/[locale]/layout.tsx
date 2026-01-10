@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 
-import { routing } from "@/services/i18n/routing";
+import { routing } from "../../services/i18n/routing";
 import "@/styles/globals.css";
 
 interface MetadataProps {
