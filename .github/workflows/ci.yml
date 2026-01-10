@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v5
 
       - name: Setup Bun
@@ -53,14 +53,8 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: bunx playwright install-deps
 
-      - name: Run type check
-        run: bun run type-check
-
-      - name: Run linter (JavaScript)
-        run: bun run lint:js
-
-      - name: Run linter (CSS)
-        run: bun run lint:css
+      - name: Lint (JavaScript & CSS)
+        run: bun run lint
 
       - name: Check code formatting
         run: bun run format:check
