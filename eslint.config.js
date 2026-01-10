@@ -19,7 +19,7 @@ const eslintConfig = [
   ...nextVitals,
   ...nextTs,
   sonarjs.configs.recommended,
-  unicorn.configs.recommended,
+  unicorn.configs.unopinionated,
   prettier,
   ignorePatterns,
 ];
