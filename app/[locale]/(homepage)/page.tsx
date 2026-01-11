@@ -1,12 +1,13 @@
 import {
   GithubLogoIcon,
   LinkedinLogoIcon,
-  EnvelopeIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+
+import { ContactForm } from "./components/contact-form/contact-form";
 
 import styles from "./page.module.css";
-import Link from "next/link";
 
 function HomePage() {
   const t = useTranslations();
@@ -19,11 +20,9 @@ function HomePage() {
         </h1>
       </header>
       <main className={styles.container}>
-        <h2 className={styles.heading}>{t("maintainance.title")}</h2>
+        <h2 className={styles.heading}>{t("homepage.title")}</h2>
         <div className={styles.contact}>
-          <h3 className={styles.contactTitle}>
-            {t("maintainance.contactTitle")}
-          </h3>
+          <h3 className={styles.contactTitle}>{t("homepage.contactTitle")}</h3>
           <ul className={styles.links}>
             <li className={styles.linkItem}>
               <Link
@@ -31,6 +30,7 @@ function HomePage() {
                 className={styles.link}
               >
                 <GithubLogoIcon />
+                Github
               </Link>
             </li>
             <li className={styles.linkItem}>
@@ -39,15 +39,11 @@ function HomePage() {
                 className={styles.link}
               >
                 <LinkedinLogoIcon />
+                LinkedIn
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link
-                href="mailto:mateo.olarte8@gmail.com?subject=%5Bmateoolarte.com%5D"
-                className={styles.link}
-              >
-                <EnvelopeIcon />
-              </Link>
+              <ContactForm />
             </li>
           </ul>
         </div>

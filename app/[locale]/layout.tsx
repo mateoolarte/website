@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: MetadataProps) {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
-    namespace: "maintainance",
+    namespace: "homepage",
   });
 
   return {

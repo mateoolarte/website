@@ -1,2 +1,6 @@
 @import url("./reset.css");
 @import url("./vars.css");
+
+a {
+  color: var(--primary-color);
+}

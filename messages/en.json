@@ -2,12 +2,16 @@
   "common": {
     "jobTitle": "Software Engineer"
   },
-  "maintainance": {
+  "homepage": {
     "metadata": {
       "title": "Mateo Olarte - Software Engineer",
       "description": "Mateo Olarte's portfolio, I'm a Software Engineer."
     },
     "title": "New website coming soon",
-    "contactTitle": "Contact me on"
+    "contactTitle": "Contact me on",
+    "emailBtn": "Contact",
+    "contactModalTitle": "How can we collaborate?",
+    "contactModalDescription": "Let me know how I can help you build your digital solution together, send me an email at:",
+    "contactModalBtnClose": "Close"
   }
 }

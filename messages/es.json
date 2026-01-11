@@ -2,12 +2,16 @@
   "common": {
     "jobTitle": "Ingeniero de Software"
   },
-  "maintainance": {
+  "homepage": {
     "metadata": {
       "title": "Mateo Olarte - Ingeniero de Software",
       "description": "Portafolio de Mateo Olarte, Ingeniero de Software."
     },
     "title": "Nuevo sitio web próximamente",
-    "contactTitle": "Contáctame en"
+    "contactTitle": "Contáctame en",
+    "emailBtn": "Contacto",
+    "contactModalTitle": "¿Cómo podemos colaborar?",
+    "contactModalDescription": "Dejame saber como puedo ayudarte a construir tu solución digital juntos, envíame un correo a:",
+    "contactModalBtnClose": "Cerrar"
   }
 }
