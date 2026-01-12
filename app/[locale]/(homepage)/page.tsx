@@ -5,7 +5,7 @@ import {
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-import { ContactForm } from "./components/contact-form/contact-form";
+import { ContactForm } from "./components/contact-form";
 
 import styles from "./page.module.css";
 
