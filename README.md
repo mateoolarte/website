@@ -76,32 +76,6 @@ The application will be available at [http://localhost:3000](http://localhost:30
 - `bun run test:e2e:dev` - Run E2E tests in UI mode
 - `bun run test:e2e:report` - View Playwright test report
 
-## 📁 Project Structure
-
-```
-website/
-├── app/                    # Next.js app directory
-│   ├── (homepage)/        # Homepage route group
-│   │   ├── page.tsx       # Home page
-│   │   ├── page.module.css # Page-specific styles
-│   │   └── page.test.tsx  # Page unit tests
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout component
-│   └── favicon.ico        # Site favicon
-├── e2e/                   # Playwright E2E tests
-│   └── homepage.test.ts
-├── playwright-report/     # Test reports
-├── test-results/         # Test artifacts
-├── commitlint.config.js  # Commit message linting
-├── eslint.config.js      # ESLint configuration
-├── lint-staged.config.js # Git hooks configuration
-├── next.config.js        # Next.js configuration
-├── playwright.config.ts  # Playwright configuration
-├── stylelint.config.js   # Stylelint configuration
-├── tsconfig.json         # TypeScript configuration
-└── vitest.config.ts      # Vitest configuration
-```
-
 ## 🧪 Testing
 
 ### Unit Tests
