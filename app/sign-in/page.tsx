@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { SignInForm } from "./components/sign-in-form";
+
 export const metadata: Metadata = {
   robots: {
     index: false,
@@ -8,11 +10,7 @@ export const metadata: Metadata = {
 };
 
 function SignIn() {
-  return (
-    <form>
-      <h1>Sign In</h1>
-    </form>
-  );
+  return <SignInForm />;
 }
 
 export default SignIn;
