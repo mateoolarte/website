@@ -1,12 +1,12 @@
 # Personal website
 
-Portfolio website of Mateo Olarte, a Software Engineer. Built with Next.js 16, React 19, and TypeScript.
+Portfolio website. Built with Next.js 16, React 19, and TypeScript.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Bun** >= 1.0 (recommended) or **Node.js** >= 18.0
+- **Bun** >= 1 (recommended) and **Node.js** >= 24
 
 ### Installation
 
@@ -21,12 +21,6 @@ Portfolio website of Mateo Olarte, a Software Engineer. Built with Next.js 16, R
 
    ```bash
    bun install
-   ```
-
-   Or if you're using npm:
-
-   ```bash
-   npm install
    ```
 
 ### Development
@@ -44,7 +38,9 @@ The application will be available at [http://localhost:3000](http://localhost:30
 - **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **UI Library**: [React 19](https://react.dev/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) (accessible primitives)
 - **Icons**: [Phosphor Icons](https://phosphoricons.com/)
+- **Internationalization**: [next-intl](https://next-intl.dev/)
 - **Analytics**: [PostHog](https://posthog.com/)
 - **Styling**: CSS Modules
 - **Font**: Reddit Sans (Google Fonts)
@@ -110,6 +106,8 @@ bun run test:e2e:report
 This project uses several tools to maintain code quality:
 
 - **ESLint** - JavaScript/TypeScript linting
+  - **eslint-plugin-sonarjs** - SonarJS rules for bug detection and code quality
+  - **eslint-plugin-unicorn** - Additional opinionated ESLint rules
 - **Stylelint** - CSS linting
 - **Prettier** - Code formatting
 - **TypeScript** - Type checking
@@ -152,7 +150,3 @@ This opens an interactive visualization of the bundle composition.
    ```
 
 The project is optimized for deployment on [Vercel](https://vercel.com), which is the recommended platform for Next.js applications.
-
-## 📝 License
-
-This is a personal project by Mateo Olarte.
