@@ -1,6 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
 
-process.loadEnvFile(".env");
+try {
+  process.loadEnvFile(".env");
+} catch {
+  // .env not present (e.g. CI environment); vars are injected via the environment
+}
 
 /**
  * Read environment variables from file.
