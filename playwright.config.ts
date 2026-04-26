@@ -1,9 +1,11 @@
 import { defineConfig, devices } from "@playwright/test";
 
-try {
-  process.loadEnvFile(".env");
-} catch {
-  // .env not present (e.g. CI environment); vars are injected via the environment
+for (const file of [".env", ".env.local"]) {
+  try {
+    process.loadEnvFile(file);
+  } catch {
+    // file not present (e.g. CI environment); vars are injected via the environment
+  }
 }
 
 /**
