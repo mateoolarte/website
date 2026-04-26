@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
 import bundleAnalyzer from "@next/bundle-analyzer";
 import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@phosphor-icons/react"],
   },
@@ -18,7 +18,6 @@ const nextConfig = {
       },
     ];
   },
-  // This is required to support PostHog trailing slash API requests
   skipTrailingSlashRedirect: true,
 };
 
