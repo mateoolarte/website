@@ -22,7 +22,7 @@ To run a single test file:
 bun run test:watch path/to/file.test.tsx
 ```
 
-Commits must follow Conventional Commits (enforced via commitlint + husky).
+Commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification (enforced via commitlint + husky). Use the format `type(scope): description`, e.g. `feat(auth): add login page`, `fix(i18n): correct Spanish translation`, `chore(deps): update dependencies`. Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`, `revert`.
 
 ## Architecture
 
@@ -46,6 +46,10 @@ app/
 - Locales: `es` (default) and `en`, using `next-intl` with `localePrefix: "as-needed"` (Spanish URLs have no prefix, English uses `/en/...`)
 - i18n routing config lives in `services/i18n/routing.ts`; request config in `services/i18n/request.ts`; typed navigation helpers in `services/i18n/navigation.ts`
 - Translation files: `messages/en.json` and `messages/es.json`
+
+### Dependencies
+
+Always use exact (fixed) version numbers for all dependencies — no `^` or `~` prefixes. This ensures reproducible installs locally and in CI. When adding or updating a package, pin the resolved version exactly, e.g. `"react": "19.2.5"` not `"react": "^19.2.5"`.
 
 ### Naming conventions
 
