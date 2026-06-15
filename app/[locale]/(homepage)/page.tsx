@@ -1,7 +1,4 @@
-import {
-  GithubLogoIcon,
-  LinkedinLogoIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -25,19 +22,13 @@ function HomePage() {
           <h3 className={styles.contactTitle}>{t("homepage.contactTitle")}</h3>
           <ul className={styles.links}>
             <li className={styles.linkItem}>
-              <Link
-                href="https://github.com/mateoolarte"
-                className={styles.link}
-              >
+              <Link href="https://github.com/mateoolarte" className={styles.link}>
                 <GithubLogoIcon />
                 Github
               </Link>
             </li>
             <li className={styles.linkItem}>
-              <Link
-                href="https://www.linkedin.com/in/mateoolarte/"
-                className={styles.link}
-              >
+              <Link href="https://www.linkedin.com/in/mateoolarte/" className={styles.link}>
                 <LinkedinLogoIcon />
                 LinkedIn
               </Link>

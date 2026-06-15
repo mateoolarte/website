@@ -1,4 +1,3 @@
-import { Reddit_Sans } from "next/font/google";
 import { getTranslations } from "next-intl/server";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -11,9 +10,7 @@ interface MetadataProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
+export async function generateMetadata({ params }: MetadataProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
@@ -25,10 +22,6 @@ export async function generateMetadata({
     description: t("metadata.description"),
   };
 }
-
-const font = Reddit_Sans({
-  subsets: ["latin"],
-});
 
 interface Props {
   children: React.ReactNode;

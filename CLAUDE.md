@@ -9,7 +9,7 @@ Use `bun` (not `npm` or `yarn`) for all commands.
 ```bash
 bun run dev          # Start development server (localhost:3000)
 bun run build        # Production build
-bun run lint         # Run ESLint + Stylelint
+bun run lint         # Run Oxlint + Stylelint
 bun run type-check   # TypeScript type checking
 bun run test         # Run unit tests (Vitest) once
 bun run test:watch   # Run unit tests in watch mode

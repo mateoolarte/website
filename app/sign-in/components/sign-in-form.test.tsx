@@ -30,10 +30,7 @@ test("disables button and shows pending label while submitting", async () => {
   await userEvent.type(screen.getByLabelText(/email/i), "a@b.com");
   await userEvent.type(screen.getByLabelText(/password/i), "pass");
   await userEvent.click(screen.getByRole("button", { name: "Sign in" }));
-  expect(screen.getByRole("button", { name: "Signing in…" })).toHaveProperty(
-    "disabled",
-    true,
-  );
+  expect(screen.getByRole("button", { name: "Signing in…" })).toHaveProperty("disabled", true);
 });
 
 test("shows error alert on failed sign-in", async () => {

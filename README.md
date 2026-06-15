@@ -56,10 +56,11 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 ### Code Quality
 
-- `bun run lint` - Run ESLint and Stylelint
-- `bun run lint:js` - Run ESLint only
+- `bun run lint` - Run Oxlint and Stylelint
+- `bun run lint:js` - Run Oxlint only
+- `bun run lint:js:fix` - Run Oxlint and auto-fix issues
 - `bun run lint:css` - Run Stylelint only
-- `bun run format` - Format code with Prettier
+- `bun run format` - Format code with Oxfmt
 - `bun run format:check` - Check code formatting
 - `bun run type-check` - Run TypeScript type checking
 - `bun run security` - Run security audit
@@ -105,11 +106,10 @@ bun run test:e2e:report
 
 This project uses several tools to maintain code quality:
 
-- **ESLint** - JavaScript/TypeScript linting
-  - **eslint-plugin-sonarjs** - SonarJS rules for bug detection and code quality
-  - **eslint-plugin-unicorn** - Additional opinionated ESLint rules
+- **Oxlint** - Fast JavaScript/TypeScript linting (Rust-based), with native React, Next.js, TypeScript, and Unicorn rules
+  - **eslint-plugin-sonarjs** - SonarJS rules for bug detection and code quality (loaded as an Oxlint JS plugin)
 - **Stylelint** - CSS linting
-- **Prettier** - Code formatting
+- **Oxfmt** - Code formatting (Rust-based, Prettier-compatible)
 - **TypeScript** - Type checking
 - **Husky** - Git hooks
 - **lint-staged** - Run linters on staged files

@@ -1,8 +1,8 @@
 import type { Configuration } from "lint-staged";
 
 const lintStagedConfig: Configuration = {
-  "*.{js,ts,tsx}": ["eslint --fix", "prettier --write"],
-  "*.{json,md,css}": ["prettier --write"],
+  "*.{js,ts,tsx}": ["oxlint --fix", "oxfmt"],
+  "*.{json,md,css}": ["oxfmt"],
   "*.css": ["stylelint --fix"],
 };
 
