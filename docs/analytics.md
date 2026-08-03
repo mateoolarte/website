@@ -4,12 +4,9 @@ This project uses [PostHog](https://posthog.com/) for product analytics and user
 
 ## Packages
 
-Two PostHog packages are installed:
-
-| Package        | Version | Purpose                                        |
-| -------------- | ------- | ---------------------------------------------- |
-| `posthog-js`   | 1.318.1 | Client-side event tracking (browser)           |
-| `posthog-node` | 5.20.0  | Server-side tracking (available, not yet used) |
+| Package      | Purpose                              |
+| ------------ | ------------------------------------ |
+| `posthog-js` | Client-side event tracking (browser) |
 
 ## How it works
 
@@ -32,9 +29,9 @@ posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
 
 ### Request proxying
 
-To avoid having analytics requests blocked by ad blockers and to keep all traffic on the same domain, PostHog requests are proxied through the Next.js app via rewrites defined in [`next.config.js`](../next.config.js):
+To avoid having analytics requests blocked by ad blockers and to keep all traffic on the same domain, PostHog requests are proxied through the Next.js app via rewrites defined in [`next.config.ts`](../next.config.ts):
 
-```js
+```ts
 async rewrites() {
   return [
     {
@@ -64,15 +61,3 @@ When using the proxy, `NEXT_PUBLIC_POSTHOG_HOST` should point to the app's own `
 | `NEXT_PUBLIC_POSTHOG_HOST` | PostHog ingestion host  | `https://us.i.posthog.com` |
 
 Copy `.env.example` to `.env.local` and fill in both values from your PostHog project settings.
-
-## Server-side usage
-
-The `posthog-node` package is installed and ready to use for server-side event tracking (e.g., from API routes or Server Actions). It is not yet used in the codebase. When needed, initialize it as a singleton:
-
-```ts
-import { PostHog } from "posthog-node";
-
-const posthogClient = new PostHog(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
-  host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-});
-```

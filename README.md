@@ -89,7 +89,7 @@ bun run test:watch
 
 ### E2E Tests
 
-End-to-end tests use [Playwright](https://playwright.dev/) and run against Chrome, Firefox, and Safari:
+End-to-end tests use [Playwright](https://playwright.dev/) and currently run against Chromium (Firefox and WebKit are temporarily disabled while an auth-flow issue is resolved):
 
 ```bash
 # Run E2E tests

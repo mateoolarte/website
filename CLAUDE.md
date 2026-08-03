@@ -64,10 +64,10 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 ### Key patterns
 
 - **Styling**: CSS Modules (`.module.css`) per component; global styles in `styles/` (`reset.css`, `vars.css`, `globals.css`)
-- **Analytics**: PostHog initialized in `instrumentation-client.ts` (Next.js client instrumentation); proxied through `/ingest/` rewrites in `next.config.js`
+- **Analytics**: PostHog initialized in `instrumentation-client.ts` (Next.js client instrumentation); proxied through `/ingest/` rewrites in `next.config.ts`
 - **Icons**: `@phosphor-icons/react` (tree-shaken via `optimizePackageImports`)
 - **UI primitives**: Radix UI
-- Tests use Vitest + React Testing Library with jsdom environment; E2E uses Playwright (Chrome, Firefox, Safari)
+- Tests use Vitest + React Testing Library with jsdom environment; E2E uses Playwright (Chromium; Firefox and WebKit temporarily disabled)
 - Pre-commit hooks via Husky run lint-staged on changed files
 
 ### Environment variables

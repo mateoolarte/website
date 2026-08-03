@@ -4,10 +4,10 @@ This project uses [Supabase](https://supabase.com/) for authentication via email
 
 ## Packages
 
-| Package                 | Version | Purpose                               |
-| ----------------------- | ------- | ------------------------------------- |
-| `@supabase/supabase-js` | 2.49.4  | Core Supabase client                  |
-| `@supabase/ssr`         | 0.6.1   | Cookie-based session handling for SSR |
+| Package                 | Purpose                               |
+| ----------------------- | ------------------------------------- |
+| `@supabase/supabase-js` | Core Supabase client                  |
+| `@supabase/ssr`         | Cookie-based session handling for SSR |
 
 ## File Structure
 

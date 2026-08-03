@@ -39,7 +39,7 @@ app/sign-in/components/
 
 ### Configuration
 
-Vitest is configured in `vite.config.ts` with the jsdom environment and path alias support. Tests import components and render them with React Testing Library, asserting on accessible roles and text content.
+Vitest is configured in `vitest.config.ts` with the jsdom environment and path alias support. Tests import components and render them with React Testing Library, asserting on accessible roles and text content.
 
 ---
 
