@@ -6,7 +6,19 @@ import { routing } from "./services/i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
+function isHomepage(pathname: string) {
+  if (pathname === "/") return true;
+  const segments = pathname.split("/").filter(Boolean);
+  return segments.length === 1 && (routing.locales as readonly string[]).includes(segments[0]);
+}
+
 export async function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (isHomepage(pathname)) {
+    return intlMiddleware(request);
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -33,8 +45,6 @@ export async function proxy(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  const { pathname } = request.nextUrl;
 
   if (pathname.startsWith("/admin") && !user) {
     return NextResponse.redirect(new URL("/sign-in", request.url));
