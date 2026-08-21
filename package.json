@@ -14,7 +14,6 @@
     "lint": "bun run lint:js && bun run lint:css",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "analyze": "ANALYZE=true bun run build",
     "security": "bun audit --audit-level=critical",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
@@ -32,7 +31,6 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.1",
     "@commitlint/config-conventional": "21.2.0",
-    "@next/bundle-analyzer": "16.2.12",
     "@testing-library/dom": "10.4.1",
     "@testing-library/react": "16.3.2",
     "@testing-library/user-event": "14.6.1",
