@@ -1,10 +1,17 @@
 import { getTranslations } from "next-intl/server";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { Reddit_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+
 import type { Metadata } from "next";
 
 import { routing } from "../../services/i18n/routing";
+
 import "@/styles/globals.css";
+
+const font = Reddit_Sans({
+  subsets: ["latin"],
+});
 
 interface MetadataProps {
   params: Promise<{ locale: string }>;
@@ -23,12 +30,12 @@ export async function generateMetadata({ params }: MetadataProps): Promise<Metad
   };
 }
 
-interface Props {
+interface RootLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }
 
-async function HomepageLayout({ children, params }: Props) {
+export default async function RootLayout({ children, params }: RootLayoutProps) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params;
 
@@ -37,12 +44,10 @@ async function HomepageLayout({ children, params }: Props) {
   }
 
   return (
-    <html suppressHydrationWarning lang={locale}>
+    <html lang={locale} className={font.className}>
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
 }
-
-export default HomepageLayout;
