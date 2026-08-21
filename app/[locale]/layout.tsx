@@ -5,7 +5,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 
 import type { Metadata } from "next";
 
-import { routing } from "../../services/i18n/routing";
+import { routing } from "../../i18n/routing";
 
 import "@/styles/globals.css";
 

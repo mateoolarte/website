@@ -39,10 +39,10 @@ app/
 ```
 
 - Locales: `es` (default) and `en`, using `next-intl` with `localePrefix: "as-needed"` (Spanish URLs have no prefix, English uses `/en/...`)
-- i18n routing config lives in `services/i18n/routing.ts`; request config in `services/i18n/request.ts`; typed navigation helpers in `services/i18n/navigation.ts`
+- i18n routing config lives in `i18n/routing.ts`; request config in `i18n/request.ts`; typed navigation helpers in `i18n/navigation.ts`
 - Translation files: `messages/en.json` and `messages/es.json`
-- Use the navigation helpers from `services/i18n/navigation.ts` (`Link`, `redirect`, `usePathname`, `useRouter`) instead of native Next.js equivalents so URLs stay locale-aware
-- Adding a new locale: add it to `locales` in `services/i18n/routing.ts` and create `messages/<locale>.json` — nothing else needed
+- Use the navigation helpers from `i18n/navigation.ts` (`Link`, `redirect`, `usePathname`, `useRouter`) instead of native Next.js equivalents so URLs stay locale-aware
+- Adding a new locale: add it to `locales` in `i18n/routing.ts` and create `messages/<locale>.json` — nothing else needed
 - New translation keys must be added to **all** message files to avoid runtime missing-translation warnings
 
 ### Dependencies
