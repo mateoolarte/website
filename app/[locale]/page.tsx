@@ -2,7 +2,7 @@ import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react/dist/ssr
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-import { ContactForm } from "./components/contact-form";
+import { ContactForm } from "./components/ContactForm";
 
 import styles from "./page.module.css";
 

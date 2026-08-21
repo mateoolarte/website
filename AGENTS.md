@@ -42,8 +42,9 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 
 ### Naming conventions
 
-- All new files and folders must use **kebab-case** (e.g., `my-component.tsx`, `auth-utils/`)
-- This applies to all file types: components, utilities, services, styles, etc.
+- React component folders inside `app/` use **PascalCase** (e.g., `ContactForm/`), containing the component in `index.tsx` and its styles in a co-located `index.module.css`; no barrel `index.ts`
+- All other files and folders must use **kebab-case** (e.g., `my-component.tsx`, `auth-utils/`)
+- This applies to all file types: utilities, services, styles, config, etc.
 
 ### Exports
 
@@ -52,7 +53,7 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 
 ### Imports
 
-- Use relative `./` imports for files within the same folder or feature folder (e.g., a component's `.module.css`, barrel `index.ts` re-exports, or `page.tsx` importing its `./components/`)
+- Use relative `./` imports for files within the same folder or feature folder (e.g., a component's `.module.css`, or `page.tsx` importing its `./components/`)
 - Use the `@/` TypeScript alias (defined in `tsconfig.json` `paths`, mapped to the project root) when importing shared project folders from elsewhere (e.g., `@/i18n/routing`, `@/styles/globals.css`) — never climb directories with `../`
 - Only third-party packages are imported by their bare package name
 
