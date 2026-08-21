@@ -50,6 +50,12 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 - Prefer **named exports** for all components, functions, utilities, hooks, and other exports
 - Use default exports only when not possible (e.g., Next.js page/layout files that require them)
 
+### Imports
+
+- Use relative `./` imports for files within the same folder or feature folder (e.g., a component's `.module.css`, barrel `index.ts` re-exports, or `page.tsx` importing its `./components/`)
+- Use the `@/` TypeScript alias (defined in `tsconfig.json` `paths`, mapped to the project root) when importing shared project folders from elsewhere (e.g., `@/i18n/routing`, `@/styles/globals.css`) — never climb directories with `../`
+- Only third-party packages are imported by their bare package name
+
 ### Key patterns
 
 - **Styling**: CSS Modules (`.module.css`) per component; global styles in `styles/` (`reset.css`, `vars.css`, `globals.css`)
