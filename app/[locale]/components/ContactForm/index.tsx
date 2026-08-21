@@ -2,7 +2,7 @@ import { Dialog } from "@base-ui/react/dialog";
 import { PaperPlaneTiltIcon, XCircleIcon } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
 
-import styles from "./contact-form.module.css";
+import styles from "./index.module.css";
 
 export function ContactForm() {
   const t = useTranslations();

@@ -70,7 +70,6 @@ The application will be available at [http://localhost:3000](http://localhost:30
 This project uses several tools to maintain code quality:
 
 - **Oxlint** - Fast JavaScript/TypeScript linting (Rust-based), with native React, Next.js, TypeScript, and Unicorn rules
-  - **eslint-plugin-sonarjs** - SonarJS rules for bug detection and code quality (loaded as an Oxlint JS plugin)
 - **Stylelint** - CSS linting
 - **Oxfmt** - Code formatting (Rust-based, Prettier-compatible)
 - **TypeScript** - Type checking

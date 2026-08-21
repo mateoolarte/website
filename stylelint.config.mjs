@@ -1,6 +1,5 @@
-import type { Config } from "stylelint";
-
-const stylelintConfig: Config = {
+/** @type {import('stylelint').Config} */
+const stylelintConfig = {
   extends: ["stylelint-config-standard"],
   rules: {
     // Allow camelCase class names: start with lowercase, followed by any combination of letters and numbers
