@@ -33,15 +33,17 @@ Personal portfolio site built with Next.js 16 App Router, React 19, TypeScript.
 app/
   [locale]/
     layout.tsx            # Root HTML shell (font) + locale validation + NextIntlClientProvider + metadata
-    (homepage)/
-      page.tsx            # Main portfolio page
-      page.test.tsx       # Unit tests co-located with page
-      components/         # Page-specific components
+    page.tsx              # Main portfolio page
+    page.test.tsx         # Unit tests co-located with page
+    components/           # Page-specific components
 ```
 
 - Locales: `es` (default) and `en`, using `next-intl` with `localePrefix: "as-needed"` (Spanish URLs have no prefix, English uses `/en/...`)
 - i18n routing config lives in `services/i18n/routing.ts`; request config in `services/i18n/request.ts`; typed navigation helpers in `services/i18n/navigation.ts`
 - Translation files: `messages/en.json` and `messages/es.json`
+- Use the navigation helpers from `services/i18n/navigation.ts` (`Link`, `redirect`, `usePathname`, `useRouter`) instead of native Next.js equivalents so URLs stay locale-aware
+- Adding a new locale: add it to `locales` in `services/i18n/routing.ts` and create `messages/<locale>.json` — nothing else needed
+- New translation keys must be added to **all** message files to avoid runtime missing-translation warnings
 
 ### Dependencies
 
@@ -60,10 +62,14 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 ### Key patterns
 
 - **Styling**: CSS Modules (`.module.css`) per component; global styles in `styles/` (`reset.css`, `vars.css`, `globals.css`)
+  - Class names must be camelCase (enforced by Stylelint `selector-class-pattern`)
+  - Colors come from design tokens in `styles/vars.css` — use `var(--token-name)`, never raw hex values
 - **Analytics**: PostHog initialized in `instrumentation-client.ts` (Next.js client instrumentation); proxied through `/ingest/` rewrites in `next.config.ts`
+  - `skipTrailingSlashRedirect: true` is required — PostHog uses trailing slashes in some API paths that would otherwise be redirected and break
+  - `NEXT_PUBLIC_POSTHOG_HOST` must point to the app's own `/ingest` path (e.g. `https://yourdomain.com/ingest`), not PostHog directly
 - **Icons**: `@phosphor-icons/react` (tree-shaken via `optimizePackageImports`)
 - **UI primitives**: Radix UI
-- Tests use Vitest + React Testing Library with jsdom environment
+- Tests use Vitest + React Testing Library with jsdom environment; test files are co-located next to the file they test (`.test.tsx`)
 - Pre-commit hooks via Husky run lint-staged on changed files
 
 ### Environment variables
