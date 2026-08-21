@@ -19,8 +19,6 @@ export default defineConfig({
     "next-env.d.ts",
     ".vscode/**",
     "node_modules/**",
-    "playwright-report/**",
-    "test-results/**",
     "convex/_generated/**",
   ],
 });

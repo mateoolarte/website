@@ -13,7 +13,6 @@ bun run lint         # Run Oxlint + Stylelint
 bun run type-check   # TypeScript type checking
 bun run test         # Run unit tests (Vitest) once
 bun run test:watch   # Run unit tests in watch mode
-bun run test:e2e     # Run Playwright E2E tests
 ```
 
 To run a single test file:
@@ -67,7 +66,7 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
 - **Analytics**: PostHog initialized in `instrumentation-client.ts` (Next.js client instrumentation); proxied through `/ingest/` rewrites in `next.config.ts`
 - **Icons**: `@phosphor-icons/react` (tree-shaken via `optimizePackageImports`)
 - **UI primitives**: Radix UI
-- Tests use Vitest + React Testing Library with jsdom environment; E2E uses Playwright (Chromium; Firefox and WebKit temporarily disabled)
+- Tests use Vitest + React Testing Library with jsdom environment
 - Pre-commit hooks via Husky run lint-staged on changed files
 
 ### Environment variables

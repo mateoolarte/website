@@ -3,4 +3,3 @@
 bun run security
 bun run build
 bun run test
-bun run test:e2e

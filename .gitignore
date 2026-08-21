@@ -21,12 +21,3 @@ npm-debug.log*
 # typescript
 next-env.d.ts
 tsconfig.tsbuildinfo
-
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
-e2e/.auth/

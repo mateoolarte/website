@@ -69,9 +69,6 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 - `bun run test` - Run unit tests (Vitest)
 - `bun run test:watch` - Run unit tests in watch mode
-- `bun run test:e2e` - Run end-to-end tests (Playwright)
-- `bun run test:e2e:dev` - Run E2E tests in UI mode
-- `bun run test:e2e:report` - View Playwright test report
 
 ## 🧪 Testing
 
@@ -85,21 +82,6 @@ bun run test
 
 # Run tests in watch mode
 bun run test:watch
-```
-
-### E2E Tests
-
-End-to-end tests use [Playwright](https://playwright.dev/) and currently run against Chromium (Firefox and WebKit are temporarily disabled while an auth-flow issue is resolved):
-
-```bash
-# Run E2E tests
-bun run test:e2e
-
-# Run E2E tests with UI
-bun run test:e2e:dev
-
-# View test report
-bun run test:e2e:report
 ```
 
 ## 🎨 Code Quality & Formatting
