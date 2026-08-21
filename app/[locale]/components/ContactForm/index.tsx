@@ -22,7 +22,7 @@ export function ContactForm() {
 
           <Dialog.Description className={styles.description}>
             {t("homepage.contactModalDescription")}{" "}
-            <a href="mailto:mateo.olarte8@gmail.com">mateo.olarte8@gmail.com</a>
+            <a href={`mailto:${t("homepage.contactEmail")}`}>{t("homepage.contactEmail")}</a>
           </Dialog.Description>
 
           <Dialog.Close className={styles.btnClose} aria-label={t("homepage.contactModalBtnClose")}>
