@@ -65,25 +65,6 @@ The application will be available at [http://localhost:3000](http://localhost:30
 - `bun run type-check` - Run TypeScript type checking
 - `bun run security` - Run security audit
 
-### Testing
-
-- `bun run test` - Run unit tests (Vitest)
-- `bun run test:watch` - Run unit tests in watch mode
-
-## 🧪 Testing
-
-### Unit Tests
-
-Unit tests are written with [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/react):
-
-```bash
-# Run tests once
-bun run test
-
-# Run tests in watch mode
-bun run test:watch
-```
-
 ## 🎨 Code Quality & Formatting
 
 This project uses several tools to maintain code quality:

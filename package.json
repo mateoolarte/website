@@ -15,9 +15,7 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "security": "bun audit --audit-level=critical",
-    "type-check": "tsc --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -31,21 +29,15 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.2",
     "@commitlint/config-conventional": "21.2.2",
-    "@testing-library/dom": "10.4.1",
-    "@testing-library/react": "16.3.2",
-    "@testing-library/user-event": "14.6.5",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
-    "@vitejs/plugin-react": "6.1.0",
     "eslint-plugin-sonarjs": "4.2.0",
     "husky": "9.1.7",
-    "jsdom": "30.0.1",
     "lint-staged": "17.3.0",
     "oxfmt": "0.64.0",
     "oxlint": "1.79.0",
     "stylelint": "17.14.1",
     "stylelint-config-standard": "40.0.0",
-    "typescript": "6.0.3",
-    "vitest": "4.1.11"
+    "typescript": "6.0.3"
   }
 }

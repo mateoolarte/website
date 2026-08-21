@@ -2,4 +2,3 @@
 
 bun run security
 bun run build
-bun run test

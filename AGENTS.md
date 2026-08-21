@@ -11,14 +11,6 @@ bun run dev          # Start development server (localhost:3000)
 bun run build        # Production build
 bun run lint         # Run Oxlint + Stylelint
 bun run type-check   # TypeScript type checking
-bun run test         # Run unit tests (Vitest) once
-bun run test:watch   # Run unit tests in watch mode
-```
-
-To run a single test file:
-
-```bash
-bun run test:watch path/to/file.test.tsx
 ```
 
 Commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification (enforced via commitlint + husky). Use the format `type(scope): description`, e.g. `feat(auth): add login page`, `fix(i18n): correct Spanish translation`, `chore(deps): update dependencies`. Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`, `revert`.
@@ -34,7 +26,6 @@ app/
   [locale]/
     layout.tsx            # Root HTML shell (font) + locale validation + NextIntlClientProvider + metadata
     page.tsx              # Main portfolio page
-    page.test.tsx         # Unit tests co-located with page
     components/           # Page-specific components
 ```
 
@@ -68,8 +59,7 @@ Always use exact (fixed) version numbers for all dependencies — no `^` or `~` 
   - `skipTrailingSlashRedirect: true` is required — PostHog uses trailing slashes in some API paths that would otherwise be redirected and break
   - `NEXT_PUBLIC_POSTHOG_HOST` must point to the app's own `/ingest` path (e.g. `https://yourdomain.com/ingest`), not PostHog directly
 - **Icons**: `@phosphor-icons/react` (tree-shaken via `optimizePackageImports`)
-- **UI primitives**: Radix UI
-- Tests use Vitest + React Testing Library with jsdom environment; test files are co-located next to the file they test (`.test.tsx`)
+- **UI primitives**: Base UI (`@base-ui/react`)
 - Pre-commit hooks via Husky run lint-staged on changed files
 
 ### Environment variables
