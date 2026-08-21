@@ -31,10 +31,6 @@ Unit tests are **co-located** with the file they test, using the `.test.tsx` ext
 app/[locale]/(homepage)/
   page.tsx
   page.test.tsx           ← co-located unit test
-
-app/sign-in/components/
-  sign-in-form.tsx
-  sign-in-form.test.tsx   ← co-located unit test
 ```
 
 ### Configuration

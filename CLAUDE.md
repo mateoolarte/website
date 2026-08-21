@@ -31,15 +31,12 @@ Personal portfolio site built with Next.js 16 App Router, React 19, TypeScript.
 
 ```
 app/
-  layout.tsx              # Root HTML shell (font only, no providers)
   [locale]/
-    layout.tsx            # Locale validation + NextIntlClientProvider + metadata
+    layout.tsx            # Root HTML shell (font) + locale validation + NextIntlClientProvider + metadata
     (homepage)/
       page.tsx            # Main portfolio page
       page.test.tsx       # Unit tests co-located with page
       components/         # Page-specific components
-  admin/                  # Admin section
-  sign-in/                # Auth page
 ```
 
 - Locales: `es` (default) and `en`, using `next-intl` with `localePrefix: "as-needed"` (Spanish URLs have no prefix, English uses `/en/...`)
