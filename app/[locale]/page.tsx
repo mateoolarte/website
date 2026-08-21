@@ -6,7 +6,7 @@ import { ContactForm } from "./components/contact-form";
 
 import styles from "./page.module.css";
 
-function HomePage() {
+export default function HomePage() {
   const t = useTranslations();
 
   return (
@@ -42,5 +42,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;
